@@ -1,6 +1,7 @@
 <h1 align="center">
   Orbit
-  <br>
+</h1>
+<h1 align="center">
   Documentation
 </h1>
 <h1 align="center">
