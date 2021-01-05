@@ -38,7 +38,7 @@ Bonus
 - request from others
 - mobile check deposits
 - update password
-- text on transaction
+- send a text on transaction
 - bills due calender
 - atm map
 
