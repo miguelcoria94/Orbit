@@ -12,6 +12,38 @@
   <img src="https://cdn.vox-cdn.com/thumbor/fbrTLtxuP2D29o8VJUaE-u3NKfU=/0x0:792x613/1200x800/filters:focal(300x237:426x363)/cdn.vox-cdn.com/uploads/chorus_image/image/59850273/Docker_logo_011.0.png" alt="sqlalchemy-logo" width="50">
 </h1>
 
+<h1 align="center">
+  MVP
+</h1>
+
+- user auth(user has a user name and hashed password(table made))
+- user pin to verify everything(user has a hashed pin number(smallint) (table made))
+- savings account(every user will have a saving)
+- checking account(every user will have a saving)
+- expense tracking
+- round purchases to nearst dollar and transfer change to savings
+- transactions between users
+- transactions and types/recent transactions
+- track spending on graph by type
+- create virtual debit cards/mobile wallet
+- savings account has limit and cool down times
+- lock account feature
+- goals/bigpurchase with money progress bar
+- low balance alert
+- notification panel(marked as read)
+- weekly spending limit
+
+Bonus 
+- login history
+- request from others
+- mobile check deposits
+- update password
+- text on transaction
+- bills due calender
+- atm map
+
+
+
 # Flask React Project
 
 This is the backend for the Flask React project.
