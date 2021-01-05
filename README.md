@@ -6,7 +6,7 @@
 </h1>
 <h1 align="center">
   <img src="https://cdn.worldvectorlogo.com/logos/react.svg" alt="js-logo" width="50">
-  <img src="https://miro.medium.com/max/1400/1*Q5EUk28Xc3iCDoMSkrd1_w.png" alt="flask-logo" width="50">
+  <img src="https://miro.medium.com/max/438/1*0G5zu7CnXdMT9pGbYUTQLQ.png" alt="flask-logo" width="50">
   <img src="https://i.ibb.co/VpGfh8w/icons8-postgresql-96-1.png" alt="psql-logo" width="50">
   <img src="https://hakin9.org/wp-content/uploads/2019/08/connect-a-flask-app-to-a-mysql-database-with-sqlalchemy-and-pymysql.jpg" alt="sqlalchemy-logo" width="50">
 </h1>
