@@ -16,22 +16,21 @@
   MVP
 </h1>
 
-- user auth(user has a user name and hashed password(table made))
-- user pin to verify everything(user has a hashed pin number(smallint) (table made))
-- savings account(every user will have a saving)
-- checking account(every user will have a saving)
-- expense tracking
-- round purchases to nearst dollar and transfer change to savings
-- transactions between users
-- transactions and types/recent transactions
-- track spending on graph by type
-- create virtual debit cards/mobile wallet
-- savings account has limit and cool down times
-- lock account feature
-- goals/bigpurchase with money progress bar
+- user auth(user has a user name and hashed password(table made)) (✅)
+- user pin to verify everything(user has a hashed pin number(smallint) (table made))(✅)
+- savings account(every user will have a saving)(✅)
+- checking account(every user will have a saving)(✅)
+- expense tracking(i will create a pie chart seperating all the transactions into categories)(✅)
+- transactions between users(✅)
+- transactions and types/recent transactions(this will be a table under the balance)(✅)
+- create virtual debit cards/mobile wallet(✅)
+- round purchases to nearst dollar and transfer change to savings()
+- savings account has limit and cool down times(✅)
+- lock account feature(✅)
+- goals/bigpurchase with money progress bar(✅)
 - low balance alert
 - notification panel(marked as read)
-- weekly spending limit
+- weather and welcome message
 
 Bonus 
 - login history
