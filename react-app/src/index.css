@@ -65,6 +65,10 @@ body {
     margin-top: 20px;
 }
 
- .active {
+.active {
     color: #00C9B7;
+}
+
+.navbar_link {
+    color: white;
 }
