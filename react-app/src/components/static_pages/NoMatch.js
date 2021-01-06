@@ -6,7 +6,12 @@ import spaceman from "../images/spaceman.png"
 const LogoutButton = ({ setAuthenticated }) => {
     return (
       <Jumbotron className="bg-404">
-        <img width={500} src={spaceman} height={500}/>
+        <img
+          width={500}
+          src={spaceman}
+          height={500}
+          className="animate__animated animate__bouncet"
+        />
         <h1 className="title-404">This Page is Lost in Space</h1>
         <p className="text-404">
           You thought this mission to the moon would be a quick six month thing.
