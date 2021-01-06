@@ -4,7 +4,8 @@
 
 
 /******* 404 page styles*/
-.body {
+#root {
+    height: 100vh;
     background-image: linear-gradient(to right bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
 }
 
@@ -37,4 +38,8 @@
 
 .animate__animated.animate__slideInRight {
   --animate-duration:60s;
+}
+
+.active {
+    color: #00C9B7;
 }
