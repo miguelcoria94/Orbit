@@ -5,8 +5,14 @@
 
 .title-404 {
     text-align: center;
+    color: white;
 }
 
 .text-404 {
     text-align: center;
+    color: white;
+}
+
+.bg-404 {
+    background-image: linear-gradient(to right bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
 }

@@ -5,10 +5,10 @@ import spaceman from "../images/spaceman.png"
 
 const LogoutButton = ({ setAuthenticated }) => {
     return (
-      <Jumbotron>
-            <img width={500} src={spaceman} height={500}/>
+      <Jumbotron className="bg-404">
+        <img width={500} src={spaceman} height={500}/>
         <h1 className="title-404">This Page is Lost in Space</h1>
-        <p>
+        <p className="text-404">
           You thought this mission to the moon would be a quick six month thing.
           Your neighbor offered to look after your dog. Your high school math
           teacher was impressed. He once said you wouldn’t amount to
