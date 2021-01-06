@@ -2,6 +2,8 @@
   Orbit
 </h1>
 <h1 align="center">
+<img src="https://github.com/miguelcoria94/Orbit/blob/main/readme-images/Screen%20Shot%202021-01-06%20at%201.55.05%20PM.png" alt="orbit-logo" width="50">
+<br>
   Documentation
 </h1>
 <h1 align="center">
