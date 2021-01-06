@@ -8,22 +8,22 @@ const NavBar = ({ setAuthenticated }) => {
       <ul className="navbar_container">
         <li className="navbar_links">
           <NavLink to="/" exact={true} activeClassName="active">
-            Home
+            <p className="navbar_link">Home</p>
           </NavLink>
         </li>
         <li className="navbar_links">
           <NavLink to="/login" exact={true} activeClassName="active">
-            Login
+            <p className="navbar_link">Login</p>
           </NavLink>
         </li>
         <li className="navbar_links">
           <NavLink to="/sign-up" exact={true} activeClassName="active">
-            Sign Up
+            <p className="navbar_link">Signup</p>
           </NavLink>
         </li>
         <li className="navbar_links">
           <NavLink to="/users" exact={true} activeClassName="active">
-            Users
+            <p className="navbar_link">Users</p>
           </NavLink>
         </li>
         <li className="navbar_links">
