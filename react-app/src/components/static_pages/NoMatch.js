@@ -5,16 +5,20 @@ import spaceman from "../images/spaceman.png"
 
 const LogoutButton = ({ setAuthenticated }) => {
     return (
-      <Jumbotron fluid className="bg-404">
-        <img
-          alt="spaceman"
-          width={500}
-          src={spaceman}
-          height={500}
-          className="animate__animated animate__slideInRight"
-        />
-        <h1 className="title-404">"Houston, we have a problem"</h1>
-        <a href="/">Go back home</a>
+      <Jumbotron fluid className="bg-404 ">
+        <div className="d-flex w-80">
+          <img
+            alt="spaceman"
+            width={500}
+            src={spaceman}
+            height={500}
+            className="animate__animated animate__slideInRight image"
+                />
+        </div>
+        <h1 className="title-404">Houston, we have a problem</h1>
+        <a href="/" className="text-center test-404">
+          404 Page Not Found - Go back home
+        </a>
       </Jumbotron>
     );
 };
