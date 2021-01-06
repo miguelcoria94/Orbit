@@ -7,7 +7,7 @@ const LogoutButton = ({ setAuthenticated }) => {
     return (
       <Jumbotron>
             <img width={500} src={spaceman} height={500}/>
-        <h1>This Page is Lost in Space</h1>
+        <h1 className="title-404">This Page is Lost in Space</h1>
         <p>
           You thought this mission to the moon would be a quick six month thing.
           Your neighbor offered to look after your dog. Your high school math
