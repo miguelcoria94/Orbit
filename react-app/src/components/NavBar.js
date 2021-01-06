@@ -11,11 +11,16 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
     <Container>
       <Row>
         <Col className="logo" linkto="/">
-          <img src={uranus} className="navbar_logo" alt="orbit-logo" href="/" />{" "}
+          <a href="/">
+            <img
+              src={uranus}
+              className="navbar_logo"
+              alt="orbit-logo"
+              href="/"
+            />{" "}
+          </a>
           <h1 className="logo-text" href>
-            <a href="/">
-            Orbit
-            </a>
+            <a href="/">Orbit</a>
           </h1>
         </Col>
         <Col>
