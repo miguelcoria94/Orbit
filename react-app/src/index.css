@@ -111,11 +111,20 @@ a {
         justify-items: center;
         align-items: center;
         justify-content: center;
+        align-content: center;
     }
+
+    .navbar_links {
+    margin-top: 30px;
+    margin-left: none;
+}
 
     .navbar_container {
         justify-items: center;
         align-items: center;
         justify-content: center;
+        align-content: center;
+        align-self: center;
+        padding-right: 55px !important;
     }
 }
