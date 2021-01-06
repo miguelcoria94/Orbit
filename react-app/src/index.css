@@ -80,16 +80,18 @@ nav {
     display: flex;
     list-style: none;
     justify-content: flex-end;
+    height: 100%;
 }
 
 .navbar_links {
-    margin-right: 20px;
-    margin-top: 30px;
+    margin-top: 35px;
+    margin-left: 20px;
 }
 
 .active {
     color: #00C9B7 !important;
     font-weight: 600;
+    text-shadow: #00c9b87c 0px 4px 10px, #00c9b86e 0px 1px 10px;
 }
 
 a {
@@ -101,4 +103,28 @@ a {
     text-decoration: underline;
     text-decoration-color: #00c9b7;
     text-decoration-thickness: 2px;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        margin-top: 20px;
+    }
+
+    .navbar_links {
+    margin-left: none;
+}
+
+    .navbar_container {
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+        padding-right: 55px !important;
+        height: 25px;
+    }
 }

@@ -23,7 +23,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
             <a href="/">Orbit</a>
           </h1>
         </Col>
-        <Col>
+        <Col className="navbar_link-wrapper">
           <ul className="navbar_container">
             <li className="navbar_links">
               <NavLink to="/" exact={true} activeClassName="active">
@@ -38,11 +38,6 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
             <li className="navbar_links">
               <NavLink to="/sign-up" exact={true} activeClassName="active">
                 <p className="navbar_link">Signup</p>
-              </NavLink>
-            </li>
-            <li className="navbar_links">
-              <NavLink to="/users" exact={true} activeClassName="active">
-                <p className="navbar_link">Users</p>
               </NavLink>
             </li>
             <li className="navbar_links">
