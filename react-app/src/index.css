@@ -80,12 +80,11 @@ nav {
     display: flex;
     list-style: none;
     justify-content: flex-end;
-    width: 100%;
-    margin: none;
+    height: 100%;
 }
 
 .navbar_links {
-    margin-top: 30px;
+    margin-top: 35px;
     margin-left: 20px;
 }
 
