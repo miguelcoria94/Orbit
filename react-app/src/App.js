@@ -9,6 +9,7 @@ import User from "./components/User";
 import { authenticate } from "./services/auth";
 import About from "./components/static_pages/About"
 import Contact from "./components/static_pages/Contact"
+import NoMatch from "./components/static_pages/NoMatch"
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -67,6 +68,7 @@ function App() {
         <Route exact path="/contact">
           <Contact />
         </Route>
+        <Route component={NoMatch}/>
       </Switch>
     </BrowserRouter>
   );
