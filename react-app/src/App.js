@@ -10,6 +10,7 @@ import { authenticate } from "./services/auth";
 import About from "./components/static_pages/About"
 import Contact from "./components/static_pages/Contact"
 import NoMatch from "./components/static_pages/NoMatch"
+import Home from "./components/static_pages/Home"
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
