@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
 
-const NavBar = ({ setAuthenticated }) => {
+const NavBar = ({ setAuthenticated, authenticated }) => {
   return (
     <nav>
       <ul className="navbar_container">
@@ -26,9 +26,10 @@ const NavBar = ({ setAuthenticated }) => {
             <p className="navbar_link">Users</p>
           </NavLink>
         </li>
-        <li className="navbar_links">
-          <LogoutButton setAuthenticated={setAuthenticated} />
-        </li>
+        {authenticated ?
+          <li className="navbar_links">
+            <LogoutButton setAuthenticated={setAuthenticated} />
+          </li> : ""}
       </ul>
     </nav>
   );

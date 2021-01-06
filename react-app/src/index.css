@@ -65,9 +65,16 @@ html, body {
 
 .active {
     color: #00C9B7 !important;
+    font-weight: 600;
 }
 
 a {
-    font-weight: 600;
+    font-weight: 400;
     color: #687293 !important;
+}
+
+.navbar_link:hover{
+    text-decoration: underline;
+    text-decoration-color: #00c9b7;
+    text-decoration-thickness: 2px;
 }
