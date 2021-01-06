@@ -11,7 +11,6 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
     <Container>
       <Row>
       <Col className="logo">
-          <img src={Orbit} className="navbar_logo" alt="orbit-logo" />
           <h1 className="logo-text">
             Orbit
           </h1>
