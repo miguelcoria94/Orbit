@@ -74,6 +74,7 @@ nav {
 .navbar_container{
     display: flex;
     list-style: none;
+    justify-content: flex-end;
 }
 
 .navbar_links {

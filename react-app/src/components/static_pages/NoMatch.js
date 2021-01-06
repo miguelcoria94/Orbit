@@ -5,7 +5,7 @@ import spaceman from "../images/spaceman.png"
 
 const LogoutButton = ({ setAuthenticated }) => {
     return (
-      <Jumbotron  fluid className="bg-404">
+      <Jumbotron fluid className="bg-404">
             <img
                 alt="spaceman"
           width={500}
