@@ -32,9 +32,8 @@ html, body {
     color: white;
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
-    width: 60%;
+    width: 100%;
     align-self: center;
-    padding-bottom: 50px;;
 }
 
 .test-404 {
@@ -50,7 +49,7 @@ html, body {
 }
 
 .animate__animated.animate__slideInRight {
-  --animate-duration:60s;
+  --animate-duration:80s;
 }
 
 
@@ -111,6 +110,11 @@ a {
 }
 
 @media (max-width: 768px) {
+    #root {
+    height: calc(100%);
+    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
+    font-family: 'Barlow', sans-serif;
+}
     .logo {
         justify-items: center;
         align-items: center;
