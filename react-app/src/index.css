@@ -38,22 +38,19 @@ body {
   --animate-duration:60s;
 }
 
-.active {
-    color: #00C9B7;
-}
 
 /*** Foooter **/
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: none;
-  color: white;
-  text-align: center;
-  height: 100px;
-
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: none;
+    color: white;
+    text-align: center;
+    height: 100px;
+    
 }
 
 /*** Navbar **/
@@ -65,5 +62,10 @@ body {
 
 .navbar_links {
     margin-right: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
+    
+}
+
+ .active {
+    color: #00C9B7;
 }
