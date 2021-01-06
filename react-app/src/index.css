@@ -10,7 +10,8 @@
     height: calc(100vh);
     background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
     font-family: 'Barlow', sans-serif;
-
+    max-width: 100%;
+    overflow: hidden;
 }
 
 html, body {
@@ -24,7 +25,8 @@ html, body {
     color: white;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    font-size: 50px;
 }
 
 .text-404 {
@@ -32,9 +34,18 @@ html, body {
     color: white;
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
-    width: 60%;
+    width: 100%;
     align-self: center;
-    padding-bottom: 50px;;
+}
+
+.test-404 {
+    font-family: Cousine;
+    color: #00C9B7 !important;
+}
+
+.test-404:hover {
+    text-shadow: #00c9b87c 0px 4px 10px, #00c9b86e 0px 1px 10px;
+    text-decoration: none;
 }
 
 .bg-404 {
@@ -45,7 +56,7 @@ html, body {
 }
 
 .animate__animated.animate__slideInRight {
-  --animate-duration:60s;
+  --animate-duration:80s;
 }
 
 
@@ -106,6 +117,16 @@ a {
 }
 
 @media (max-width: 768px) {
+    #root {
+    height: calc(100%);
+    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
+    font-family: 'Barlow', sans-serif;
+}
+.animate__animated.animate__slideInRight {
+  --animate-duration:20s;
+}
+
+
     .logo {
         justify-items: center;
         align-items: center;
