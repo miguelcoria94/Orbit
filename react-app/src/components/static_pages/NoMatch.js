@@ -10,7 +10,7 @@ const LogoutButton = ({ setAuthenticated }) => {
           width={500}
           src={spaceman}
           height={500}
-          className="animate__animated animate__bouncet"
+          className="animate__animated animate__slideInRight"
         />
         <h1 className="title-404">This Page is Lost in Space</h1>
         <p className="text-404">

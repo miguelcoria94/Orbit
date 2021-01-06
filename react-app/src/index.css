@@ -1,5 +1,7 @@
 /* TODO Add site wide styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
 
 /******* 404 page styles*/
 
@@ -15,4 +17,8 @@
 
 .bg-404 {
     background-image: linear-gradient(to right bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
+}
+
+.animate__animated.animate__slideInRight {
+  --animate-duration:60s;
 }
