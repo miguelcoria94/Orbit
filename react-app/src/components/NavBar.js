@@ -26,10 +26,23 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
             <p className="navbar_link">Users</p>
           </NavLink>
         </li>
-        {authenticated ?
+        <li className="navbar_links">
+          <NavLink to="/users" exact={true} activeClassName="active">
+            <p className="navbar_link">About</p>
+          </NavLink>
+        </li>
+        <li className="navbar_links">
+          <NavLink to="/users" exact={true} activeClassName="active">
+            <p className="navbar_link">Contact</p>
+          </NavLink>
+        </li>
+        {authenticated ? (
           <li className="navbar_links">
             <LogoutButton setAuthenticated={setAuthenticated} />
-          </li> : ""}
+          </li>
+        ) : (
+          ""
+        )}
       </ul>
     </nav>
   );
