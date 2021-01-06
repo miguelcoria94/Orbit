@@ -10,54 +10,55 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
   return (
     <Container>
       <Row>
-      <Col className="logo">
-          <img src={uranus} className="navbar_logo" alt="orbit-logo" />{" "}
-          <h1 className="logo-text">
+        <Col className="logo" linkto="/">
+          <img src={uranus} className="navbar_logo" alt="orbit-logo" href="/" />{" "}
+          <h1 className="logo-text" href>
+            <a href="/">
             Orbit
+            </a>
           </h1>
         </Col>
         <Col>
-      <ul className="navbar_container">
-        <li className="navbar_links">
-          <NavLink to="/" exact={true} activeClassName="active">
-            <p className="navbar_link">Home</p>
-          </NavLink>
-        </li>
-        <li className="navbar_links">
-          <NavLink to="/login" exact={true} activeClassName="active">
-            <p className="navbar_link">Login</p>
-          </NavLink>
-        </li>
-        <li className="navbar_links">
-          <NavLink to="/sign-up" exact={true} activeClassName="active">
-            <p className="navbar_link">Signup</p>
-          </NavLink>
-        </li>
-        <li className="navbar_links">
-          <NavLink to="/users" exact={true} activeClassName="active">
-            <p className="navbar_link">Users</p>
-          </NavLink>
-        </li>
-        <li className="navbar_links">
-          <NavLink to="/about" exact={true} activeClassName="active">
-            <p className="navbar_link">About</p>
-          </NavLink>
-        </li>
-        <li className="navbar_links">
-          <NavLink to="/contact" exact={true} activeClassName="active">
-            <p className="navbar_link">Contact</p>
-          </NavLink>
-        </li>
-        {authenticated ? (
-          <li className="navbar_links">
-            <LogoutButton setAuthenticated={setAuthenticated} />
-          </li>
-        ) : (
-          ""
-        )}
-      </ul>
+          <ul className="navbar_container">
+            <li className="navbar_links">
+              <NavLink to="/" exact={true} activeClassName="active">
+                <p className="navbar_link">Home</p>
+              </NavLink>
+            </li>
+            <li className="navbar_links">
+              <NavLink to="/login" exact={true} activeClassName="active">
+                <p className="navbar_link">Login</p>
+              </NavLink>
+            </li>
+            <li className="navbar_links">
+              <NavLink to="/sign-up" exact={true} activeClassName="active">
+                <p className="navbar_link">Signup</p>
+              </NavLink>
+            </li>
+            <li className="navbar_links">
+              <NavLink to="/users" exact={true} activeClassName="active">
+                <p className="navbar_link">Users</p>
+              </NavLink>
+            </li>
+            <li className="navbar_links">
+              <NavLink to="/about" exact={true} activeClassName="active">
+                <p className="navbar_link">About</p>
+              </NavLink>
+            </li>
+            <li className="navbar_links">
+              <NavLink to="/contact" exact={true} activeClassName="active">
+                <p className="navbar_link">Contact</p>
+              </NavLink>
+            </li>
+            {authenticated ? (
+              <li className="navbar_links">
+                <LogoutButton setAuthenticated={setAuthenticated} />
+              </li>
+            ) : (
+              ""
+            )}
+          </ul>
         </Col>
-
       </Row>
     </Container>
   );

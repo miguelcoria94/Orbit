@@ -61,9 +61,9 @@ html, body {
     align-items: center;
 }
 
-.logo-text {
-    color: white;
-    font-weight: 900;
+.logo-text a {
+    color: white !important;
+    font-weight: 900 !important;
     text-shadow: 2px 3px 0px #898999;
 }
 
