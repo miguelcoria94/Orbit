@@ -103,3 +103,11 @@ a {
     text-decoration-color: #00c9b7;
     text-decoration-thickness: 2px;
 }
+
+@media (max-width: 768px) {
+    .logo {
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
