@@ -1,1 +1,80 @@
 /* TODO Add site wide styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/******* 404 page styles*/
+#root {
+    height: calc(100vh);
+    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
+    font-family: 'Barlow', sans-serif;
+
+}
+
+html, body {
+    background-color: #000000;
+    font-family: 'Barlow', sans-serif;
+
+}
+
+.title-404 {
+    text-align: center;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.text-404 {
+    text-align: center;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    width: 60%;
+    align-self: center;
+    padding-bottom: 50px;;
+}
+
+.bg-404 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: transparent !important;
+}
+
+.animate__animated.animate__slideInRight {
+  --animate-duration:60s;
+}
+
+
+/*** Foooter **/
+
+/*** Navbar **/
+
+.navbar_container{
+    display: flex;
+    list-style: none;
+}
+
+.navbar_links {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.active {
+    color: #00C9B7 !important;
+    font-weight: 600;
+}
+
+a {
+    font-weight: 400;
+    color: #687293 !important;
+}
+
+.navbar_link:hover{
+    text-decoration: underline;
+    text-decoration-color: #00c9b7;
+    text-decoration-thickness: 2px;
+}

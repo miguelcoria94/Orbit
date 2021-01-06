@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/echo/dev/appacademy/starters/python-project-starter/.venv/bin/python",
+    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.9/bin/python3",
     "python.linting.pylintEnabled": false,
     "python.linting.enabled": true,
     "python.linting.pycodestyleEnabled": true
