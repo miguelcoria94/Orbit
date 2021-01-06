@@ -5,7 +5,7 @@
 
 /******* 404 page styles*/
 #root {
-    height: 100vh;
+    height: calc(100vh - 75px);
     background-image: linear-gradient(to right bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
 }
 
@@ -24,6 +24,7 @@
     font-weight: 300;
     width: 60%;
     align-self: center;
+    padding-bottom: 50px;;
 }
 
 .bg-404 {
