@@ -67,6 +67,10 @@ html, body {
     text-shadow: 2px 3px 0px #898999;
 }
 
+.logo-text:hover a:hover{
+    text-decoration: none;
+}
+
 nav {
     display: flex;
 }
