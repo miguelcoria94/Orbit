@@ -4,15 +4,16 @@ import LogoutButton from './auth/LogoutButton';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Orbit from "./images/orbit.png"
+import uranus from "./images/uranus.png"
 
 const NavBar = ({ setAuthenticated, authenticated }) => {
   return (
     <Container>
       <Row>
       <Col className="logo">
+          <img src={uranus} className="navbar_logo" alt="orbit-logo" />{" "}
           <h1 className="logo-text">
-            Orbit
+            rbit
           </h1>
         </Col>
         <Col>

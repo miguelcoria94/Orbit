@@ -53,7 +53,8 @@ html, body {
 
 /*** Navbar **/
 .navbar_logo {
-    height: 75px;
+    height: 35px;
+    margin-bottom: 5px;
 }
 .logo {
     display: flex;
