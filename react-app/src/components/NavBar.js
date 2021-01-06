@@ -10,9 +10,12 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
   return (
     <Container>
       <Row>
-      <Col>
-          <img src={Orbit} className="navbar_logo"/>
-      </Col>
+      <Col className="logo">
+          <img src={Orbit} className="navbar_logo" alt="orbit-logo" />
+          <h1 className="logo-text">
+            Orbit
+          </h1>
+        </Col>
         <Col>
       <ul className="navbar_container">
         <li className="navbar_links">

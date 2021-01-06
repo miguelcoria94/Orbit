@@ -52,6 +52,19 @@ html, body {
 /*** Foooter **/
 
 /*** Navbar **/
+.navbar_logo {
+    height: 75px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    color: white;
+    font-weight: 900;
+}
+
 nav {
     display: flex;
 }
