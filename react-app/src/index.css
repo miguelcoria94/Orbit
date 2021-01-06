@@ -41,6 +41,11 @@ html, body {
     color: #00C9B7 !important;
 }
 
+.test-404:hover {
+    text-shadow: #00c9b87c 0px 4px 10px, #00c9b86e 0px 1px 10px;
+    text-decoration: none;
+}
+
 .bg-404 {
     display: flex;
     flex-direction: column;
