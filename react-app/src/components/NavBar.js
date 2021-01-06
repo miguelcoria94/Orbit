@@ -1,10 +1,22 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import uranus from "./images/uranus.png"
 
 const NavBar = ({ setAuthenticated, authenticated }) => {
   return (
-    <nav>
+    <Container>
+      <Row>
+      <Col className="logo">
+          <img src={uranus} className="navbar_logo" alt="orbit-logo" />{" "}
+          <h1 className="logo-text">
+            Orbit
+          </h1>
+        </Col>
+        <Col>
       <ul className="navbar_container">
         <li className="navbar_links">
           <NavLink to="/" exact={true} activeClassName="active">
@@ -26,12 +38,28 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
             <p className="navbar_link">Users</p>
           </NavLink>
         </li>
-        {authenticated ?
+        <li className="navbar_links">
+          <NavLink to="/about" exact={true} activeClassName="active">
+            <p className="navbar_link">About</p>
+          </NavLink>
+        </li>
+        <li className="navbar_links">
+          <NavLink to="/contact" exact={true} activeClassName="active">
+            <p className="navbar_link">Contact</p>
+          </NavLink>
+        </li>
+        {authenticated ? (
           <li className="navbar_links">
             <LogoutButton setAuthenticated={setAuthenticated} />
-          </li> : ""}
+          </li>
+        ) : (
+          ""
+        )}
       </ul>
-    </nav>
+        </Col>
+
+      </Row>
+    </Container>
   );
 }
 

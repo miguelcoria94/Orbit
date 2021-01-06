@@ -52,15 +52,34 @@ html, body {
 /*** Foooter **/
 
 /*** Navbar **/
+.navbar_logo {
+    height: 35px;
+    margin-bottom: 5px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    color: white;
+    font-weight: 900;
+    text-shadow: 2px 3px 0px #898999;
+}
+
+nav {
+    display: flex;
+}
 
 .navbar_container{
     display: flex;
     list-style: none;
+    justify-content: flex-end;
 }
 
 .navbar_links {
     margin-right: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .active {
