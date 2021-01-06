@@ -55,3 +55,15 @@ body {
   height: 100px;
 
 }
+
+/*** Navbar **/
+
+.navbar_container{
+    display: flex;
+    list-style: none;
+}
+
+.navbar_links {
+    margin-right: 20px;
+    margin-top: 10px;
+}

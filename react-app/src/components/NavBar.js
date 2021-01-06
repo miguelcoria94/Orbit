@@ -5,28 +5,28 @@ import LogoutButton from './auth/LogoutButton';
 const NavBar = ({ setAuthenticated }) => {
   return (
     <nav>
-      <ul className="navbar_links">
-        <li>
+      <ul className="navbar_container">
+        <li className="navbar_links">
           <NavLink to="/" exact={true} activeClassName="active">
             Home
           </NavLink>
         </li>
-        <li>
+        <li className="navbar_links">
           <NavLink to="/login" exact={true} activeClassName="active">
             Login
           </NavLink>
         </li>
-        <li>
+        <li className="navbar_links">
           <NavLink to="/sign-up" exact={true} activeClassName="active">
             Sign Up
           </NavLink>
         </li>
-        <li>
+        <li className="navbar_links">
           <NavLink to="/users" exact={true} activeClassName="active">
             Users
           </NavLink>
         </li>
-        <li>
+        <li className="navbar_links">
           <LogoutButton setAuthenticated={setAuthenticated} />
         </li>
       </ul>
