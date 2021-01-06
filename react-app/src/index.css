@@ -10,6 +10,8 @@
     height: calc(100vh);
     background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
     font-family: 'Barlow', sans-serif;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 html, body {
@@ -120,6 +122,11 @@ a {
     background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
     font-family: 'Barlow', sans-serif;
 }
+.animate__animated.animate__slideInRight {
+  --animate-duration:20s;
+}
+
+
     .logo {
         justify-items: center;
         align-items: center;
