@@ -9,10 +9,14 @@
 #root {
     height: calc(100vh);
     background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
+    font-family: 'Barlow', sans-serif;
+
 }
 
 html, body {
     background-color: #000000;
+    font-family: 'Barlow', sans-serif;
+
 }
 
 .title-404 {
@@ -60,9 +64,10 @@ html, body {
 }
 
 .active {
-    color: #00C9B7;
+    color: #00C9B7 !important;
 }
 
-.navbar_link {
-    color: white;
+a {
+    font-weight: 600;
+    color: #687293 !important;
 }
