@@ -27,12 +27,12 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
           </NavLink>
         </li>
         <li className="navbar_links">
-          <NavLink to="/users" exact={true} activeClassName="active">
+          <NavLink to="/about" exact={true} activeClassName="active">
             <p className="navbar_link">About</p>
           </NavLink>
         </li>
         <li className="navbar_links">
-          <NavLink to="/users" exact={true} activeClassName="active">
+          <NavLink to="/contact" exact={true} activeClassName="active">
             <p className="navbar_link">Contact</p>
           </NavLink>
         </li>
