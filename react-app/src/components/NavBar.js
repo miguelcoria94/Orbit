@@ -1,10 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
+import Container from "react-bootstrap/Container";
 
 const NavBar = ({ setAuthenticated, authenticated }) => {
   return (
-    <nav>
+    <Container>
+      <div>
+        logo
+      </div>
       <ul className="navbar_container">
         <li className="navbar_links">
           <NavLink to="/" exact={true} activeClassName="active">
@@ -44,7 +48,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
           ""
         )}
       </ul>
-    </nav>
+    </Container>
   );
 }
 
