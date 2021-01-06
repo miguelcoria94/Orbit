@@ -6,7 +6,7 @@
 /******* 404 page styles*/
 body {
     height: calc(100vh);
-    background-image: linear-gradient(to right bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
+    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
 }
 
 .title-404 {
@@ -31,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    background-image: linear-gradient(to right bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
+    background-color: transparent !important;
 }
 
 .animate__animated.animate__slideInRight {
