@@ -8,11 +8,16 @@
 .title-404 {
     text-align: center;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .text-404 {
     text-align: center;
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
 }
 
 .bg-404 {
