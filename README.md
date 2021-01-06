@@ -28,7 +28,6 @@
 - savings account has limit and cool down times(✅)
 - lock account feature(✅)
 - goals/bigpurchase with money progress bar(✅)
-- low balance alert
 - notification panel(marked as read)
 - weather and welcome message
 
@@ -39,7 +38,9 @@ Bonus
 - update password
 - send a text on transaction
 - bills due calender
+- lending
 - atm map
+- group goals
 
 
 
