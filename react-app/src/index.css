@@ -80,11 +80,13 @@ nav {
     display: flex;
     list-style: none;
     justify-content: flex-end;
+    width: 100%;
+    margin: none;
 }
 
 .navbar_links {
-    margin-right: 20px;
     margin-top: 30px;
+    margin-left: 20px;
 }
 
 .active {
@@ -106,6 +108,12 @@ a {
 
 @media (max-width: 768px) {
     .logo {
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar_container {
         justify-items: center;
         align-items: center;
         justify-content: center;
