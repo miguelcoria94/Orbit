@@ -65,6 +65,7 @@ html, body {
     color: white !important;
     font-weight: 900 !important;
     text-shadow: 2px 3px 0px #898999;
+    cursor: pointer;
 }
 
 .logo-text:hover a:hover{
