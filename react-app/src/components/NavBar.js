@@ -4,13 +4,14 @@ import LogoutButton from './auth/LogoutButton';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Orbit from "./images/orbit.png"
 
 const NavBar = ({ setAuthenticated, authenticated }) => {
   return (
     <Container>
       <Row>
       <Col>
-          logo
+          <img src={Orbit} className="navbar_logo"/>
       </Col>
         <Col>
       <ul className="navbar_container">
