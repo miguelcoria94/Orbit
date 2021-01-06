@@ -13,7 +13,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
       <Col className="logo">
           <img src={uranus} className="navbar_logo" alt="orbit-logo" />{" "}
           <h1 className="logo-text">
-            rbit
+            Orbit
           </h1>
         </Col>
         <Col>

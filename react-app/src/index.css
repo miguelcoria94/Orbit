@@ -64,6 +64,7 @@ html, body {
 .logo-text {
     color: white;
     font-weight: 900;
+    text-shadow: 2px 3px 0px #898999;
 }
 
 nav {
