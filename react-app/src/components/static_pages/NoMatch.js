@@ -1,7 +1,7 @@
 import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import "bootstrap/dist/css/bootstrap.min.css";
-import spaceman from "../images/spaceman.png"
+import spaceman4 from "../images/space.png"
 import Container from "react-bootstrap/Container";
 
 const LogoutButton = ({ setAuthenticated }) => {
@@ -11,7 +11,7 @@ const LogoutButton = ({ setAuthenticated }) => {
           <img
             alt="spaceman"
             width={500}
-            src={spaceman}
+            src={spaceman4}
             height={500}
             className="animate__animated animate__slideInRight image"
           />
