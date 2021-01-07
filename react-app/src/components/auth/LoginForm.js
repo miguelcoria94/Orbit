@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import { login } from "../../services/auth";
+import { Container , Row} from "react-bootstrap/";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./LoginForm.css"
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
   const [errors, setErrors] = useState([]);
@@ -30,34 +33,51 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <form onSubmit={onLogin}>
-      <div>
-        {errors.map((error) => (
-          <div>{error}</div>
-        ))}
-      </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          name="email"
-          type="text"
-          placeholder="Email"
-          value={email}
-          onChange={updateEmail}
-        />
-      </div>
-      <div>
-        <label htmlFor="password">Password</label>
-        <input
-          name="password"
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={updatePassword}
-        />
-        <button type="submit">Login</button>
-      </div>
-    </form>
+    <Container>
+      <Row className="d-flex justify-content-center form-wrapper ">
+        <form
+          onSubmit={onLogin}
+          className="form animate__animated animate__zoomIn"
+        >
+          <div>
+            {errors.map((error) => (
+              <div>{error}</div>
+            ))}
+          </div>
+          <p className="tiny-text welcome">Welcome Back!</p>
+          <h1 className="form-title">Sign in</h1>
+          <div className="label-wrapper">
+            <label htmlFor="email" className="label">
+              Email
+            </label>
+            <input
+              name="email"
+              type="text"
+              placeholder=""
+              value={email}
+              onChange={updateEmail}
+              className="input"
+            />
+          </div>
+          <div className="label-wrapper">
+            <label htmlFor="password" className="label">
+              Password
+            </label>
+            <input
+              name="password"
+              type="password"
+              placeholder=""
+              value={password}
+              onChange={updatePassword}
+              className="input"
+            />
+            <button className="demo-button-home" type="submit">
+              Login
+            </button>
+          </div>
+        </form>
+      </Row>
+    </Container>
   );
 };
 
