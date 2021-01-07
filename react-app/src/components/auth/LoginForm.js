@@ -44,27 +44,31 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
           <p className="tiny-text welcome">Welcome Back!</p>
           <h1 className="form-title">Sign in</h1>
           <div className="label-wrapper">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className="label">
+              Email
+            </label>
             <input
               name="email"
               type="text"
-              placeholder="Email"
+              placeholder=""
               value={email}
               onChange={updateEmail}
               className="input"
             />
           </div>
           <div className="label-wrapper">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password" className="label">
+              Password
+            </label>
             <input
               name="password"
               type="password"
-              placeholder="Password"
+              placeholder=""
               value={password}
               onChange={updatePassword}
               className="input"
             />
-            <button type="submit">Login</button>
+            <button className="demo-button-home"type="submit">Login</button>
           </div>
         </form>
       </Row>
