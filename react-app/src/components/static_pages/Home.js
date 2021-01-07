@@ -9,7 +9,9 @@ const Home = ({ setAuthenticated }) => {
         <Row>
           <Col className="main-header-container">
             <h1 className="main-header-h1">
-              Mission <span>control</span>, but for your money.
+              Mission <span className="home-cta">control</span>, but for{" "}
+              <span className="home-cta">your</span>{" "}
+              <span className="home-cta">money</span>.
             </h1>
           </Col>
           <Col className="main-header-container">
