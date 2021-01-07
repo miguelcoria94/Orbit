@@ -33,6 +33,11 @@
     background: #3d4372;
     border-radius: 5px;
     border: 3px solid #353a62;
+    margin-bottom: 10px;
+}
+
+.input:focus {
+    outline: none;
 }
 
 ::placeholder {
