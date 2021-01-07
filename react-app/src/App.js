@@ -9,7 +9,6 @@ import About from "./components/static_pages/About"
 import Contact from "./components/static_pages/Contact"
 import NoMatch from "./components/static_pages/NoMatch"
 import Home from "./components/static_pages/Home"
-import axios from "axios";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
