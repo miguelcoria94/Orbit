@@ -39,9 +39,9 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
           <div>
             {errors.map((error) => (
               <div>{error}</div>
-              ))}
+            ))}
           </div>
-              <h1 className="form-title">login</h1>
+          <h1 className="form-title">Sign in</h1>
           <div className="label-wrapper">
             <label htmlFor="email">Email</label>
             <input
