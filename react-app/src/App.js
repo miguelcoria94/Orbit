@@ -52,9 +52,9 @@ function App() {
         >
           <User />
         </ProtectedRoute>
-        <ProtectedRoute path="/" exact={true} authenticated={authenticated}>
+        <Route path="/" exact={true} authenticated={authenticated}>
           <Home />
-        </ProtectedRoute>
+        </Route>
         <Route exact path="/about">
           <About />
         </Route>

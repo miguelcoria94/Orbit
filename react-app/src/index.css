@@ -7,7 +7,7 @@
 
 /******* 404 page styles*/
 #root {
-    height: calc(100vh);
+    height: calc(100%);
     background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
     font-family: 'Barlow', sans-serif;
     max-width: 100%;
@@ -41,6 +41,7 @@ html, body {
 .test-404 {
     font-family: Cousine;
     color: #00C9B7 !important;
+    padding-bottom: 20px !important;
 }
 
 .test-404:hover {
@@ -53,6 +54,10 @@ html, body {
     flex-direction: column;
     align-content: center;
     background-color: transparent !important;
+}
+
+.inv-box{
+    height: 24px;
 }
 
 .animate__animated.animate__slideInRight {
@@ -127,6 +132,7 @@ a {
 }
 
 
+
     .logo {
         justify-items: center;
         align-items: center;
@@ -148,4 +154,22 @@ a {
         padding-right: 55px !important;
         height: 25px;
     }
+}
+
+/*** Home page styles**/
+
+
+.main-header-h1 {
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    font-weight: 800;
+    font-size: 67px;
+}
+
+.main-header-container {
+    padding-top: 40px;
+}
+
+.animate__animated.animate__swing {
+    --animate-duration:70s;
 }
