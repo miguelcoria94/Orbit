@@ -175,12 +175,13 @@ a {
 }
 
 .home-cta {
-    color: #ffffff;
-    text-shadow: #0046c97c 0px 4px 10px, #0046c96e 0px 1px 10px;
+    color: #00C9B7;
     font-weight: 300;
 }
 
 
 .tiny-text {
     color: #00C9B7;
+    border-left: 3px solid #00C9B7;
+    padding-left: 10px;
 }
