@@ -1,8 +1,9 @@
 import React from 'react'
 import { Row, Col, Container } from "react-bootstrap/";
-import spaceman from "../images/spaceman2.png"
+import spaceman from "../images/spaceman2.png";
+import DemoButton from "../auth/DemoButton"
 
-const Home = ({ setAuthenticated }) => {
+const Home = ({ setAuthenticated, authenticated }) => {
 
     return (
       <Container>
@@ -23,6 +24,7 @@ const Home = ({ setAuthenticated }) => {
               </span>
               .
             </h1>
+                    <DemoButton setAuthenticated={setAuthenticated} authenticated={authenticated}/>
           </Col>
           <Col className="main-header-container">
             <img
