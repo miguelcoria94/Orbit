@@ -4,12 +4,12 @@ import LoginForm from "./components/auth/LoginForm";
 import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
-import User from "./components/User";
 import { authenticate } from "./services/auth";
 import About from "./components/static_pages/About"
 import Contact from "./components/static_pages/Contact"
 import NoMatch from "./components/static_pages/NoMatch"
 import Home from "./components/static_pages/Home"
+import axios from "axios";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -31,7 +31,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar setAuthenticated={setAuthenticated} authenticated={authenticated}/>
+      <NavBar
+        setAuthenticated={setAuthenticated}
+        authenticated={authenticated}
+      />
       <Switch>
         <Route path="/login" exact={true}>
           <LoginForm
@@ -45,15 +48,15 @@ function App() {
             setAuthenticated={setAuthenticated}
           />
         </Route>
-        <ProtectedRoute
-          path="/users/:userId"
-          exact={true}
-          authenticated={authenticated}
-        >
-          <User />
-        </ProtectedRoute>
         <Route path="/" exact={true} authenticated={authenticated}>
-          <Home authenticate={authenticate} setAuthenticated={setAuthenticated}/>
+          {authenticated ? (
+            <h1>Hello</h1>
+          ) : (
+            <Home
+              authenticate={authenticate}
+              setAuthenticated={setAuthenticated}
+            />
+          )}
         </Route>
         <Route exact path="/about">
           <About />
@@ -61,7 +64,7 @@ function App() {
         <Route exact path="/contact">
           <Contact />
         </Route>
-        <Route component={NoMatch}/>
+        <Route component={NoMatch} />
       </Switch>
     </BrowserRouter>
   );
