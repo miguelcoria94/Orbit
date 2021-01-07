@@ -161,9 +161,10 @@ a {
 .main-header-h1 {
     font-family: 'Barlow', sans-serif;
     color: white;
-    font-weight: 800;;
+    font-weight: 800;
+    font-size: 75px;
 }
 
 .main-header-container {
-    
+    padding-top: 40px;
 }
