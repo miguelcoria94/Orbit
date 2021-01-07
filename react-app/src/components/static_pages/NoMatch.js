@@ -17,7 +17,9 @@ const LogoutButton = ({ setAuthenticated }) => {
           />
         </Container>
         <h1 className="title-404">Oh, ship...</h1>
-        <h1 className="title-404">Houston, we have a problem.</h1>
+        <h1 className="title-404">
+          Houston, we have a problem.
+        </h1>
         <a href="/" className="text-center test-404">
           404 Page Not Found - Go back home
         </a>
