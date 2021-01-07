@@ -41,7 +41,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               <div>{error}</div>
             ))}
           </div>
-          <div>
+          <div className="label-wrapper">
             <label htmlFor="email">Email</label>
             <input
               name="email"
@@ -51,7 +51,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               onChange={updateEmail}
             />
           </div>
-          <div>
+          <div className="label-wrapper">
             <label htmlFor="password">Password</label>
             <input
               name="password"

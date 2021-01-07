@@ -5,3 +5,8 @@
     align-content: center;
     justify-content: center;
 }
+
+.label-wrapper {
+    display: flex;
+    flex-direction: column;
+}
