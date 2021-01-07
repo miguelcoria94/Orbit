@@ -198,6 +198,7 @@ background-size: 200% auto;
 color: white;            
 border-radius: 10px;
 display: block;
+border: none;
 }
 
 .demo-button-home:hover {
