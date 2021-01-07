@@ -48,14 +48,10 @@ function App() {
           />
         </Route>
         <Route path="/" exact={true} authenticated={authenticated}>
-          {authenticated ? (
-            <h1>Hello</h1>
-          ) : (
             <Home
               authenticate={authenticate}
               setAuthenticated={setAuthenticated}
             />
-          )}
         </Route>
         <Route exact path="/about">
           <About />
