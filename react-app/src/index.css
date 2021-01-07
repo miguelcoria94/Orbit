@@ -170,8 +170,8 @@ a {
     padding-top: 40px;
 }
 
-.animate__animated.animate__swing {
-    --animate-duration:70s;
+.animate__animated.animate__shakeY {
+    --animate-duration:30s;
 }
 
 .home-cta {
