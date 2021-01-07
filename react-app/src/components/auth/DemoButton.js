@@ -8,9 +8,7 @@ const DemoButton = ({ setAuthenticated, authenticated }) => {
     window.location.reload(false);
   };
 
-  return authenticated ? (
-    ""
-  ) : (
+  return (
     <button className="demo-button-home" onClick={demoPress}>
       Login as a Demo User
     </button>
