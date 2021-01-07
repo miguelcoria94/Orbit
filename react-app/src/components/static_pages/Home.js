@@ -12,11 +12,16 @@ const Home = ({ setAuthenticated }) => {
               Mission <span>control</span>, but for your money.
             </h1>
           </Col>
-        </Row>
-        <Row>
           <Col className="main-header-container">
-            <img src={spaceman} width="500"/>
+            <img src={spaceman} width="600"/>
           </Col>
+        </Row>
+            <Row>
+                <Col>
+                    <Row>
+
+                    </Row>
+                </Col>
         </Row>
       </Container>
     );
