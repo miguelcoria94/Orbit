@@ -31,7 +31,7 @@ export const logout = async () => {
 };
 
 
-export const signUp = async (username, email, password) => {
+export const signUp = async (username, email, password, firstname, lastname) => {
   const response = await fetch("/api/auth/signup", {
     method: "POST",
     headers: {
@@ -41,7 +41,23 @@ export const signUp = async (username, email, password) => {
       username,
       email,
       password,
+      firstname,
+      lastname,
     }),
   });
   return await response.json();
 }
+
+export const demo = async (email = "demo@aa.io", password = "password") => {
+  const response = await fetch("/api/auth/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email,
+      password,
+    }),
+  });
+  return await response.json();
+};
