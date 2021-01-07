@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Container } from "react-bootstrap/";
-import control from "../images/control.png"
+import spaceman from "../images/spaceman2.png"
 
 const Home = ({ setAuthenticated }) => {
 
@@ -12,10 +12,11 @@ const Home = ({ setAuthenticated }) => {
               Mission <span>control</span>, but for your money.
             </h1>
           </Col>
+        </Row>
+        <Row>
           <Col className="main-header-container">
-                    <img src={control}/>
+            <img src={spaceman} width="500"/>
           </Col>
-          
         </Row>
       </Container>
     );
