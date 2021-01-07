@@ -41,7 +41,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               <div>{error}</div>
             ))}
           </div>
-          <p className="tiny-text">Welcome Back!</p>
+          <p className="tiny-text welcome">Welcome Back!</p>
           <h1 className="form-title">Sign in</h1>
           <div className="label-wrapper">
             <label htmlFor="email">Email</label>
