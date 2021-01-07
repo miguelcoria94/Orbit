@@ -50,6 +50,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               placeholder="Email"
               value={email}
               onChange={updateEmail}
+              className="input"
             />
           </div>
           <div className="label-wrapper">
@@ -60,6 +61,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               placeholder="Password"
               value={password}
               onChange={updatePassword}
+              className="input"
             />
             <button type="submit">Login</button>
           </div>
