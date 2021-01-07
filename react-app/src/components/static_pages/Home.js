@@ -7,7 +7,8 @@ const Home = ({ setAuthenticated }) => {
     return (
       <Container>
         <Row>
-          <Col className="main-header-container">
+                <Col className="main-header-container">
+                    <p className="tiny-text">Personal Finance App</p>
             <h1 className="main-header-h1">
               Mission <span className="home-cta">control</span>, but for{" "}
               <span className="home-cta">your</span>{" "}

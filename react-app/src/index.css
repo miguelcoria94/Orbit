@@ -176,7 +176,11 @@ a {
 
 .home-cta {
     color: #ffffff;
-    text-shadow: #00c9b87c 0px 4px 10px, #00c9b86e 0px 1px 10px;
+    text-shadow: #0046c97c 0px 4px 10px, #0046c96e 0px 1px 10px;
+    font-weight: 300;
 }
 
 
+.tiny-text {
+    color: #00C9B7;
+}
