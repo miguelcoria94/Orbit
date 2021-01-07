@@ -4,10 +4,11 @@
     align-self: center;
     align-content: center;
     justify-content: center;
-    background-color: black;
+    background-color: #202442;
     width: 80%;
     height: 500px;
     padding: 40px;
+    border-radius: 10px;
 }
 
 .label-wrapper {
