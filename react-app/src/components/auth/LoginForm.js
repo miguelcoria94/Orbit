@@ -34,7 +34,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 
   return (
     <Container>
-      <Row className="d-flex justify-content-center">
+      <Row className="d-flex justify-content-center form-wrapper">
         <form onSubmit={onLogin} className="form">
           <div>
             {errors.map((error) => (

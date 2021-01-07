@@ -4,9 +4,16 @@
     align-self: center;
     align-content: center;
     justify-content: center;
+    background-color: black;
+    width: 80%;
+    height: 500px;
 }
 
 .label-wrapper {
     display: flex;
     flex-direction: column;
+}
+
+.form-wrapper {
+    height: 600px;
 }
