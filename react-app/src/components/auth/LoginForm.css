@@ -20,3 +20,10 @@
 .form-wrapper {
     height: 600px;
 }
+
+.form-title {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
