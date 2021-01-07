@@ -169,3 +169,7 @@ a {
 .main-header-container {
     padding-top: 40px;
 }
+
+.animate__animated.animate__swing {
+    --animate-duration:120s;
+}

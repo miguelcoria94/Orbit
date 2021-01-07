@@ -13,15 +13,17 @@ const Home = ({ setAuthenticated }) => {
             </h1>
           </Col>
           <Col className="main-header-container">
-            <img src={spaceman} width="600"/>
+            <img
+              src={spaceman}
+              width="600"
+              className="animate__animated animate__swing"
+            />
           </Col>
         </Row>
-            <Row>
-                <Col>
-                    <Row>
-
-                    </Row>
-                </Col>
+        <Row>
+          <Col>
+            <Row></Row>
+          </Col>
         </Row>
       </Container>
     );
