@@ -186,6 +186,23 @@ a {
     padding-left: 10px;
 }
 
-.demo-button-home {
-    
+
+.demo-button-home  {background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)}
+.demo-button-home  {
+margin-top: 30px;
+padding: 15px 45px;
+text-align: center;
+text-transform: uppercase;
+transition: 0.5s;
+background-size: 200% auto;
+color: white;            
+border-radius: 10px;
+display: block;
 }
+
+.demo-button-home:hover {
+background-position: right center; /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
+}
+         
