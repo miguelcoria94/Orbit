@@ -34,8 +34,11 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
 
   return (
     <Container>
-      <Row className="d-flex justify-content-center form-wrapper">
-        <form onSubmit={onLogin} className="form">
+      <Row className="d-flex justify-content-center form-wrapper ">
+        <form
+          onSubmit={onLogin}
+          className="form animate__animated animate__zoomIn"
+        >
           <div>
             {errors.map((error) => (
               <div>{error}</div>
@@ -68,7 +71,9 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               onChange={updatePassword}
               className="input"
             />
-            <button className="demo-button-home"type="submit">Login</button>
+            <button className="demo-button-home" type="submit">
+              Login
+            </button>
           </div>
         </form>
       </Row>
