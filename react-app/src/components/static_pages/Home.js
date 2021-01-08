@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { Row, Col, Container } from "react-bootstrap/";
 import spaceman from "../images/spaceman2.png";
 import DemoButton from "../auth/DemoButton"

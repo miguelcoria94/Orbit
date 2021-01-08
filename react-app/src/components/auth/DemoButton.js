@@ -1,9 +1,7 @@
 import React from "react";
 import { demo } from "../../services/auth";
 
-const DemoButton = ({ setAuthenticated, authenticated, currentUser }) => {
-
-  currentUser = null
+const DemoButton = ({ setAuthenticated }) => {
   const demoPress = async (e) => {
     await demo();
     setAuthenticated(true);
