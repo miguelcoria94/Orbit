@@ -1,8 +1,7 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 import { demo } from "../../services/auth";
 
-const DemoButton = ({ setAuthenticated, authenticated }) => {
+const DemoButton = ({ setAuthenticated }) => {
   const demoPress = async (e) => {
     await demo();
     setAuthenticated(true);
