@@ -5,6 +5,7 @@ const DemoButton = ({ setAuthenticated }) => {
   const demoPress = async (e) => {
     await demo();
     setAuthenticated(true);
+    window.location.reload();
   };
 
   return (

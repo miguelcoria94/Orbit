@@ -3,7 +3,7 @@ import { Row, Col, Container } from "react-bootstrap/";
 import spaceman from "../images/spaceman2.png";
 import DemoButton from "../auth/DemoButton"
 
-const Home = ({ setAuthenticated, authenticated }) => {
+const Home = ({ setAuthenticated }) => {
     return (
       <Container>
         <Row>
@@ -23,7 +23,7 @@ const Home = ({ setAuthenticated, authenticated }) => {
               </span>
               .
             </h1>
-                    <DemoButton setAuthenticated={setAuthenticated}/>
+            <DemoButton setAuthenticated={setAuthenticated}/>
           </Col>
           <Col className="main-header-container">
                     <img

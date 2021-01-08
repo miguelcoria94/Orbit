@@ -1,15 +1,20 @@
 import React from "react";
 import { logout } from "../../services/auth";
-import Button from 'react-bootstrap/Button'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const LogoutButton = ({setAuthenticated}) => {
+const LogoutButton = ({ setAuthenticated }) => {
   const onLogout = async (e) => {
+    e.preventDefault();
     await logout();
     setAuthenticated(false);
+    window.location.href = "/login"
   };
-
-  return <Button onClick={onLogout}>Logout</Button>;
+  
+  return (
+    <button className="demo-button-home logout-button" onClick={onLogout}>
+      Logout
+    </button>
+  );
 };
 
 export default LogoutButton;

@@ -18,6 +18,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
     if (password === repeatPassword) {
       const user = await signUp(username, email, password, firstname, lastname);
       if (!user.errors) {
+        window.location.reload();
         setAuthenticated(true);
       }
     }
@@ -56,7 +57,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
       <Row className="d-flex justify-content-center form-wrapper-register ">
         <form
           onSubmit={onSignUp}
-          className="form animate__animated animate__zoomIn"
+          className="form"
         >
           <p className="tiny-text welcome">Welcome!</p>
           <h1 className="form-title">Sign up</h1>

@@ -206,4 +206,11 @@ background-position: right center; /* change the direction of the change here */
 color: #fff;
 text-decoration: none;
 }
+
+.logout-button {
+    margin-left: 20px;
+    padding: 5px 25px !important;
+    height: 40px;
+    border-radius: 5px;
+}
          

@@ -15,12 +15,14 @@ import { Redirect } from "react-router-dom";
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [currentUser, setCurrentUser] = useState("")
 
   useEffect(() => {
     (async() => {
       const user = await authenticate();
       if (!user.errors) {
         setAuthenticated(true);
+        setCurrentUser(user.username)
       }
       setLoaded(true);
     })();
@@ -30,11 +32,16 @@ function App() {
     return null;
   }
 
+  if (!currentUser) {
+    
+  }
+
   return (
     <BrowserRouter>
       <NavBar
-        setAuthenticated={setAuthenticated}
         authenticated={authenticated}
+        setAuthenticated={setAuthenticated}
+        currentUser={currentUser}
       />
       <Switch>
         <Route path="/login" exact={true}>
@@ -56,6 +63,7 @@ function App() {
           <Home
             authenticate={authenticate}
             setAuthenticated={setAuthenticated}
+            currentUser={currentUser}
           />
         </Route>
         <Route exact path="/about">

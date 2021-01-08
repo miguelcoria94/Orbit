@@ -14,6 +14,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
     e.preventDefault();
     const user = await login(email, password);
     if (!user.errors) {
+      window.location.reload();
       setAuthenticated(true);
     } else {
       setErrors(user.errors);
@@ -37,7 +38,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
       <Row className="d-flex justify-content-center form-wrapper ">
         <form
           onSubmit={onLogin}
-          className="form animate__animated animate__zoomIn"
+          className="form"
         >
           <div>
             {errors.map((error) => (
