@@ -59,6 +59,8 @@ function App() {
         <Route exact path="/contact">
           <Contact />
         </Route>
+        <ProtectedRoute path="/dashboard" exact={true} authenticate={authenticate}>
+        </ProtectedRoute>
         <Route component={NoMatch} />
       </Switch>
     </BrowserRouter>
