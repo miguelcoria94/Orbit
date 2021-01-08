@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect }from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
 import Container from "react-bootstrap/Container";
@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import uranus from "./images/uranus.png"
 
 const NavBar = ({ setAuthenticated, authenticated }) => {
+  const [currentUser, setCurrentUser] = useState("");
   return (
     <Container>
       <Row>
