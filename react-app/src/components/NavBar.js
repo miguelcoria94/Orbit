@@ -1,17 +1,18 @@
-import React, { useState, useEffect }from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import LogoutButton from './auth/LogoutButton';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import uranus from "./images/uranus.png"
+import uranus from "./images/uranus.png";
 
-const NavBar = ({ setAuthenticated, authenticated }) => {
-  const [currentUser, setCurrentUser] = useState("");
+
+const NavBar = ({ setAuthenticated, authenticated, currentUser}) => {
+
   return (
     <Container>
       <Row>
-          {authenticated ? "":
+        {authenticated ? <h1>{currentUser}</h1>:
         <Col className="logo" linkto="/">
           <a href="/">
             <img
@@ -53,7 +54,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
               </NavLink>
             </li>
             {authenticated ? (
-                <LogoutButton setAuthenticated={setAuthenticated} />
+                <LogoutButton setAuthenticated={setAuthenticated} currentUser={currentUser} />
             ) : (
               ""
             )}
