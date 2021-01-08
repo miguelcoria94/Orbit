@@ -10,6 +10,7 @@ import Contact from "./components/static_pages/Contact"
 import NoMatch from "./components/static_pages/NoMatch"
 import Home from "./components/static_pages/Home"
 import Dashboard from "./components/Dashboard";
+import { Redirect } from "react-router-dom";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -49,6 +50,9 @@ function App() {
           />
         </Route>
         <Route path="/" exact={true} authenticated={authenticated}>
+          {authenticated ?  
+    <Redirect to="/dashboard" />: ""
+  }
           <Home
             authenticate={authenticate}
             setAuthenticated={setAuthenticated}
