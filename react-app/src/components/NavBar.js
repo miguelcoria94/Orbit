@@ -10,6 +10,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
   return (
     <Container>
       <Row>
+          {authenticated ? "":
         <Col className="logo" linkto="/">
           <a href="/">
             <img
@@ -22,7 +23,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
           <h1 className="logo-text" href>
             <a href="/">Orbit</a>
           </h1>
-        </Col>
+        </Col>}
         <Col className="navbar_link-wrapper">
           <ul className="navbar_container">
             <li className="navbar_links">
