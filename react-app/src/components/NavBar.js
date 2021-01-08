@@ -28,11 +28,12 @@ const NavBar = ({ setAuthenticated, authenticated, currentUser}) => {
         </Col>}
         <Col className="navbar_link-wrapper">
           <ul className="navbar_container">
-            <li className="navbar_links">
-              <NavLink to="/" exact={true} activeClassName="active">
-                <p className="navbar_link">Home</p>
-              </NavLink>
-            </li>{ authenticated ? "" :
+            {authenticated ? "" :
+              <li className="navbar_links">
+                <NavLink to="/" exact={true} activeClassName="active">
+                  <p className="navbar_link">Home</p>
+                </NavLink>
+              </li>}{ authenticated ? "" :
               <li className="navbar_links">
                 <NavLink to="/login" exact={true} activeClassName="active">
                   <p className="navbar_link">Login</p>
@@ -43,16 +44,18 @@ const NavBar = ({ setAuthenticated, authenticated, currentUser}) => {
                   <p className="navbar_link">Signup</p>
                 </NavLink>
               </li>}
-            <li className="navbar_links">
-              <NavLink to="/about" exact={true} activeClassName="active">
-                <p className="navbar_link">About</p>
-              </NavLink>
-            </li>
-            <li className="navbar_links">
-              <NavLink to="/contact" exact={true} activeClassName="active">
-                <p className="navbar_link">Contact</p>
-              </NavLink>
-            </li>
+            {authenticated ? "" :
+              <li className="navbar_links">
+                <NavLink to="/about" exact={true} activeClassName="active">
+                  <p className="navbar_link">About</p>
+                </NavLink>
+              </li>}
+            {authenticated ? "" :
+              <li className="navbar_links">
+                <NavLink to="/contact" exact={true} activeClassName="active">
+                  <p className="navbar_link">Contact</p>
+                </NavLink>
+              </li>}
             {authenticated ? (
                 <LogoutButton setAuthenticated={setAuthenticated} currentUser={currentUser} />
             ) : (
