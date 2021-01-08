@@ -54,7 +54,10 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   return (
     <Container>
       <Row className="d-flex justify-content-center form-wrapper ">
-        <form onSubmit={onSignUp}>
+        <form
+          onSubmit={onSignUp}
+          className="form animate__animated animate__zoomIn"
+        >
           <div>
             <label>First Name</label>
             <input
