@@ -58,6 +58,8 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
           onSubmit={onSignUp}
           className="form animate__animated animate__zoomIn"
         >
+          <p className="tiny-text welcome">Welcome!</p>
+          <h1 className="form-title">Sign up</h1>
           <div>
             <label>First Name</label>
             <input
