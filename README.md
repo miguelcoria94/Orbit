@@ -39,6 +39,8 @@ Bonus
 - send a text on transaction
 - bills due calender
 - atm map
+- tools
+
 
 
 
