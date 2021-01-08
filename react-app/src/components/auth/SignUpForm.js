@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Redirect } from 'react-router-dom';
 import { signUp } from '../../services/auth';
-import { Container, Row } from "react-bootstrap/";
+import { Container, Row, Col } from "react-bootstrap/";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./LoginForm.css";
 
@@ -53,69 +53,79 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
 
   return (
     <Container>
-      <Row className="d-flex justify-content-center form-wrapper ">
+      <Row className="d-flex justify-content-center form-wrapper-register ">
         <form
           onSubmit={onSignUp}
           className="form animate__animated animate__zoomIn"
         >
           <p className="tiny-text welcome">Welcome!</p>
           <h1 className="form-title">Sign up</h1>
-          <div>
-            <label>First Name</label>
+          <Row className="name-box">
+          <Col className="label-wrapper">
+            <label className="label">First Name</label>
             <input
               type="text"
               name="firstname"
               onChange={updateFirstname}
               value={firstname}
+              className="input"
             ></input>
-          </div>
-          <div>
-            <label>Last Name</label>
+          </Col>
+          <Col className="label-wrapper">
+            <label className="label">Last Name</label>
             <input
               type="text"
               name="lastname"
               onChange={updateLastname}
               value={lastname}
+              className="input"
             ></input>
-          </div>
-          <div>
-            <label>User Name</label>
+          </Col>
+          </Row>
+          <div className="label-wrapper">
+            <label className="label">User Name</label>
             <input
               type="text"
               name="username"
               onChange={updateUsername}
               value={username}
+              className="input"
             ></input>
           </div>
-          <div>
-            <label>Email</label>
+          <div className="label-wrapper">
+            <label className="label">Email</label>
             <input
               type="text"
               name="email"
               onChange={updateEmail}
               value={email}
+              className="input"
             ></input>
           </div>
-          <div>
-            <label>Password</label>
+          <div className="label-wrapper">
+            <label className="label">Password</label>
             <input
               type="password"
               name="password"
               onChange={updatePassword}
               value={password}
+              className="input"
             ></input>
           </div>
-          <div>
-            <label>Repeat Password</label>
+          <div className="label-wrapper">
+            <label className="label">Repeat Password</label>
             <input
               type="password"
               name="repeat_password"
               onChange={updateRepeatPassword}
               value={repeatPassword}
               required={true}
+              className="input"
             ></input>
           </div>
-          <button type="submit">Sign Up</button>
+          <button className="demo-button-home" type="submit">
+            Sign Up
+          </button>
         </form>
       </Row>
     </Container>
