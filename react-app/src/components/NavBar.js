@@ -51,9 +51,7 @@ const NavBar = ({ setAuthenticated, authenticated }) => {
               </NavLink>
             </li>
             {authenticated ? (
-              <li className="navbar_links">
                 <LogoutButton setAuthenticated={setAuthenticated} />
-              </li>
             ) : (
               ""
             )}

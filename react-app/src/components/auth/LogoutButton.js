@@ -1,6 +1,5 @@
 import React from "react";
 import { logout } from "../../services/auth";
-import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const LogoutButton = ({setAuthenticated}) => {
@@ -9,7 +8,11 @@ const LogoutButton = ({setAuthenticated}) => {
     setAuthenticated(false);
   };
 
-  return <Button onClick={onLogout}>Logout</Button>;
+  return (
+    <button className="demo-button-home logout-button" onClick={onLogout}>
+      Logout
+    </button>
+  );
 };
 
 export default LogoutButton;
