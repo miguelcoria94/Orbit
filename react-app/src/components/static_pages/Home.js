@@ -1,10 +1,10 @@
 import React from 'react'
+import { Redirect } from "react-router-dom";
 import { Row, Col, Container } from "react-bootstrap/";
 import spaceman from "../images/spaceman2.png";
 import DemoButton from "../auth/DemoButton"
 
 const Home = ({ setAuthenticated, authenticated }) => {
-
     return (
       <Container>
         <Row>
