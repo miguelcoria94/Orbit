@@ -6,12 +6,7 @@ const DemoButton = ({ setAuthenticated, authenticated }) => {
   const demoPress = async (e) => {
     await demo();
     setAuthenticated(true);
-    window.location.reload(false);
-    if (authenticated) {
-      return <Redirect to="/dashboard" />;
-    }
   };
-
 
   return (
     <button className="demo-button-home" onClick={demoPress}>

@@ -49,10 +49,10 @@ function App() {
           />
         </Route>
         <Route path="/" exact={true} authenticated={authenticated}>
-            <Home
-              authenticate={authenticate}
-              setAuthenticated={setAuthenticated}
-            />
+          <Home
+            authenticate={authenticate}
+            setAuthenticated={setAuthenticated}
+          />
         </Route>
         <Route exact path="/about">
           <About />
@@ -60,9 +60,13 @@ function App() {
         <Route exact path="/contact">
           <Contact />
         </Route>
-        <Route path="/dashboard" exact={true} authenticate={authenticate}>
-          <Dashboard authenticated={authenticated}/>
-        </Route>
+        <ProtectedRoute
+          path="/dashboard"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Dashboard/>
+        </ProtectedRoute>
         <Route component={NoMatch} />
       </Switch>
     </BrowserRouter>
