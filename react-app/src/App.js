@@ -9,6 +9,7 @@ import About from "./components/static_pages/About"
 import Contact from "./components/static_pages/Contact"
 import NoMatch from "./components/static_pages/NoMatch"
 import Home from "./components/static_pages/Home"
+import Dashboard from "./components/Dashboard";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -60,6 +61,7 @@ function App() {
           <Contact />
         </Route>
         <ProtectedRoute path="/dashboard" exact={true} authenticate={authenticate}>
+          <Dashboard />
         </ProtectedRoute>
         <Route component={NoMatch} />
       </Switch>
