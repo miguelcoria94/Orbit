@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import { demo } from "../../services/auth";
 
 const DemoButton = ({ setAuthenticated, authenticated }) => {
@@ -6,7 +7,11 @@ const DemoButton = ({ setAuthenticated, authenticated }) => {
     await demo();
     setAuthenticated(true);
     window.location.reload(false);
+    if (authenticated) {
+      return <Redirect to="/dashboard" />;
+    }
   };
+
 
   return (
     <button className="demo-button-home" onClick={demoPress}>
