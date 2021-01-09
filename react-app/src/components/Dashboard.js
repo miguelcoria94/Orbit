@@ -7,7 +7,7 @@ import LogoutButton from "./auth/LogoutButton"
 
 const Dashboard = ({ setAuthenticated, authenticated, currentUser }) => {
   return (
-    <Container className="dashboard-wrapper">
+    <Container fluid className="dashboard-wrapper">
       <Row>
         <Col className="col-3">
           <SideNav currentUser={currentUser} />

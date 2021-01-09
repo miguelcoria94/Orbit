@@ -1,11 +1,12 @@
 .dashboard-wrapper {
-    height: 600px;
+    height: 90vh;
     background-color: #26294B;
     border-radius: 10px;
     padding:0 !important;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     margin-top: 25px;
     margin-bottom: 25px;
+    width: 90vw;
 }
 
 .sidenav-wrapper {
@@ -13,7 +14,7 @@
     background-color: #202442;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    height: 600px;
+    height: 90vh;
     justify-content: center;
     align-content: center;
     align-items: center;
