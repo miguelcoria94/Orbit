@@ -1,7 +1,7 @@
 import React from "react";
 import { demo } from "../../services/auth";
 
-const DemoButton = ({ setAuthenticated }) => {
+const ActivateSavingsButton = ({  }) => {
   const demoPress = async (e) => {
     await demo();
     setAuthenticated(true);
@@ -15,4 +15,4 @@ const DemoButton = ({ setAuthenticated }) => {
   );
 };
 
-export default DemoButton;
+export default ActivateSavingsButton;
