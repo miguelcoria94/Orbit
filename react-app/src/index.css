@@ -213,4 +213,7 @@ text-decoration: none;
     height: 40px;
     border-radius: 5px;
 }
+.welcome-message {
+    color: white;
+}
          
