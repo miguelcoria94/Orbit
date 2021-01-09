@@ -9,7 +9,7 @@ function SavingsCard({ currentUserId }) {
   useEffect(() => {
 		(async () => {
 			const data = await axios.get(
-        `http://127.0.0.1:5000/api/savings_account/${currentUserId}`
+        `/api/savings_account/${currentUserId}`
       );
 			setBalance(data.data.savings_balance[0]);
 		})();
