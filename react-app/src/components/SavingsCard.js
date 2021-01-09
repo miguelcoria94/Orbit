@@ -29,7 +29,7 @@ function SavingsCard({ currentUserId }) {
         <>
           <div className="disabled-wrapper">
             <i class="fas fa-circle icon-disabled"></i>
-              <p>Disabled</p>
+              <p className="disabled-text">Disabled</p>
               <ActivateSavingsButton currentUserId={currentUserId}/>
           </div>
           <h1 className="balance">{"$0"}</h1>
