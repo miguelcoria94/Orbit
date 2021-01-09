@@ -19,9 +19,6 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
                 href="/"
               />{" "}
             </a>
-            <h1 className="sidelogo-text" href>
-              <a href="/">Orbit</a>
-            </h1>
           </Col>
           <h1 className="welcome-message-1">Dashboard</h1>
           <p className="welcome-message-2">Logged in as {currentUser}</p>
