@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function BalanceCard() {
+function SavingsCard() {
   const [balance, setBalance] = useState([]);
 
   useEffect(() => {
@@ -17,4 +17,4 @@ function BalanceCard() {
   return <h1>test</h1>;
 }
 
-export default BalanceCard;
+export default SavingsCard;
