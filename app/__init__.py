@@ -8,7 +8,7 @@ from flask_login import LoginManager
 from .models import db, User
 from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
-from .api.savings_account_route import savings_account_route
+from .api.savings_account_routes import savings_account_routes
 
 
 from .seeds import seed_commands
