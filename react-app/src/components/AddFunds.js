@@ -1,31 +1,19 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 
-const AddFunds = ({ currentUserId }) => {
-  const history = useHistory();
-  const activateSavings = async (e) => {
-    e.preventDefault();
-    const userBalance = 0;
-
-    const response = await fetch("/api/savings_account", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        currentUserId,
-        userBalance,
-      }),
-    });
-
-    if (response.ok) {
-      window.location.reload();
-    }
-  };
+const AddFunds = ({ currentUserId, currentBalance }) => {
+    const history = useHistory();
+    const newBalance = 100 + currentBalance
+    const addFunds = async (e) => {
+      const request = { newBalance, currentUserId };
+      const response = await axios.put(`/api/checkings_account/${currentUserId}`, request);
+      console.log(response);
+    };
 
   return (
-    <button className="add-funds-button" onClick={activateSavings}>
-      <i class="fas fa-power-off"></i> Activate Savings
+    <button className="add-funds-button" onClick={addFunds}>
+      Load $100
     </button>
   );
 };

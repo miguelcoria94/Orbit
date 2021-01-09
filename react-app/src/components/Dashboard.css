@@ -146,6 +146,24 @@ a {
             text-decoration: none;
             background-color: rgb(71, 226, 84);
           }
+
+          .add-funds-button {
+            transition: 0.5s;
+            background-size: 200% auto;
+            border: none;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    background-color: rgb(28, 131, 37);
+    color: white;
+          }
+
+          .add-funds-button:hover{
+background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+            background-color: rgb(71, 226, 84);
+          }
          
 
 @media (max-width: 768px) {

@@ -11,7 +11,7 @@ function SavingsCard({ currentUserId }) {
 			const data = await axios.get(
         `/api/savings_account/${currentUserId}`
       );
-			setBalance(data.data.savings_balance[0]);
+      setBalance(data.data.savings_balance[0]);
 		})();
   }, []);
   

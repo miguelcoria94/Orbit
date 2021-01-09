@@ -4,15 +4,17 @@ import "./Dashboard.css";
 import LoadCheckings from "./LoadCheckings";
 import AddFunds from "./AddFunds";
 
-function SavingsCard({ currentUserId }) {
-  const [balance, setBalance] = useState([]);
+function CheckingsCard({ currentUserId }) {
+    const [balance, setBalance] = useState([]);
+    const [currentBalance, setCurrentBalance] = useState("");
 
   useEffect(() => {
     (async () => {
       const data = await axios.get(`/api/checkings_account/${currentUserId}`);
-      setBalance(data.data.checkings_balance[0]);
+        setBalance(data.data.checkings_balance[0]);
+        setCurrentBalance(data.data.checkings_balance[0].balance);
     })();
-  }, []);
+}, []);
 
   return (
     <div className="card custom-card">
@@ -20,8 +22,11 @@ function SavingsCard({ currentUserId }) {
         <>
           <div className="disabled-wrapper">
             <i className="fas fa-circle icon-active"></i>
-                      <p className="active-text">active</p>
-                      <AddFunds />
+            <p className="active-text">active</p>
+            <AddFunds
+              currentBalance={currentBalance}
+              currentUserId={currentUserId}
+            />
           </div>
           <h1 className="balance">${balance.balance}</h1>
         </>
@@ -40,4 +45,4 @@ function SavingsCard({ currentUserId }) {
   );
 }
 
-export default SavingsCard;
+export default CheckingsCard;
