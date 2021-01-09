@@ -14,7 +14,7 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
             <a href="/">
               <img
                 src={uranus}
-                className="sidenavbar_logo"
+                className="sidenavbar_logo animate__animated animate__headShake"
                 alt="orbit-logo"
                 href="/"
               />{" "}

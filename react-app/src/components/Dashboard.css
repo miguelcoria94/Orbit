@@ -153,6 +153,10 @@ background-position: right center; /* change the direction of the change here */
           }
          
 
+          .animate__animated.animate__headShake {
+              --animate-duration:30s;
+          }
+
 @media (max-width: 768px) {
     .dashboard-wrapper {
     }
