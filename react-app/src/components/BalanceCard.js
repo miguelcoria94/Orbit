@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function Story() {
+function BalanceCard() {
   const [balance, setBalance] = useState([]);
 
   useEffect(() => {
@@ -12,11 +12,9 @@ function Story() {
       setBalance(data);
     })();
     console.log("hi");
-  }, [story]);
-
-  console.log(story);
+  }, [balance]);
 
   return <h1>test</h1>;
 }
 
-export default Story;
+export default BalanceCard;
