@@ -38,7 +38,9 @@ const SideNav = () => {
                 exact={true}
                 activeClassName="active-sidenav"
               >
-                <p>Transfer</p>
+                <p>
+                  <i class="fas fa-exchange-alt icon"></i>Transfer
+                </p>
               </NavLink>
             </li>
             <li className="navbar_links-sidenav">
