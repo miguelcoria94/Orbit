@@ -219,10 +219,12 @@ text-decoration: none;
     font-size: 14px;
     font-family: Cousine;
     margin-left: 2px;
+    text-shadow: #00c9b87c 0px 4px 10px, #00c9b86e 0px 1px 10px;
 }
 
 .welcome-message-1 {
     color: white;
     margin-top: 20px;
+    
 }
          
