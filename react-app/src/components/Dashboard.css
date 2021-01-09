@@ -99,6 +99,15 @@ a {
 .icon-disabled {
     margin-right: 5px;
     font-size: 10px;
+    margin-bottom: 16px;
+    color: rgb(173, 50, 50);
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.disabled-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 @media (max-width: 768px) {
     .dashboard-wrapper {
