@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import uranus from "./images/uranus.png";
 
 
+
 const NavBar = ({ setAuthenticated, authenticated, currentUser}) => {
 
   return (

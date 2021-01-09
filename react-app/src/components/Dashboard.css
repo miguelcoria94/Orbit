@@ -1,0 +1,29 @@
+.dashboard-wrapper {
+    height: 600px;
+    background-color: #26294B;
+    border-radius: 10px;
+    padding:0 !important;
+}
+
+.sidenav-wrapper {
+    background-color: #202442;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 600px;
+}
+
+.active-sidenav {
+
+}
+a {
+    font-weight: 400;
+    color: #687293 !important;
+}
+
+.navbar_links-sidenav {
+    margin-top: 35px;
+}
+
+.icon {
+    margin-right: 10px;
+}
