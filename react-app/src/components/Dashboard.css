@@ -93,15 +93,18 @@ a {
 
 .balance-tag {
     color: #898999;
-    font-size: 12px;
 }
 
 .icon-disabled {
     margin-right: 5px;
     font-size: 10px;
     margin-bottom: 16px;
-    color: rgb(173, 50, 50);
-    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: rgb(209, 58, 58);
+    text-shadow: rgba(255, 0, 0, 0.25) 0px 54px 55px, rgba(251, 0, 0, 0.12) 0px -12px 30px, rgba(255, 0, 0, 0.12) 0px 4px 6px, rgba(255, 0, 0, 0.17) 0px 12px 13px, rgba(255, 12, 12, 0.09) 0px -3px 5px;
+}
+
+.disabled-text {
+    color: #898999;
 }
 
 .icon-active {
@@ -110,6 +113,7 @@ a {
     margin-bottom: 16px;
     color: rgb(50, 173, 81);
     text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-shadow: rgba(255, 0, 0, 0.25) 0px 54px 55px, rgba(0, 251, 0, 0.12) 0px -12px 30px, rgba(9, 255, 0, 0.12) 0px 4px 6px, rgba(0, 255, 21, 0.17) 0px 12px 13px, rgba(12, 255, 32, 0.09) 0px -3px 5px;
 }
 
 .active-text {
@@ -122,6 +126,27 @@ a {
     align-content: center;
     justify-content: center;
 }
+
+
+         .activate-savings-button {background-image: linear-gradient(to right, rgba(255, 0, 0, 0.25) 0%, rgba(255, 0, 0, 0.25)  51%, rgba(255, 0, 0, 0.25)  100%)}
+         .activate-savings-button {
+            transition: 0.5s;
+            background-size: 200% auto;
+            border: none;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 0, 0, 0.25);
+    color: white;
+          }
+
+          .activate-savings-button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+            background-color: rgb(71, 226, 84);
+          }
+         
 
 @media (max-width: 768px) {
     .dashboard-wrapper {

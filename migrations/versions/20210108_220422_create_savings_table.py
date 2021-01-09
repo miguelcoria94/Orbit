@@ -23,7 +23,8 @@ def upgrade():
     sa.Column('balance', sa.Integer(), nullable=False, server_default="0"),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['user_id'], ['users.id'], ),
-    sa.PrimaryKeyConstraint('id')
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('user_id')
     )
     # ### end Alembic commands ###
 
