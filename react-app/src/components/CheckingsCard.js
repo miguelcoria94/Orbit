@@ -33,7 +33,7 @@ function SavingsCard({ currentUserId }) {
           <h1 className="balance">{"$0"}</h1>
         </>
       )}
-      <p className="balance-tag">Total Savings</p>
+      <p className="balance-tag">Checkings Account</p>
     </div>
   );
 }
