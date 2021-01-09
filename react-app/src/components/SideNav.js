@@ -71,7 +71,9 @@ const SideNav = () => {
                 exact={true}
                 activeClassName="active-sidenav"
               >
-                <p>Education</p>
+                <p>
+                  <i class="fas fa-graduation-cap icon"></i>Education
+                </p>
               </NavLink>
             </li>
           </ul>
