@@ -5,6 +5,7 @@ import SideNav from "./SideNav";
 import "./Dashboard.css";
 import LogoutButton from "./auth/LogoutButton"
 import SavingsCard from "./SavingsCard"
+import CheckingsCard from "./CheckingsCard";
 
 const Dashboard = ({ setAuthenticated, authenticated, currentUser, currentUserId }) => {
   return (
@@ -14,6 +15,7 @@ const Dashboard = ({ setAuthenticated, authenticated, currentUser, currentUserId
           <SideNav currentUser={currentUser} />
         </Col>
         <Col className="col-3">
+          <CheckingsCard currentUserId={currentUserId} />
           <SavingsCard currentUserId={currentUserId} />
         </Col>
         <Col>
