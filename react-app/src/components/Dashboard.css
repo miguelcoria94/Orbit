@@ -41,6 +41,33 @@ a {
     margin-right: 10px;
 }
 
+.sidenavbar_logo {
+    height: 75px;
+}
+.sidelogo {
+    display: flex;
+    align-items: center;
+}
+
+.sidelogo-text a {
+    color: white !important;
+    font-weight: 900 !important;
+    text-shadow: 2px 3px 0px #898999;
+    cursor: pointer;
+}
+
+.sidelogo-text:hover a:hover{
+    text-decoration: none;
+}
+
+.logo-wrapper-sidenav {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 @media (max-width: 768px) {
     .dashboard-wrapper {
     }

@@ -10,16 +10,16 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
     <Container className="sidenav-wrapper">
       <Row>
         <Col>
-          <Col>
+          <Col className="logo-wrapper-sidenav">
             <a href="/">
               <img
                 src={uranus}
-                className="navbar_logo"
+                className="sidenavbar_logo"
                 alt="orbit-logo"
                 href="/"
               />{" "}
             </a>
-            <h1 className="logo-text" href>
+            <h1 className="sidelogo-text" href>
               <a href="/">Orbit</a>
             </h1>
           </Col>
