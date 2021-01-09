@@ -8,11 +8,12 @@ class User(db.Model, UserMixin):
   id = db.Column(db.Integer, primary_key = True)
   firstname = db.Column(db.String(40), nullable=False, unique=False)
   lastname = db.Column(db.String(40), nullable=False, unique=False)
-  username = db.Column(db.String(40), nullable = False, unique = True)
-  email = db.Column(db.String(255), nullable = False, unique = True)
+  username = db.Column(db.String(40), nullable = False, unique =True)
+  email = db.Column(db.String(255), nullable = False, unique =True)
   hashed_password = db.Column(db.String(255), nullable=False)
   
   savings_account = db.relationship('Savings_Account', back_populates='user', cascade="all, delete, delete-orphan")
+  checkings_account = db.relationship('Checkings_Account', back_populates='user', cascade="all, delete, delete-orphan")
 
 
   @property
