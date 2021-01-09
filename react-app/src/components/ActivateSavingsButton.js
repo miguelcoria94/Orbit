@@ -2,7 +2,7 @@ import React from "react";
 
 const ActivateSavingsButton = ({ currentUserId }) => {
   const activateSavings = async (e) => {
-    window.location.reload();
+    e.preventDefault();
   };
 
 
