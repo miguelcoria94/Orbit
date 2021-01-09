@@ -34,20 +34,10 @@ function App() {
     return null;
   }
 
-  if (!currentUser) {
-    
-  }
-
-  console.log(currentUserId)
-
   return (
     <BrowserRouter>{
       authenticated ? "" :
-        <NavBar
-          authenticated={authenticated}
-          setAuthenticated={setAuthenticated}
-          currentUser={currentUser}
-        />}
+        <NavBar />}
       <Switch>
         <Route path="/login" exact={true}>
           <LoginForm

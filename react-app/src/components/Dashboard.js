@@ -16,6 +16,8 @@ const Dashboard = ({ setAuthenticated, authenticated, currentUser, currentUserId
         </Col>
         <Col className="col-3">
           <CheckingsCard currentUserId={currentUserId} />
+        </Col>
+        <Col col-3>
           <SavingsCard currentUserId={currentUserId} />
         </Col>
         <Col>
