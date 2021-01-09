@@ -81,6 +81,7 @@ a {
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #2D325A;
 }
 
 @media (max-width: 768px) {
