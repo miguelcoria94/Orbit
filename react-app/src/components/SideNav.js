@@ -23,8 +23,8 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
               <a href="/">Orbit</a>
             </h1>
           </Col>
-            <h1 className="welcome-message-1">Dashboard</h1>
-            <p className="welcome-message-2">Logged in as {currentUser}</p>
+          <h1 className="welcome-message-1">Dashboard</h1>
+          <p className="welcome-message-2">Logged in as {currentUser}</p>
           <ul className="ul-wrapper">
             <li className="navbar_links-sidenav">
               <NavLink
@@ -45,6 +45,17 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
               >
                 <p>
                   <i class="fas fa-wallet icon"></i>Accounts
+                </p>
+              </NavLink>
+            </li>
+            <li className="navbar_links-sidenav">
+              <NavLink
+                to="/education"
+                exact={true}
+                activeClassName="active-sidenav"
+              >
+                <p>
+                  <i class="fas fa-graduation-cap icon"></i>Virtual Card
                 </p>
               </NavLink>
             </li>
@@ -78,17 +89,6 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
               >
                 <p>
                   <i class="fas fa-plane-departure icon"></i>Goals
-                </p>
-              </NavLink>
-            </li>
-            <li className="navbar_links-sidenav">
-              <NavLink
-                to="/education"
-                exact={true}
-                activeClassName="active-sidenav"
-              >
-                <p>
-                  <i class="fas fa-graduation-cap icon"></i>Education
                 </p>
               </NavLink>
             </li>
