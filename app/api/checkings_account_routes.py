@@ -14,11 +14,11 @@ def user_savings(id):
 @checkings_account_routes.route('', methods=['PUT'])
 def add_checkings():
     user_id = request.json['currentUserId']
-    balance = request.json['userBalance']
+    balance = request.json['loadBalance']
 
     new_checkings = Checkings_Account(balance, user_id)
 
     db.session.add(new_checkings)
     db.session.commit()
 
-    return {"id": new_savings.id}
+    return {"id": new_checkings.id}
