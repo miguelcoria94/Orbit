@@ -17,7 +17,13 @@ function SavingsCard({ currentUserId }) {
   return (
     <div className="card custom-card">
       {balance.balance ? (
-        <h1 className="balance">${balance.balance}</h1>
+        <>
+          <div className="disabled-wrapper">
+            <i className="fas fa-circle icon-active"></i>
+            <p className="active-text">active</p>
+          </div>
+          <h1 className="balance">${balance.balance}</h1>
+        </>
       ) : (
         <>
           <div className="disabled-wrapper">
