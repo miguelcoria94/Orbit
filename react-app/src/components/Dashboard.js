@@ -8,13 +8,11 @@ const Dashboard = () => {
     return (
       <Container className="dashboard-wrapper">
         <Row>
-          <Col>
+          <Col className="col-3">
             <SideNav />
           </Col>
-          <Col>
-          </Col>
-          <Col>
-          </Col>
+          <Col></Col>
+          <Col></Col>
         </Row>
       </Container>
     );
