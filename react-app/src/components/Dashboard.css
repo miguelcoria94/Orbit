@@ -30,9 +30,17 @@
     font-weight: 600;
     text-shadow: #9494941a  0px 4px 10px, #a8a8a817  0px 1px 10px;
 }
-a {
-    font-weight: 400;
-    color: #687293 !important;
+
+.active-sidenav:hover {
+    color: #50568b !important;
+    font-weight: 600;
+    text-shadow: #9494941a  0px 4px 10px, #a8a8a817  0px 1px 10px;
+    text-decoration: none !important;
+}
+a:hover {
+    font-weight: 600;
+    text-shadow: #9494941a  0px 4px 10px, #a8a8a817  0px 1px 10px;
+    text-decoration: none !important;
 }
 
 .navbar_links-sidenav {
