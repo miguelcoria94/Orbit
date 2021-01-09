@@ -27,7 +27,9 @@ const SideNav = () => {
                 exact={true}
                 activeClassName="active-sidenav"
               >
-                <p>Accounts</p>
+                <p>
+                  <i class="fas fa-wallet icon"></i>Accounts
+                </p>
               </NavLink>
             </li>
             <li className="navbar_links-sidenav">
