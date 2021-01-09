@@ -26,7 +26,9 @@
 }
 
 .active-sidenav {
-
+    color: #3e4581 !important;
+    font-weight: 600;
+    text-shadow: #9494941a  0px 4px 10px, #a8a8a817  0px 1px 10px;
 }
 a {
     font-weight: 400;
