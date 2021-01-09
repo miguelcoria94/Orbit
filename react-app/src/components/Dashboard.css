@@ -95,6 +95,11 @@ a {
     color: #898999;
     font-size: 12px;
 }
+
+.icon-disabled {
+    margin-right: 5px;
+    font-size: 10px;
+}
 @media (max-width: 768px) {
     .dashboard-wrapper {
     }
