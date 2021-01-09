@@ -3,13 +3,29 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import uranus from "./images/uranus.png";
 
-const SideNav = () => {
+const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
   return (
     <Container className="sidenav-wrapper">
       <Row>
         <Col>
-          <ul>
+          <Col className="logo-wrapper-sidenav">
+            <a href="/">
+              <img
+                src={uranus}
+                className="sidenavbar_logo"
+                alt="orbit-logo"
+                href="/"
+              />{" "}
+            </a>
+            <h1 className="sidelogo-text" href>
+              <a href="/">Orbit</a>
+            </h1>
+          </Col>
+            <h1 className="welcome-message-1">Dashboard</h1>
+            <p className="welcome-message-2">Logged in as {currentUser}</p>
+          <ul className="ul-wrapper">
             <li className="navbar_links-sidenav">
               <NavLink
                 to="/dashboard"

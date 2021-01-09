@@ -1,15 +1,28 @@
 .dashboard-wrapper {
-    height: 600px;
+    height: 90vh;
     background-color: #26294B;
     border-radius: 10px;
     padding:0 !important;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 90vw;
 }
 
 .sidenav-wrapper {
+    display: flex;
     background-color: #202442;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    height: 600px;
+    height: 90vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.ul-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .active-sidenav {
@@ -26,4 +39,41 @@ a {
 
 .icon {
     margin-right: 10px;
+}
+
+.sidenavbar_logo {
+    height: 75px;
+}
+.sidelogo {
+    display: flex;
+    align-items: center;
+}
+
+.sidelogo-text a {
+    color: white !important;
+    font-weight: 900 !important;
+    text-shadow: 2px 3px 0px #898999;
+    cursor: pointer;
+}
+
+.sidelogo-text:hover a:hover{
+    text-decoration: none;
+}
+
+.logo-wrapper-sidenav {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: #212341 3px 3px 6px 0px inset, #1b1d33  -3px -3px 6px 1px inset;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    background-color: #27294C;
+    padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .dashboard-wrapper {
+    }
 }
