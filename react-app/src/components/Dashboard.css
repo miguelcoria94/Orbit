@@ -127,14 +127,26 @@ a {
     justify-content: center;
 }
 
-.activate-savings-button {
-    border: none;
-    border-radius: 5px;
+
+         .activate-savings-button {background-image: linear-gradient(to right, rgba(255, 0, 0, 0.25) 0%, rgba(255, 0, 0, 0.25)  51%, rgba(255, 0, 0, 0.25)  100%)}
+         .activate-savings-button {
+            transition: 0.5s;
+            background-size: 200% auto;
+            border: none;
+    border-radius: 50%;
     margin-left: 5px;
     margin-bottom: 15px;
-    background-color: #202442;
-    color: #898999;
-}
+    background-color: rgba(255, 0, 0, 0.25);
+    color: white;
+          }
+
+          .activate-savings-button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+            background-color: red;
+          }
+         
 
 @media (max-width: 768px) {
     .dashboard-wrapper {

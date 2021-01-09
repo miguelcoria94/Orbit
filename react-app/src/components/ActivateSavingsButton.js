@@ -7,7 +7,7 @@ const ActivateSavingsButton = ({ currentUserId }) => {
 
   return (
     <button className="activate-savings-button" onClick={activateSavings}>
-      Initiate Savings
+      <i class="fas fa-power-off"></i>
     </button>
   );
 };
