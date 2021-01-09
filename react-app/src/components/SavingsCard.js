@@ -19,7 +19,10 @@ function SavingsCard({ currentUserId }) {
       {balance.balance ? (
         <h1 className="balance">${balance.balance}</h1>
       ) : (
-        <h1 className="balance">{"$0"}</h1>
+          <>
+          <p>Disabled</p>
+            <h1 className="balance">{"$0"}</h1>
+            </>
       )}
       <p className="balance-tag">Total Savings</p>
     </div>
