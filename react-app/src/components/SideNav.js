@@ -9,7 +9,7 @@ const SideNav = () => {
     <Container className="sidenav-wrapper">
       <Row>
         <Col>
-          <ul>
+          <ul className="ul-wrapper">
             <li className="navbar_links-sidenav">
               <NavLink
                 to="/dashboard"

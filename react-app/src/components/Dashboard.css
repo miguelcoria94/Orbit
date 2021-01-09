@@ -9,10 +9,19 @@
 }
 
 .sidenav-wrapper {
+    display: flex;
     background-color: #202442;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     height: 600px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.ul-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .active-sidenav {
