@@ -11,3 +11,16 @@
     border-bottom-left-radius: 10px;
     height: 600px;
 }
+
+.active-sidenav {
+
+}
+a {
+    font-weight: 400;
+    color: #687293 !important;
+}
+
+.navbar_links-sidenav {
+    margin-top: 35px;
+    margin-left: 20px;
+}
