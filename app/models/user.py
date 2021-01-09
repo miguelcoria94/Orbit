@@ -10,7 +10,9 @@ class User(db.Model, UserMixin):
   lastname = db.Column(db.String(40), nullable=False, unique=False)
   username = db.Column(db.String(40), nullable = False, unique = True)
   email = db.Column(db.String(255), nullable = False, unique = True)
-  hashed_password = db.Column(db.String(255), nullable = False)
+  hashed_password = db.Column(db.String(255), nullable=False)
+  
+  savings_account = db.relationship('Savings_Account', back_populates='user', cascade="all, delete, delete-orphan")
 
 
   @property
