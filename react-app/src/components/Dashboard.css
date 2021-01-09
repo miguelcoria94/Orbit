@@ -7,5 +7,7 @@
 
 .sidenav-wrapper {
     background-color: #202442;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 600px;
 }

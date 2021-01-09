@@ -7,7 +7,15 @@ import "./Dashboard.css";
 const Dashboard = () => {
     return (
       <Container className="dashboard-wrapper">
+        <Row>
+          <Col>
             <SideNav />
+          </Col>
+          <Col>
+          </Col>
+          <Col>
+          </Col>
+        </Row>
       </Container>
     );
 }
