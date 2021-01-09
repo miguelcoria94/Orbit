@@ -213,11 +213,14 @@ text-decoration: none;
     height: 40px;
     border-radius: 5px;
 }
-.welcome-message {
+.welcome-message-2 {
     color: #00C9B7;
     margin-top: 35px;
     font-size: 20px;
     font-family: Cousine;
+}
+
+.welcome-message-1 {
     
 }
          
