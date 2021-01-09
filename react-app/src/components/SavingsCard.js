@@ -21,7 +21,7 @@ function SavingsCard({ currentUserId }) {
       ) : (
         <h1 className="balance">{"$0"}</h1>
       )}
-      <p>Total Savings</p>
+      <p className="balance-tag">Total Savings</p>
     </div>
   );
 }
