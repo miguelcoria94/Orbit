@@ -10,7 +10,7 @@ const SideNav = () => {
       <Row>
         <Col>
           <ul>
-            <li className="navbar_links">
+            <li className="navbar_links-sidenav">
               <NavLink
                 to="/dashboard"
                 exact={true}
@@ -19,7 +19,7 @@ const SideNav = () => {
                 <p>Dashboard</p>
               </NavLink>
             </li>
-            <li className="navbar_links">
+            <li className="navbar_links-sidenav">
               <NavLink
                 to="/accounts"
                 exact={true}
@@ -28,7 +28,7 @@ const SideNav = () => {
                 <p>Accounts</p>
               </NavLink>
             </li>
-            <li className="navbar_links">
+            <li className="navbar_links-sidenav">
               <NavLink
                 to="/transfer"
                 exact={true}
@@ -37,7 +37,7 @@ const SideNav = () => {
                 <p>Transfer</p>
               </NavLink>
             </li>
-            <li className="navbar_links">
+            <li className="navbar_links-sidenav">
               <NavLink
                 to="/transactions"
                 exact={true}
@@ -46,7 +46,7 @@ const SideNav = () => {
                 <p>Transactions</p>
               </NavLink>
             </li>
-            <li className="navbar_links">
+            <li className="navbar_links-sidenav">
               <NavLink
                 to="/goals"
                 exact={true}
@@ -55,7 +55,7 @@ const SideNav = () => {
                 <p>Goals</p>
               </NavLink>
             </li>
-            <li className="navbar_links">
+            <li className="navbar_links-sidenav">
               <NavLink
                 to="/education"
                 exact={true}
