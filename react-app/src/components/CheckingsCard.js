@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Dashboard.css";
 import LoadCheckings from "./LoadCheckings";
+import AddFunds from "./AddFunds";
 
 function SavingsCard({ currentUserId }) {
   const [balance, setBalance] = useState([]);
@@ -19,7 +20,8 @@ function SavingsCard({ currentUserId }) {
         <>
           <div className="disabled-wrapper">
             <i className="fas fa-circle icon-active"></i>
-            <p className="active-text">active</p>
+                      <p className="active-text">active</p>
+                      <AddFunds />
           </div>
           <h1 className="balance">${balance.balance}</h1>
         </>
