@@ -1,15 +1,15 @@
 import React from "react";
 import { demo } from "../../services/auth";
 
-const ActivateSavingsButton = ({  }) => {
-  const demoPress = async (e) => {
+const ActivateSavingsButton = ({ currentUserId }) => {
+  const activateSavings = async (e) => {
     await demo();
     setAuthenticated(true);
     window.location.reload();
   };
 
   return (
-    <button className="demo-button-home" onClick={demoPress}>
+    <button className="demo-button-home" onClick={activateSavings}>
       Login as a Demo User
     </button>
   );
