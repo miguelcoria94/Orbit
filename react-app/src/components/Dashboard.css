@@ -2,4 +2,10 @@
     height: 600px;
     background-color: #26294B;
     border-radius: 10px;
+    padding:0 !important;
+}
+
+.sidenav-wrapper {
+    background-color: #202442;
+    border-radius: 10px;
 }

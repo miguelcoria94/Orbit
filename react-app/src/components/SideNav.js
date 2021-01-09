@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 
 const SideNav = () => {
   return (
-    <Container>
+    <Container className="sidenav-wrapper">
       <Row>
         <Col>
           <ul>
