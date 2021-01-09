@@ -212,15 +212,17 @@ text-decoration: none;
     padding: 5px 25px !important;
     height: 40px;
     border-radius: 5px;
+    margin-top: 45px;
 }
 .welcome-message-2 {
     color: #00C9B7;
-    margin-top: 35px;
-    font-size: 20px;
+    font-size: 14px;
     font-family: Cousine;
+    margin-left: 2px;
 }
 
 .welcome-message-1 {
-    
+    color: white;
+    margin-top: 20px;
 }
          
