@@ -13,12 +13,7 @@ const NavBar = ({ setAuthenticated, authenticated, currentUser}) => {
   return (
     <Container>
       <Row>
-        {authenticated ? (
-          <Col>
-            <h1 className="welcome-message-1">Dashboard</h1>
-            <p className="welcome-message-2">Logged in as {currentUser}</p>
-          </Col>
-        ) : (
+        
           <Col className="logo" linkto="/">
             <a href="/">
               <img
@@ -32,62 +27,34 @@ const NavBar = ({ setAuthenticated, authenticated, currentUser}) => {
               <a href="/">Orbit</a>
             </h1>
           </Col>
-        )}
         <Col className="navbar_link-wrapper">
           <ul className="navbar_container">
-            {authenticated ? (
-              ""
-            ) : (
+            
               <li className="navbar_links">
                 <NavLink to="/" exact={true} activeClassName="active">
                   <p className="navbar_link">Home</p>
                 </NavLink>
               </li>
-            )}
-            {authenticated ? (
-              ""
-            ) : (
               <li className="navbar_links">
                 <NavLink to="/login" exact={true} activeClassName="active">
                   <p className="navbar_link">Login</p>
                 </NavLink>
               </li>
-            )}
-            {authenticated ? (
-              ""
-            ) : (
               <li className="navbar_links">
                 <NavLink to="/sign-up" exact={true} activeClassName="active">
                   <p className="navbar_link">Signup</p>
                 </NavLink>
               </li>
-            )}
-            {authenticated ? (
-              ""
-            ) : (
               <li className="navbar_links">
                 <NavLink to="/about" exact={true} activeClassName="active">
                   <p className="navbar_link">About</p>
                 </NavLink>
               </li>
-            )}
-            {authenticated ? (
-              ""
-            ) : (
               <li className="navbar_links">
                 <NavLink to="/contact" exact={true} activeClassName="active">
                   <p className="navbar_link">Contact</p>
                 </NavLink>
               </li>
-            )}
-            {authenticated ? (
-              <LogoutButton
-                setAuthenticated={setAuthenticated}
-                currentUser={currentUser}
-              />
-            ) : (
-              ""
-            )}
           </ul>
         </Col>
       </Row>
