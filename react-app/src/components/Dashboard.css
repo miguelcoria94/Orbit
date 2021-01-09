@@ -123,6 +123,12 @@ a {
     justify-content: center;
 }
 
+.activate-savings-button {
+    border: none;
+    border-radius: 5px;
+    
+}
+
 @media (max-width: 768px) {
     .dashboard-wrapper {
     }
