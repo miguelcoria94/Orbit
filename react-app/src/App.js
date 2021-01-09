@@ -57,9 +57,7 @@ function App() {
           />
         </Route>
         <Route path="/" exact={true} authenticated={authenticated}>
-          {authenticated ?  
-    <Redirect to="/dashboard" />: ""
-  }
+          {authenticated ? <Redirect to="/dashboard" /> : ""}
           <Home
             authenticate={authenticate}
             setAuthenticated={setAuthenticated}
@@ -77,7 +75,11 @@ function App() {
           exact={true}
           authenticated={authenticated}
         >
-          <Dashboard/>
+          <Dashboard
+            authenticate={authenticate}
+            setAuthenticated={setAuthenticated}
+            currentUser={currentUser}
+          />
         </ProtectedRoute>
         <Route component={NoMatch} />
       </Switch>

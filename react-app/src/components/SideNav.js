@@ -4,11 +4,15 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const SideNav = () => {
+const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
   return (
     <Container className="sidenav-wrapper">
       <Row>
         <Col>
+          <Col>
+            <h1 className="welcome-message-1">Dashboard</h1>
+            <p className="welcome-message-2">Logged in as {currentUser}</p>
+          </Col>
           <ul className="ul-wrapper">
             <li className="navbar_links-sidenav">
               <NavLink
