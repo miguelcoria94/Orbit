@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "./Dashboard.css";
 
 function SavingsCard({ currentUserId }) {
   const [balance, setBalance] = useState([]);
@@ -14,7 +15,7 @@ function SavingsCard({ currentUserId }) {
   }, []);
   
   return (
-    <div>{balance.balance ? (<h1>${balance.balance}</h1>) : (<h1>{"$0"}</h1>)}</div>
+    <div className="card">{balance.balance ? (<h1>${balance.balance}</h1>) : (<h1>{"$0"}</h1>)}</div>
   );
 }
 

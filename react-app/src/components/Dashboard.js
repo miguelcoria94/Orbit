@@ -13,7 +13,9 @@ const Dashboard = ({ setAuthenticated, authenticated, currentUser, currentUserId
         <Col className="col-3">
           <SideNav currentUser={currentUser} />
         </Col>
-        <Col><SavingsCard currentUserId={currentUserId}/></Col>
+        <Col className="col-3">
+          <SavingsCard currentUserId={currentUserId} />
+        </Col>
         <Col>
           <LogoutButton
             setAuthenticated={setAuthenticated}
