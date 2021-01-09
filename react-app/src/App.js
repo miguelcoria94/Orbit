@@ -16,6 +16,7 @@ function App() {
   const [authenticated, setAuthenticated] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [currentUser, setCurrentUser] = useState("")
+  const [currentUserId, setCurrentUserId] = useState("")
 
   useEffect(() => {
     (async() => {
@@ -23,6 +24,7 @@ function App() {
       if (!user.errors) {
         setAuthenticated(true);
         setCurrentUser(user.username)
+        setCurrentUserId(user.id);
       }
       setLoaded(true);
     })();
@@ -35,6 +37,8 @@ function App() {
   if (!currentUser) {
     
   }
+
+  console.log(currentUserId)
 
   return (
     <BrowserRouter>{
@@ -80,6 +84,7 @@ function App() {
             authenticate={authenticate}
             setAuthenticated={setAuthenticated}
             currentUser={currentUser}
+            currentUserId={currentUserId}
           />
         </ProtectedRoute>
         <Route component={NoMatch} />

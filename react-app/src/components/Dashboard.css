@@ -73,6 +73,56 @@ a {
     padding-top: 10px;
 }
 
+.custom-card {
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2D325A;
+    border-radius: 10px;
+}
+
+.balance {
+    color: white;
+    font-weight: 300;
+    font-size: 60px;
+}
+
+.balance-tag {
+    color: #898999;
+    font-size: 12px;
+}
+
+.icon-disabled {
+    margin-right: 5px;
+    font-size: 10px;
+    margin-bottom: 16px;
+    color: rgb(173, 50, 50);
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.icon-active {
+    margin-right: 5px;
+    font-size: 10px;
+    margin-bottom: 16px;
+    color: rgb(50, 173, 81);
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.active-text {
+    color: #898999;
+}
+
+.disabled-wrapper {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
 @media (max-width: 768px) {
     .dashboard-wrapper {
     }
