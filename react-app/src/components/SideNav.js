@@ -11,32 +11,32 @@ const SideNav = () => {
         <Col>
           <ul>
             <li className="navbar_links">
-              <NavLink to="/" exact={true} activeClassName="active">
+              <NavLink to="/dashboard" exact={true} activeClassName="active">
                 <p>Dashboard</p>
               </NavLink>
             </li>
             <li className="navbar_links">
-              <NavLink to="/" exact={true} activeClassName="active">
+              <NavLink to="/accounts" exact={true} activeClassName="active">
                 <p>Accounts</p>
               </NavLink>
             </li>
             <li className="navbar_links">
-              <NavLink to="/" exact={true} activeClassName="active">
+              <NavLink to="/transfer" exact={true} activeClassName="active">
                 <p>Transfer</p>
               </NavLink>
             </li>
             <li className="navbar_links">
-              <NavLink to="/" exact={true} activeClassName="active">
+              <NavLink to="/transactions" exact={true} activeClassName="active">
                 <p>Transactions</p>
               </NavLink>
             </li>
             <li className="navbar_links">
-              <NavLink to="/" exact={true} activeClassName="active">
+              <NavLink to="/goals" exact={true} activeClassName="active">
                 <p>Goals</p>
               </NavLink>
             </li>
             <li className="navbar_links">
-              <NavLink to="/" exact={true} activeClassName="active">
+              <NavLink to="/education" exact={true} activeClassName="active">
                 <p>Education</p>
               </NavLink>
             </li>
