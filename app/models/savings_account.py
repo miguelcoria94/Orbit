@@ -8,7 +8,7 @@ class Savings_Account(db.Model):
     balance = db.Column(db.Integer, nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
-    user = db.relationship('User', back_populates='stories', )
+    user = db.relationship('User', back_populates='savings_account', )
     
     def __init__(self, balance, user_id):
         self.balance = balance
