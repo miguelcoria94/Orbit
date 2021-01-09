@@ -49,7 +49,9 @@ const SideNav = () => {
                 exact={true}
                 activeClassName="active-sidenav"
               >
-                <p>Transactions</p>
+                <p>
+                  <i class="fas fa-receipt icon"></i>Transactions
+                </p>
               </NavLink>
             </li>
             <li className="navbar_links-sidenav">
