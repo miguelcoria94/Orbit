@@ -1,8 +1,26 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 const ActivateSavingsButton = ({ currentUserId }) => {
+  const history = useHistory();
   const activateSavings = async (e) => {
     e.preventDefault();
+    const userBalance = 0;
+
+    const response = await fetch("/api/savings_account", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        currentUserId,
+        userBalance
+      }),
+    });
+
+    if (response.ok) {
+      window.location.reload()
+    }
   };
 
 

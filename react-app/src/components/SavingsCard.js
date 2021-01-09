@@ -17,7 +17,7 @@ function SavingsCard({ currentUserId }) {
   
   return (
     <div className="card custom-card">
-      {balance.balance ? (
+      {balance.balance !== undefined ? (
         <>
           <div className="disabled-wrapper">
             <i className="fas fa-circle icon-active"></i>

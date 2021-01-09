@@ -6,7 +6,8 @@ class Savings_Account(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     balance = db.Column(db.Integer, nullable=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(
+        'users.id'), nullable=False, unique=True)
 
     user = db.relationship('User', back_populates='savings_account', )
     
