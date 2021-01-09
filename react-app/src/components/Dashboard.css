@@ -133,7 +133,7 @@ a {
             transition: 0.5s;
             background-size: 200% auto;
             border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     margin-left: 5px;
     margin-bottom: 15px;
     background-color: rgba(255, 0, 0, 0.25);
@@ -144,7 +144,7 @@ a {
             background-position: right center; /* change the direction of the change here */
             color: #fff;
             text-decoration: none;
-            background-color: red;
+            background-color: rgb(71, 226, 84);
           }
          
 

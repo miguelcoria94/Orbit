@@ -5,9 +5,11 @@ const ActivateSavingsButton = ({ currentUserId }) => {
     window.location.reload();
   };
 
+
+
   return (
     <button className="activate-savings-button" onClick={activateSavings}>
-      <i class="fas fa-power-off"></i>
+      <i class="fas fa-power-off"></i> Activate Savings
     </button>
   );
 };
