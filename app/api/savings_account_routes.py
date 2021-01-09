@@ -7,5 +7,5 @@ savings_account_routes = Blueprint('savings_account', __name__)
 
 @savings_account_routes.route('/<int:id>')
 def user_savings(id):
-    balance = Savings_Account.query.get(id)
-    return {'savings_balance': balance.to_dict()}
+    balance = Savings_Account.query.filter(Savings_Account.user_id == id).first()
+    return {'savings_balance': [balance.to_dict()]}
