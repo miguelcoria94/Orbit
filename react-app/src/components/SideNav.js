@@ -44,29 +44,18 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-wallet icon"></i>Accounts
+                  <i class="fas fa-exchange-alt icon"></i>Transfers
                 </p>
               </NavLink>
             </li>
             <li className="navbar_links-sidenav">
               <NavLink
-                to="/education"
+                to="/virtual-card"
                 exact={true}
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-graduation-cap icon"></i>Virtual Card
-                </p>
-              </NavLink>
-            </li>
-            <li className="navbar_links-sidenav">
-              <NavLink
-                to="/transfer"
-                exact={true}
-                activeClassName="active-sidenav"
-              >
-                <p>
-                  <i class="fas fa-exchange-alt icon"></i>Transfer
+                  <i class="fab fa-cc-visa icon"></i>Virtual Card
                 </p>
               </NavLink>
             </li>
@@ -89,6 +78,17 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
               >
                 <p>
                   <i class="fas fa-plane-departure icon"></i>Goals
+                </p>
+              </NavLink>
+            </li>
+            <li className="navbar_links-sidenav">
+              <NavLink
+                to="/goals"
+                exact={true}
+                activeClassName="active-sidenav"
+              >
+                <p>
+                  <i class="fas fa-bug icon"></i>Report A Bug
                 </p>
               </NavLink>
             </li>
