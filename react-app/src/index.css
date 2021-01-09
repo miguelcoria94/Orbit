@@ -215,7 +215,6 @@ text-decoration: none;
     margin-top: 45px;
 }
 .welcome-message-2 {
-    text-align: center;
     color: #00C9B7;
     font-size: 14px;
     font-family: Cousine;
@@ -226,6 +225,5 @@ text-decoration: none;
 .welcome-message-1 {
     color: white;
     margin-top: 20px;
-    text-align: center;
 }
          
