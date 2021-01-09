@@ -12,7 +12,7 @@ const NavBar = ({ setAuthenticated, authenticated, currentUser}) => {
   return (
     <Container>
       <Row>
-        {authenticated ? <h1 className="welcome-message">{currentUser}</h1>:
+        {authenticated ? <h1 className="welcome-message">Logged in as {currentUser}</h1>:
         <Col className="logo" linkto="/">
           <a href="/">
             <img
