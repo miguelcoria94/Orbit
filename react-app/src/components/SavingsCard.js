@@ -15,7 +15,8 @@ function SavingsCard({ currentUserId }) {
   }, []);
   
   return (
-    <div className="card">{balance.balance ? (<h1>${balance.balance}</h1>) : (<h1>{"$0"}</h1>)}</div>
+    <div className="card custom-card">{balance.balance ? (<h1>${balance.balance}</h1>) : (<h1>{"$0"}</h1>)}
+    <p>Total Savings</p></div>
   );
 }
 

@@ -73,6 +73,16 @@ a {
     padding-top: 10px;
 }
 
+.custom-card {
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 @media (max-width: 768px) {
     .dashboard-wrapper {
     }
