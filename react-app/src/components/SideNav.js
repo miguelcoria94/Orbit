@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import uranus from "./images/uranus.png";
 
-const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
+const SideNav = ({ currentUser }) => {
   return (
     <Container className="sidenav-wrapper">
       <Row>

@@ -1,9 +1,7 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 const AddFunds = ({ currentUserId, currentBalance }) => {
-    const history = useHistory();
     const newBalance = 100 + currentBalance
     const addFunds = async (e) => {
       const request = { newBalance, currentUserId };
