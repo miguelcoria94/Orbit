@@ -12,7 +12,7 @@ const AddFunds = ({ currentUserId, currentBalance }) => {
 
   return (
     <button className="add-funds-button" onClick={addFunds}>
-      Load $100
+      <i class="fas fa-plus-circle"></i> $100
     </button>
   );
 };

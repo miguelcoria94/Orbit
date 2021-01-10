@@ -7,11 +7,18 @@
 
 /******* 404 page styles*/
 #root {
-    height: calc(100%);
-    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
+    height: calc(100vh);
+    background-color: #191446;
+    background-image: linear-gradient(316deg,#191446 = 0%,  #281a3d 74%);
     font-family: 'Barlow', sans-serif;
     max-width: 100%;
     overflow: hidden;
+    background-size: cover;
+}
+
+.home_image {
+    width: 650px;
+    position: relative;
 }
 
 html, body {
@@ -40,7 +47,7 @@ html, body {
 
 .test-404 {
     font-family: Cousine;
-    color: #00C9B7 !important;
+    color: #00c921 !important;
     padding-bottom: 20px !important;
 }
 
@@ -78,10 +85,12 @@ html, body {
 }
 
 .logo-text a {
+    padding-top: 60px;
     color: white !important;
     font-weight: 900 !important;
     text-shadow: 2px 3px 0px #898999;
     cursor: pointer;
+    font-size: 50px;
 }
 
 .logo-text:hover a:hover{
@@ -105,19 +114,19 @@ nav {
 }
 
 .active {
-    color: #00C9B7 !important;
+    color: #2ad45d !important;
     font-weight: 600;
-    text-shadow: #00c9b87c 0px 4px 10px, #00c9b86e 0px 1px 10px;
+    text-shadow: #001c4469 0px 4px 10px, #001c446e 0px 1px 10px;
 }
 
 a {
     font-weight: 400;
-    color: #687293 !important;
+    color:#5d677c !important;
 }
 
 .navbar_link:hover{
     text-decoration: underline;
-    text-decoration-color: #00c9b7;
+    text-decoration-color: #5d677c;
     text-decoration-thickness: 2px;
 }
 
@@ -163,7 +172,7 @@ a {
     font-family: 'Barlow', sans-serif;
     color: white;
     font-weight: 800;
-    font-size: 67px;
+    font-size: 65px;
 }
 
 .main-header-container {
@@ -175,19 +184,19 @@ a {
 }
 
 .home-cta {
-    color: #00C9B7;
-    font-weight: 300;
+    color: #50ca2a;
+    font-weight: 800;
 }
 
 
 .tiny-text {
-    color: #00C9B7;
-    border-left: 3px solid #00C9B7;
+    color: #11c900;
+    border-left: 3px solid #11c900;
     padding-left: 10px;
 }
 
 
-.demo-button-home  {background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)}
+.demo-button-home  {background-image: linear-gradient(to right, #41e23c 0%, #14c82c  51%, #2b7653  100%)}
 .demo-button-home  {
 margin-top: 30px;
 padding: 15px 45px;

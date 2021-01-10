@@ -27,7 +27,7 @@ const Dashboard = ({ setAuthenticated, currentUser, currentUserId }) => {
               id="users-chart"
               width="64vw"
               height="100%"
-              colors={["rgb(50, 173, 81)", "#666"]}
+              colors={["rgb(8, 255, 29)", "#666"]}
               label="Value"
               data={{ 1: 3500, 2: 4000, 3: 3600, 4: 5000 }}
             />

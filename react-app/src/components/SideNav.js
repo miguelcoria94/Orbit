@@ -25,7 +25,10 @@ const SideNav = ({ currentUser, setAuthenticated }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-home icon"></i>Dashboard
+                  <i
+                    class="fas fa-home icon icon-1"
+                  ></i>
+                  Dashboard
                 </p>
               </NavLink>
             </li>
@@ -36,7 +39,7 @@ const SideNav = ({ currentUser, setAuthenticated }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-exchange-alt icon"></i>Transfers
+                  <i class="fas fa-exchange-alt icon icon-1"></i>Transfers
                 </p>
               </NavLink>
             </li>
@@ -47,7 +50,7 @@ const SideNav = ({ currentUser, setAuthenticated }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fab fa-cc-visa icon"></i>Virtual Card
+                  <i class="fab fa-cc-visa icon icon-1"></i>Virtual Card
                 </p>
               </NavLink>
             </li>
@@ -58,7 +61,7 @@ const SideNav = ({ currentUser, setAuthenticated }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-receipt icon"></i>Transactions
+                  <i class="fas fa-receipt icon icon-1"></i>Transactions
                 </p>
               </NavLink>
             </li>
@@ -69,7 +72,7 @@ const SideNav = ({ currentUser, setAuthenticated }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-plane-departure icon"></i>Goals
+                  <i class="fas fa-plane-departure icon icon-1"></i>Goals
                 </p>
               </NavLink>
             </li>
@@ -80,7 +83,7 @@ const SideNav = ({ currentUser, setAuthenticated }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-bug icon"></i>Report A Bug
+                  <i class="fas fa-bug icon icon-1"></i>Report A Bug
                 </p>
               </NavLink>
             </li>
