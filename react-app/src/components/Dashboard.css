@@ -168,7 +168,7 @@ background-position: right center; /* change the direction of the change here */
           }
 
 .small-form {
-    background-color: #898999;
+    background-color: #2D325A;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -178,6 +178,16 @@ background-position: right center; /* change the direction of the change here */
 .small-input-wrapper {
     display: flex;
     flex-direction: column;
+}
+
+.small-input {
+    border: none;
+    border-bottom: 2px solid #202442;
+    background-color: #2D325A !important;
+}
+
+.small-input:active {
+    background-color: #202442 !important;
 }
 
 @media (max-width: 768px) {
