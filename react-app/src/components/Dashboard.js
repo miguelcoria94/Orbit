@@ -24,6 +24,9 @@ const Dashboard = ({ setAuthenticated, currentUser, currentUserId }) => {
           <CheckingsCard currentUserId={currentUserId} />
           <div className="chart-div">
             <LineChart
+              id="users-chart"
+              width="64vw"
+              height="100%"
               colors={["rgb(50, 173, 81)", "#666"]}
               label="Value"
               data={{ 1: 3500, 2: 4000, 3: 3600, 4: 5000 }}
@@ -35,7 +38,6 @@ const Dashboard = ({ setAuthenticated, currentUser, currentUserId }) => {
         </Col>
         <Col col-3 className="last-div">
           <QuickPay currentUserId={currentUserId} />
-          <PieChart data={{ Blueberry: 1, Strawberry: 3 }} />
         </Col>
       </Row>
     </Container>
