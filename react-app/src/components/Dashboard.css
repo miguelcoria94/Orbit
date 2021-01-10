@@ -170,8 +170,8 @@ background-position: right center; /* change the direction of the change here */
           }
 
 .small-form {
-    background-color: #2D325A;
-    width: 90%;
+    background-color: transparent;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -184,22 +184,44 @@ background-position: right center; /* change the direction of the change here */
 
 .small-input {
     border: none;
-    border-bottom: 2px solid #202442;
-    background-color: #2D325A !important;
+    margin: none;
+    height: 30px;
+    border-bottom: 3px solid #404780;
+    background-color: #2d325a00 !important;
 }
 
+::placeholder {
+    color: #898999;
+}
 .small-input:active {
     background-color: #202442 !important;
 }
 
-.depth {
-    box-shadow: none;
+.gradient-card {
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)
 }
 
-.gradient-card {
+.gradient-card:hover {
+    background-position: right center;
+    color: #fff;
+}
+
+.last-div {
+    padding-right: 4px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.last-card {
+    background-color: #212127;
 }
 
 @media (max-width: 768px) {
     .dashboard-wrapper {
     }
 }
+
+
+         

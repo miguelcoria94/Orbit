@@ -32,21 +32,19 @@ const QuickPay = () => {
               <div>{error}</div>
             ))}
             <div className="small-input-wrapper">
-              <label>Email</label>
               <input
                 name="text"
                 type="text"
-                placeholder="$100"
+                placeholder="Amount to send"
                 onChange={updateAmount}
-                            className="small-input"
+                className="small-input"
               />
             </div>
             <div className="small-input-wrapper">
-              <label>Password</label>
               <input
                 name="password"
                 type="password"
-                placeholder=""
+                placeholder="Recipient Email"
                 onChange={updateEmail}
                 className="small-input"
               />

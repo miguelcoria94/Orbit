@@ -23,7 +23,7 @@ const Dashboard = ({ setAuthenticated, currentUser, currentUserId }) => {
         <Col col-3>
           <SavingsCard currentUserId={currentUserId} />
         </Col>
-        <Col col-3>
+        <Col col-3 className="last-div">
           <QuickPay currentUserId={currentUserId} />
         </Col>
       </Row>
