@@ -36,7 +36,7 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
             </li>
             <li className="navbar_links-sidenav">
               <NavLink
-                to="/accounts"
+                to="/transfers"
                 exact={true}
                 activeClassName="active-sidenav"
               >
