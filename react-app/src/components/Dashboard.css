@@ -71,6 +71,7 @@ a:hover {
 }
 
 .custom-card {
+    cursor: pointer;
     height: 200px;
     margin-top: 50px;
     display: flex;
@@ -80,7 +81,7 @@ a:hover {
     flex-direction: column;
     background-color: #2D325A;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .balance {
@@ -196,8 +197,6 @@ background-position: right center; /* change the direction of the change here */
 }
 
 .gradient-card {
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-
 }
 
 @media (max-width: 768px) {
