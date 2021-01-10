@@ -26,12 +26,7 @@ const Home = ({ setAuthenticated }) => {
             <DemoButton setAuthenticated={setAuthenticated}/>
           </Col>
           <Col className="main-header-container">
-                    <img
-                        alt="home-spaceman"
-              src={spaceman}
-              width="600"
-              className="animate__animated animate__shakeY"
-            />
+                    
           </Col>
         </Row>
         <Row>

@@ -1,5 +1,5 @@
 .dashboard-wrapper {
-    height: 100%;
+    height: auto;
     background-color: #26294B;
     background-color: #bdbdbd;
     background-image: linear-gradient(19deg, #15404b 0%, #341a7e 100%);
