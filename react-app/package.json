@@ -9,9 +9,12 @@
     "animate.css": "^4.1.1",
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
+    "chart.js": "^2.9.4",
     "http-proxy-middleware": "^1.0.5",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.0",
+    "react-chartkick": "^0.4.1",
+    "react-charts": "^2.0.0-beta.7",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
