@@ -185,21 +185,23 @@ background-position: right center; /* change the direction of the change here */
     border: none;
     margin-bottom: 18px;
     height: 30px;
-    border-bottom: 3px solid #c56a20fb;
+    border-bottom: 1px solid #898999;
     background-color: #383b5000 !important;
     width: 240px;
-    font-weight: 800;
-    color: #c56a20fb;
+    font-weight: 300;
+    color: #f3f3f3fb;
 }
 
 ::placeholder {
     color: #898999;
-    font-weight: 800;
+    font-weight: 400;
 }
 .small-input:active {
     background-color: #202442 !important;
 }
 .small-input:focus {
+    border-bottom: 3px solid #202442;
+    color: #ffffff;
     outline: none;
 }
 
@@ -222,6 +224,11 @@ background-position: right center; /* change the direction of the change here */
 
 .last-card {
     background-color: #423462;
+}
+.quick-pay-test {
+    font-size: 15px;
+    color: #898999;
+    font-weight: 400;
 }
 
 @media (max-width: 768px) {

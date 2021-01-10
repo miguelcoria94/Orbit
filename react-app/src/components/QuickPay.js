@@ -25,7 +25,7 @@ const QuickPay = () => {
     
     return (
       <div className="Card custom-card last-card depth">
-        <p className="active-text">Quick Pay</p>
+        <p className="quick-pay-test">Quick Pay</p>
         <form onSubmit={handleSubmit} className="small-form">
           <div>
             {errors.map((error) => (
@@ -34,7 +34,7 @@ const QuickPay = () => {
             <div className="small-input-wrapper">
               <input
                 name="text"
-                type="text"
+                type="number"
                 placeholder="Amount to send"
                 onChange={updateAmount}
                 className="small-input"
@@ -42,13 +42,15 @@ const QuickPay = () => {
             </div>
             <div className="small-input-wrapper">
               <input
-                name="password"
-                type="password"
+                name="email"
+                type="email"
                 placeholder="Recipient Email"
                 onChange={updateEmail}
                 className="small-input"
               />
-              <button type="submit">Send Now</button>
+              <button type="submit" className="add-funds-button">
+                Send Now <i class="fas fa-arrow-circle-right icon"></i>
+              </button>
             </div>
           </div>
         </form>
