@@ -80,7 +80,7 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
             </li>
             <li className="navbar_links-sidenav">
               <NavLink
-                to="/goals"
+                to="/report-a-bug"
                 exact={true}
                 activeClassName="active-sidenav"
               >

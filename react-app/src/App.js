@@ -36,9 +36,8 @@ function App() {
   }
 
   return (
-    <BrowserRouter>{
-      authenticated ? "" :
-        <NavBar />}
+    <BrowserRouter>
+      {authenticated ? "" : <NavBar />}
       <Switch>
         <Route path="/login" exact={true}>
           <LoginForm
@@ -78,7 +77,39 @@ function App() {
             currentUserId={currentUserId}
           />
         </ProtectedRoute>
-        <ProtectedRoute path="/transfers" exact={true} authenticated={authenticated}>
+        <ProtectedRoute
+          path="/transfers"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Transfers />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/virtual-card"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Transfers />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/transactions"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Transfers />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/goals"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Transfers />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/report-a-bug"
+          exact={true}
+          authenticated={authenticated}
+        >
           <Transfers />
         </ProtectedRoute>
         <Route component={NoMatch} />
