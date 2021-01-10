@@ -124,11 +124,11 @@ a:hover {
 }
 
 
-         .activate-savings-button {background-image: linear-gradient(to right, rgba(255, 0, 0, 0.25) 0%, rgba(255, 0, 0, 0.25)  51%, rgba(255, 0, 0, 0.25)  100%)}
-         .activate-savings-button {
-            transition: 0.5s;
-            background-size: 200% auto;
-            border: none;
+.activate-savings-button {background-image: linear-gradient(to right, rgba(255, 0, 0, 0.25) 0%, rgba(255, 0, 0, 0.25)  51%, rgba(255, 0, 0, 0.25)  100%)}
+.activate-savings-button {
+    transition: 0.5s;
+    background-size: 200% auto;
+    border: none;
     border-radius: 10px;
     margin-left: 5px;
     margin-bottom: 15px;
@@ -147,10 +147,10 @@ a:hover {
             transition: 0.5s;
             background-size: 200% auto;
             border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 5px;
     margin-bottom: 15px;
-    background-color: rgb(28, 131, 37);
+    background-color: rgba(28, 131, 37, 0.726);
     color: white;
           }
 
@@ -158,7 +158,7 @@ a:hover {
 background-position: right center; /* change the direction of the change here */
             color: #fff;
             text-decoration: none;
-            background-color: rgb(71, 226, 84);
+            background-color: rgb(78, 177, 86);
           }
          
 
