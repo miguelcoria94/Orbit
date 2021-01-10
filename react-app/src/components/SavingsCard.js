@@ -16,7 +16,7 @@ function SavingsCard({ currentUserId }) {
   }, []);
   
   return (
-    <div className="card custom-card">
+    <div className="card custom-card gradient-card">
       {balance.balance !== undefined ? (
         <>
           <div className="disabled-wrapper">
