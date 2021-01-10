@@ -55,75 +55,76 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   return (
     <Container>
       <Row className="d-flex justify-content-center form-wrapper-register ">
-        <form
-          onSubmit={onSignUp}
-          className="form"
-        >
+        <form onSubmit={onSignUp} className="form">
           <p className="tiny-text welcome">Welcome!</p>
           <h1 className="form-title">Sign up</h1>
           <Row className="name-box">
-          <Col className="label-wrapper">
-            <label className="label">First Name</label>
-            <input
-              type="text"
-              name="firstname"
-              onChange={updateFirstname}
-              value={firstname}
-              className="input"
-            ></input>
-          </Col>
-          <Col className="label-wrapper">
-            <label className="label">Last Name</label>
-            <input
-              type="text"
-              name="lastname"
-              onChange={updateLastname}
-              value={lastname}
-              className="input"
-            ></input>
-          </Col>
+            <Col className="label-wrapper">
+              <label className="label">First Name</label>
+              <input
+                type="text"
+                name="firstname"
+                onChange={updateFirstname}
+                value={firstname}
+                className="input"
+              ></input>
+            </Col>
+            <Col className="label-wrapper">
+              <label className="label">Last Name</label>
+              <input
+                type="text"
+                name="lastname"
+                onChange={updateLastname}
+                value={lastname}
+                className="input"
+              ></input>
+            </Col>
           </Row>
-          <div className="label-wrapper">
-            <label className="label">User Name</label>
-            <input
-              type="text"
-              name="username"
-              onChange={updateUsername}
-              value={username}
-              className="input"
-            ></input>
-          </div>
-          <div className="label-wrapper">
-            <label className="label">Email</label>
-            <input
-              type="text"
-              name="email"
-              onChange={updateEmail}
-              value={email}
-              className="input"
-            ></input>
-          </div>
-          <div className="label-wrapper">
-            <label className="label">Password</label>
-            <input
-              type="password"
-              name="password"
-              onChange={updatePassword}
-              value={password}
-              className="input"
-            ></input>
-          </div>
-          <div className="label-wrapper">
-            <label className="label">Repeat Password</label>
-            <input
-              type="password"
-              name="repeat_password"
-              onChange={updateRepeatPassword}
-              value={repeatPassword}
-              required={true}
-              className="input"
-            ></input>
-          </div>
+          <Row className="name-box">
+            <Col className="label-wrapper">
+              <label className="label">User Name</label>
+              <input
+                type="text"
+                name="username"
+                onChange={updateUsername}
+                value={username}
+                className="input"
+              ></input>
+            </Col>
+            <Col className="label-wrapper">
+              <label className="label">Email</label>
+              <input
+                type="text"
+                name="email"
+                onChange={updateEmail}
+                value={email}
+                className="input"
+              ></input>
+            </Col>
+          </Row>
+          <Row className="name-box">
+            <Col className="label-wrapper">
+              <label className="label">Password</label>
+              <input
+                type="password"
+                name="password"
+                onChange={updatePassword}
+                value={password}
+                className="input"
+              ></input>
+            </Col>
+            <Col className="label-wrapper">
+              <label className="label">Repeat Password</label>
+              <input
+                type="password"
+                name="repeat_password"
+                onChange={updateRepeatPassword}
+                value={repeatPassword}
+                required={true}
+                className="input"
+              ></input>
+            </Col>
+          </Row>
           <button className="demo-button-home" type="submit">
             Sign Up
           </button>

@@ -8,12 +8,17 @@
 /******* 404 page styles*/
 #root {
     height: calc(100vh);
-    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
-    background-image: url("./components/images/homepage.png");
+    background-color: #191446;
+    background-image: linear-gradient(316deg,#191446 = 0%,  #281a3d 74%);
     font-family: 'Barlow', sans-serif;
     max-width: 100%;
     overflow: hidden;
     background-size: cover;
+}
+
+.home_image {
+    width: 650px;
+    position: relative;
 }
 
 html, body {
@@ -109,19 +114,19 @@ nav {
 }
 
 .active {
-    color: #11c900 !important;
+    color: #2ad45d !important;
     font-weight: 600;
-    text-shadow: #11c90077 0px 4px 10px, #11c90083 0px 1px 10px;
+    text-shadow: #001c4469 0px 4px 10px, #001c446e 0px 1px 10px;
 }
 
 a {
     font-weight: 400;
-    color: #687293 !important;
+    color:#5d677c !important;
 }
 
 .navbar_link:hover{
     text-decoration: underline;
-    text-decoration-color: #11c900;
+    text-decoration-color: #5d677c;
     text-decoration-thickness: 2px;
 }
 
@@ -167,7 +172,7 @@ a {
     font-family: 'Barlow', sans-serif;
     color: white;
     font-weight: 800;
-    font-size: 75px;
+    font-size: 65px;
 }
 
 .main-header-container {
@@ -179,8 +184,8 @@ a {
 }
 
 .home-cta {
-    color: #11c900;
-    font-weight: 300;
+    color: #50ca2a;
+    font-weight: 800;
 }
 
 
@@ -191,7 +196,7 @@ a {
 }
 
 
-.demo-button-home  {background-image: linear-gradient(to right, #2d762b 0%, #4e4376  51%, #2b7653  100%)}
+.demo-button-home  {background-image: linear-gradient(to right, #41e23c 0%, #14c82c  51%, #2b7653  100%)}
 .demo-button-home  {
 margin-top: 30px;
 padding: 15px 45px;

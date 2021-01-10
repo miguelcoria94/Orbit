@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Container } from "react-bootstrap/";
-import spaceman from "../images/spaceman2.png";
+import spaceman from "../images/spaceship.png";
 import DemoButton from "../auth/DemoButton"
 
 const Home = ({ setAuthenticated }) => {
@@ -25,9 +25,12 @@ const Home = ({ setAuthenticated }) => {
             </h1>
             <DemoButton setAuthenticated={setAuthenticated}/>
           </Col>
-          <Col className="main-header-container">
-                    
-          </Col>
+                    <img
+                        alt="home-spaceman"
+              src={spaceman}
+              width="600"
+              className="animate__animated animate__shakeY home_image"
+            />
         </Row>
         <Row>
           <Col>
