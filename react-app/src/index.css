@@ -208,11 +208,9 @@ text-decoration: none;
 }
 
 .logout-button {
-    margin-left: 20px;
     padding: 5px 25px !important;
-    height: 40px;
+    height: 35px;
     border-radius: 5px;
-    margin-top: 45px;
 }
 .welcome-message-2 {
     color: #898999;

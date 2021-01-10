@@ -11,7 +11,7 @@ const Dashboard = ({ setAuthenticated, currentUser, currentUserId }) => {
     <Container fluid className="dashboard-wrapper">
       <Row>
         <Col className="col-3">
-          <SideNav currentUser={currentUser} />
+          <SideNav currentUser={currentUser} setAuthenticated={setAuthenticated}/>
         </Col>
         <Col className="col-3">
           <CheckingsCard currentUserId={currentUserId} />
@@ -20,10 +20,6 @@ const Dashboard = ({ setAuthenticated, currentUser, currentUserId }) => {
           <SavingsCard currentUserId={currentUserId} />
         </Col>
         <Col>
-          <LogoutButton
-            setAuthenticated={setAuthenticated}
-            currentUser={currentUser}
-          />
         </Col>
       </Row>
     </Container>

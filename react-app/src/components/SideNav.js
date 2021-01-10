@@ -4,8 +4,9 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import uranus from "./images/uranus.png";
+import LogoutButton from "./auth/LogoutButton";
 
-const SideNav = ({ currentUser }) => {
+const SideNav = ({ currentUser, setAuthenticated }) => {
   return (
     <Container className="sidenav-wrapper">
       <Row>
@@ -22,6 +23,10 @@ const SideNav = ({ currentUser }) => {
           </Col>
           <h1 className="welcome-message-1">Dashboard</h1>
           <p className="welcome-message-2">Logged in as {currentUser}</p>
+          <LogoutButton
+            setAuthenticated={setAuthenticated}
+            currentUser={currentUser}
+          />
           <ul className="ul-wrapper">
             <li className="navbar_links-sidenav">
               <NavLink
