@@ -7,6 +7,7 @@ const AddFunds = ({ currentUserId, currentBalance }) => {
       const request = { newBalance, currentUserId };
       const response = await axios.put(`/api/checkings_account/${currentUserId}`, request);
       window.location.reload()
+      return response
     };
 
   return (
