@@ -139,35 +139,35 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     color: white;
           }
 
-          .activate-savings-button:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-            background-color: rgb(71, 226, 84);
-          }
+.activate-savings-button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(71, 226, 84);
+}
 
-          .add-funds-button {
-            transition: 0.5s;
-            background-size: 200% auto;
-            border: none;
+.add-funds-button {
+    transition: 0.5s;
+    background-size: 200% auto;
+    border: none;
     border-radius: 5px;
     margin-left: 5px;
     margin-bottom: 15px;
     background-color: rgba(27, 172, 39, 0.726);
     color: white;
-          }
+}
 
-          .add-funds-button:hover{
-background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-            background-color: rgb(78, 177, 86);
-          }
+.add-funds-button:hover{
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(78, 177, 86);
+}
          
 
-          .animate__animated.animate__headShake {
-              --animate-duration:60s;
-          }
+.animate__animated.animate__headShake {
+    --animate-duration:60s;
+}
 
 .small-form {
     background-color: transparent;
