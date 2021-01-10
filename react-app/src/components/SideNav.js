@@ -11,16 +11,6 @@ const SideNav = ({ currentUser, setAuthenticated }) => {
     <Container className="sidenav-wrapper">
       <Row>
         <Col>
-          <Col className="logo-wrapper-sidenav">
-            <a href="/">
-              <img
-                src={uranus}
-                className="sidenavbar_logo animate__animated animate__headShake"
-                alt="orbit-logo"
-                href="/"
-              />{" "}
-            </a>
-          </Col>
           <h1 className="welcome-message-1">Dashboard</h1>
           <p className="welcome-message-2">Logged in as {currentUser}</p>
           <LogoutButton
