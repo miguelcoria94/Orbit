@@ -7,6 +7,7 @@
     margin-top: 25px;
     margin-bottom: 25px;
     width: 90vw;
+    padding-right: 20px !important;
 }
 
 .sidenav-wrapper {
@@ -165,6 +166,14 @@ background-position: right center; /* change the direction of the change here */
           .animate__animated.animate__headShake {
               --animate-duration:60s;
           }
+
+.small-form {
+    background-color: #898999;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
 @media (max-width: 768px) {
     .dashboard-wrapper {
