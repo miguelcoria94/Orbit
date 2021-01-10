@@ -7,7 +7,7 @@ import uranus from "./images/uranus.png";
 
 
 
-const NavBar = ({ setAuthenticated, authenticated, currentUser}) => {
+const NavBar = () => {
 
   return (
     <Container>

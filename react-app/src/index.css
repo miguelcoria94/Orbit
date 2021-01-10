@@ -222,7 +222,7 @@ text-decoration: none;
 }
 
 .welcome-message-1 {
-    color: white;
-    margin-top: 20px;
+    color: rgb(255, 255, 255) !important;
+    font-weight: 900 !important;
 }
          

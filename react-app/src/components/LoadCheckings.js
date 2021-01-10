@@ -1,8 +1,6 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 
 const LoadCheckings = ({ currentUserId }) => {
-  const history = useHistory();
   const activateSavings = async (e) => {
     e.preventDefault();
     const loadBalance = 100;

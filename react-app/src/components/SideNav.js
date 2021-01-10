@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import uranus from "./images/uranus.png";
 
-const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
+const SideNav = ({ currentUser }) => {
   return (
     <Container className="sidenav-wrapper">
       <Row>
@@ -14,17 +14,14 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
             <a href="/">
               <img
                 src={uranus}
-                className="sidenavbar_logo"
+                className="sidenavbar_logo animate__animated animate__headShake"
                 alt="orbit-logo"
                 href="/"
               />{" "}
             </a>
-            <h1 className="sidelogo-text" href>
-              <a href="/">Orbit</a>
-            </h1>
           </Col>
-            <h1 className="welcome-message-1">Dashboard</h1>
-            <p className="welcome-message-2">Logged in as {currentUser}</p>
+          <h1 className="welcome-message-1">Dashboard</h1>
+          <p className="welcome-message-2">Logged in as {currentUser}</p>
           <ul className="ul-wrapper">
             <li className="navbar_links-sidenav">
               <NavLink
@@ -39,23 +36,23 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
             </li>
             <li className="navbar_links-sidenav">
               <NavLink
-                to="/accounts"
+                to="/transfers"
                 exact={true}
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-wallet icon"></i>Accounts
+                  <i class="fas fa-exchange-alt icon"></i>Transfers
                 </p>
               </NavLink>
             </li>
             <li className="navbar_links-sidenav">
               <NavLink
-                to="/transfer"
+                to="/virtual-card"
                 exact={true}
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-exchange-alt icon"></i>Transfer
+                  <i class="fab fa-cc-visa icon"></i>Virtual Card
                 </p>
               </NavLink>
             </li>
@@ -83,12 +80,12 @@ const SideNav = ({ setAuthenticated, authenticated, currentUser }) => {
             </li>
             <li className="navbar_links-sidenav">
               <NavLink
-                to="/education"
+                to="/report-a-bug"
                 exact={true}
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-graduation-cap icon"></i>Education
+                  <i class="fas fa-bug icon"></i>Report A Bug
                 </p>
               </NavLink>
             </li>

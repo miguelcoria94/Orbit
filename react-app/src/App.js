@@ -10,6 +10,7 @@ import Contact from "./components/static_pages/Contact"
 import NoMatch from "./components/static_pages/NoMatch"
 import Home from "./components/static_pages/Home"
 import Dashboard from "./components/Dashboard";
+import Transfers from "./components/Transfers"
 import { Redirect } from "react-router-dom";
 
 function App() {
@@ -34,20 +35,9 @@ function App() {
     return null;
   }
 
-  if (!currentUser) {
-    
-  }
-
-  console.log(currentUserId)
-
   return (
-    <BrowserRouter>{
-      authenticated ? "" :
-        <NavBar
-          authenticated={authenticated}
-          setAuthenticated={setAuthenticated}
-          currentUser={currentUser}
-        />}
+    <BrowserRouter>
+      {authenticated ? "" : <NavBar />}
       <Switch>
         <Route path="/login" exact={true}>
           <LoginForm
@@ -86,6 +76,41 @@ function App() {
             currentUser={currentUser}
             currentUserId={currentUserId}
           />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/transfers"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Transfers />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/virtual-card"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Transfers />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/transactions"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Transfers />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/goals"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Transfers />
+        </ProtectedRoute>
+        <ProtectedRoute
+          path="/report-a-bug"
+          exact={true}
+          authenticated={authenticated}
+        >
+          <Transfers />
         </ProtectedRoute>
         <Route component={NoMatch} />
       </Switch>
