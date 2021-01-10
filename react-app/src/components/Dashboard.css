@@ -52,8 +52,9 @@ a:hover {
 }
 
 .sidenavbar_logo {
-    height: 30px;
-    margin: 8px;
+    height: 150px;
+    margin-right: 10px;
+    margin-bottom: 50px;
 }
 
 .logo-wrapper-sidenav {
@@ -63,11 +64,9 @@ a:hover {
     justify-content: center;
     align-content: center;
     border-radius: 5px;
-    box-shadow: #212341 3px 3px 6px 0px inset, #1b1d33  -3px -3px 6px 1px inset;
-    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
-    background-color: #27294C;
-    margin-bottom: 55%;
-    width: 50px;
+    align-self: center;
+    height: 120px;
+    width: 100%;
 }
 
 .custom-card {
