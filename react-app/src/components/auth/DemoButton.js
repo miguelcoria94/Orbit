@@ -9,7 +9,7 @@ const DemoButton = ({ setAuthenticated }) => {
   };
 
   return (
-    <button className="demo-button-home" onClick={demoPress}>
+    <button className="demo-button-home-1" onClick={demoPress}>
       Login as a Demo User
     </button>
   );

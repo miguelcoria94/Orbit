@@ -196,8 +196,8 @@ a {
 }
 
 
-.demo-button-home  {background-image: linear-gradient(to right, #41e23c 0%, #14c82c  51%, #2b7653  100%)}
-.demo-button-home  {
+.demo-button-home-1  {background-image: linear-gradient(to right, #4908b1 0%, #1c4ce9  51%, #68d84c  100%)}
+.demo-button-home-1  {
 margin-top: 30px;
 padding: 15px 45px;
 text-align: center;
@@ -210,6 +210,28 @@ display: block;
 border: none;
 }
 
+.demo-button-home-1:hover {
+background-position: right center; /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
+}
+
+.demo-button-home  {background-image: linear-gradient(to right, #258b33 0%, #30bd37  51%, #333362  100%)}
+.demo-button-home  {
+margin-top: 30px;
+padding: 15px 45px;
+text-align: center;
+text-transform: uppercase;
+transition: 0.5s;
+background-size: 200% auto;
+color: white;            
+border-radius: 10px;
+display: block;
+border: none;
+}
+.image-col {
+    margin-top: 45px;
+}
 .demo-button-home:hover {
 background-position: right center; /* change the direction of the change here */
 color: #fff;
