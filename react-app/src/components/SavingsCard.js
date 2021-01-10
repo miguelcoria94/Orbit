@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Dashboard.css";
 import ActivateSavingsButton from "./ActivateSavingsButton";
+const numeral = require("numeral");
+
 
 function SavingsCard({ currentUserId }) {
   const [balance, setBalance] = useState([]);
@@ -17,7 +19,7 @@ function SavingsCard({ currentUserId }) {
   
   return (
     <div className="card custom-card gradient-card">
-      {balance.balance !== undefined ? (
+      {numeral(balance.balance).format("0,0[.]00 $") !== undefined ? (
         <>
           <div className="disabled-wrapper">
             <i className="fas fa-circle icon-active"></i>
@@ -29,8 +31,8 @@ function SavingsCard({ currentUserId }) {
         <>
           <div className="disabled-wrapper">
             <i class="fas fa-circle icon-disabled"></i>
-              <p className="disabled-text">Disabled</p>
-              <ActivateSavingsButton currentUserId={currentUserId}/>
+            <p className="disabled-text">Disabled</p>
+            <ActivateSavingsButton currentUserId={currentUserId} />
           </div>
           <h1 className="balance">{"$0"}</h1>
         </>
