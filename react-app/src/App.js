@@ -10,6 +10,7 @@ import Contact from "./components/static_pages/Contact"
 import NoMatch from "./components/static_pages/NoMatch"
 import Home from "./components/static_pages/Home"
 import Dashboard from "./components/Dashboard";
+import Transfers from "./components/Transfers"
 import { Redirect } from "react-router-dom";
 
 function App() {
@@ -76,6 +77,9 @@ function App() {
             currentUser={currentUser}
             currentUserId={currentUserId}
           />
+        </ProtectedRoute>
+        <ProtectedRoute path="/transfers" exact={true} authenticated={authenticated}>
+          <Transfers />
         </ProtectedRoute>
         <Route component={NoMatch} />
       </Switch>
