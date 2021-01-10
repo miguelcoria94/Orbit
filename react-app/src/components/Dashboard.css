@@ -175,6 +175,11 @@ background-position: right center; /* change the direction of the change here */
     align-content: center;
 }
 
+.small-input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 768px) {
     .dashboard-wrapper {
     }
