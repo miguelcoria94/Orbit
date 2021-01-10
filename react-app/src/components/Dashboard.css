@@ -81,7 +81,7 @@ a:hover {
     flex-direction: column;
     background-color: #2D325A;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .balance {
@@ -171,7 +171,6 @@ background-position: right center; /* change the direction of the change here */
 
 .small-form {
     background-color: transparent;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -184,17 +183,24 @@ background-position: right center; /* change the direction of the change here */
 
 .small-input {
     border: none;
-    margin: none;
+    margin-bottom: 18px;
     height: 30px;
-    border-bottom: 3px solid #404780;
-    background-color: #2d325a00 !important;
+    border-bottom: 3px solid #c56a20fb;
+    background-color: #383b5000 !important;
+    width: 240px;
+    font-weight: 800;
+    color: #c56a20fb;
 }
 
 ::placeholder {
     color: #898999;
+    font-weight: 800;
 }
 .small-input:active {
     background-color: #202442 !important;
+}
+.small-input:focus {
+    outline: none;
 }
 
 .gradient-card {
@@ -215,7 +221,7 @@ background-position: right center; /* change the direction of the change here */
 }
 
 .last-card {
-    background-color: #212127;
+    background-color: #423462;
 }
 
 @media (max-width: 768px) {
