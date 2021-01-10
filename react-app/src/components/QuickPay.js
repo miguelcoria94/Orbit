@@ -24,7 +24,7 @@ const QuickPay = () => {
     }
     
     return (
-      <div className="Card custom-card last-card">
+      <div className="Card custom-card last-card depth">
         <p className="active-text">Quick Pay</p>
         <form onSubmit={handleSubmit} className="small-form">
           <div>

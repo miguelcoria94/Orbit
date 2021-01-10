@@ -80,6 +80,7 @@ a:hover {
     flex-direction: column;
     background-color: #2D325A;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .balance {
@@ -188,6 +189,15 @@ background-position: right center; /* change the direction of the change here */
 
 .small-input:active {
     background-color: #202442 !important;
+}
+
+.depth {
+    box-shadow: none;
+}
+
+.gradient-card {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
 }
 
 @media (max-width: 768px) {
