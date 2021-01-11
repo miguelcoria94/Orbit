@@ -9,7 +9,9 @@
 #root {
     height: calc(100vh);
     background-color: #191446;
-    background-image: linear-gradient(316deg,#191446 = 0%,  #281a3d 74%);
+    background-color: #011954;
+    background-image: linear-gradient(315deg, #001d5f 0%, #122b64 74%);
+    background-image: url(./components/images/1.jpg);
     font-family: 'Barlow', sans-serif;
     max-width: 100%;
     overflow: hidden;
@@ -196,7 +198,7 @@ a {
 }
 
 
-.demo-button-home-1  {background-image: linear-gradient(to right, #4908b1 0%, #1c4ce9  51%, #68d84c  100%)}
+.demo-button-home-1  {background-image: linear-gradient(to right, #1444ac 0%, #0e2a85  51%, #844db1  100%)}
 .demo-button-home-1  {
 margin-top: 30px;
 padding: 15px 45px;

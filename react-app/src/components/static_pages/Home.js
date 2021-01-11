@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Container } from "react-bootstrap/";
-import spaceman from "../images/spaceman2.png";
+import spaceman from "../images/spaceship.png";
 import DemoButton from "../auth/DemoButton"
 
 const Home = ({ setAuthenticated }) => {
