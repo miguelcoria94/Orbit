@@ -24,6 +24,7 @@ def add_checkings():
     return {"id": new_checkings.id}
 
 
+
 @checkings_account_routes.route('/<int:id>', methods=['PUT'])
 def quick_load(id):
     user_id = request.json['currentUserId']
