@@ -2,10 +2,12 @@ import React from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import "./Dashboard.css";
+import BigCheckingsCard from "./BigCheckingsCard";
 
 const Transfers = ({
   currentUser,
-  setAuthenticated
+  setAuthenticated,
+  currentUserId
 }) => {
   return (
     <Container fluid className="dashboard-wrapper">
@@ -17,7 +19,7 @@ const Transfers = ({
             setAuthenticated={setAuthenticated}
           />
         </Col>
-        <Col className="col-3"></Col>
+        <Col className="col-3"><BigCheckingsCard currentUserId={currentUserId}/></Col>
         <Col col-3></Col>
         <Col></Col>
       </Row>
