@@ -4,6 +4,7 @@ import SideNav from "./SideNav";
 import "./Transfer.css";
 import BigCheckingsCard from "./BigCheckingsCard";
 import BigSavingsCard from "./BigSavingsAccount";
+import axios from "axios";
 
 const Transfers = ({
   currentUser,
@@ -14,13 +15,57 @@ const Transfers = ({
   const [checkingsTransferAmount, setCheckingsTransferAmount] = useState("");
   const [userId, setUserId] = useState("");
 
+  const transferToSavings = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("/api/checkings_account/transfer-to-savings", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId,
+        savingsTransferAmount
+      }),
+    });
+
+    if (response.ok) {
+      window.location.reload();
+    }
+
+    if (!response.ok) {
+    }
+  };
+
+  const transferToCheckings = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch("/api/savings_account/transfer-to-checkings", {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId,
+        checkingsTransferAmount
+      }),
+    });
+
+    if (response.ok) {
+      window.location.reload();
+    }
+
+    if (!response.ok) {
+    }
+  };
+
   const updateSavings = (e) => {
     setSavingsTransferAmount(e.target.value);
     setUserId(currentUserId);
   };
 
   const updateCheckings = (e) => {
-    setCheckingsTransferAmount(currentUserId);
+    setCheckingsTransferAmount(e.target.value);
     setUserId(currentUserId);
   };
 
@@ -42,7 +87,7 @@ const Transfers = ({
           <div className="transfer-form-wrapper">
             <p className="transfer-from-title">Transfer Form</p>
             <div className="forms-wrapper">
-              <form className="transfer-form">
+              <form className="transfer-form" onSubmit={transferToSavings}>
                 <p className="quick-pay-test transfer-form-subtitle">
                   Transfer to Savings
                 </p>
@@ -69,7 +114,7 @@ const Transfers = ({
                   <i class="fas fa-exchange-alt transfer-icon"></i>
                 </p>
               </div>
-              <form className="transfer-form">
+              <form className="transfer-form" onSubmit={transferToCheckings}>
                 <p className="quick-pay-test transfer-form-subtitle">
                   Transfer to Checkings
                 </p>
