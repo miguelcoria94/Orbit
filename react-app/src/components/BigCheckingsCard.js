@@ -17,14 +17,14 @@ function BigCheckingsCard({ currentUserId }) {
   }, []);
 
   return (
-    <div className="card custom-card">
+    <div className="card big-custom-card">
       {balance.balance !== undefined ? (
         <>
           <div className="disabled-wrapper">
             <i className="fas fa-circle icon-active"></i>
             <p className="active-text">active</p>
           </div>
-          <h1 className="balance">${balance.balance}</h1>
+          <h1 className="big-balance">${balance.balance}</h1>
         </>
       ) : (
         <>
@@ -36,7 +36,7 @@ function BigCheckingsCard({ currentUserId }) {
           <h1 className="balance">{"$0"}</h1>
         </>
       )}
-      <p className="balance-tag">Checkings Account</p>
+      <p className="big-balance-tag">Checkings Account</p>
     </div>
   );
 }

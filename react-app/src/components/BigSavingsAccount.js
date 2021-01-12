@@ -14,7 +14,7 @@ function BigSavingsCard({ currentUserId }) {
   }, []);
 
   return (
-    <div className="card custom-card gradient-card">
+    <div className="card big-custom-card gradient-card">
       {balance.balance !== undefined ? (
         <>
           <div className="disabled-wrapper">
