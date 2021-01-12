@@ -11,3 +11,20 @@
 .transfer-from-title {
     color: white;
 }
+
+.big-custom-card {
+    cursor: pointer;
+    height: 300px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2D325A;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.big-gradient-card {
+}
