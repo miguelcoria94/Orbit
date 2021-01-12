@@ -3,6 +3,7 @@ import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import "./Dashboard.css";
 import BigCheckingsCard from "./BigCheckingsCard";
+import BigSavingsCard from "./BigSavingsAccount";
 
 const Transfers = ({
   currentUser,
@@ -19,8 +20,12 @@ const Transfers = ({
             setAuthenticated={setAuthenticated}
           />
         </Col>
-        <Col className="col-3"><BigCheckingsCard currentUserId={currentUserId}/></Col>
-        <Col col-3></Col>
+        <Col className="col-3">
+          <BigCheckingsCard currentUserId={currentUserId} />
+        </Col>
+        <Col col-3>
+          <BigSavingsCard currentUserId={currentUserId} />
+        </Col>
         <Col></Col>
       </Row>
     </Container>
