@@ -40,6 +40,9 @@ const Transfers = ({
                     className="smaller-input"
                   />
                 </div>
+                <div>
+                  <button>Transfer</button>
+                </div>
               </form>
               <div>
                 <p>
@@ -57,6 +60,9 @@ const Transfers = ({
                     placeholder="Enter Amount"
                     className="smaller-input"
                   />
+                </div>
+                <div>
+                  <button>Transfer</button>
                 </div>
               </form>
             </div>
