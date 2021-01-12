@@ -26,10 +26,30 @@ const Transfers = ({
             <Col className="col-12">
               <div className="transfer-form-wrapper">
                 <p className="transfer-from-title">Transfer Form</p>
-                <form>
-                  <div className="small-input-wrapper"></div>
-                </form>
-                <form></form>
+                <div className="forms-wrapper">
+                  <form>
+                    <div className="small-input-wrapper">
+                      <input
+                        name="email"
+                        type="email"
+                        placeholder="Send to savings"
+                        onChange={"ef"}
+                        className="small-input"
+                      />
+                    </div>
+                  </form>
+                  <form>
+                    <div className="small-input-wrapper">
+                      <input
+                        name="email"
+                        type="email"
+                        placeholder="Send to savings"
+                        onChange={"ef"}
+                        className="small-input"
+                      />
+                    </div>
+                  </form>
+                </div>
               </div>
             </Col>
           </Row>

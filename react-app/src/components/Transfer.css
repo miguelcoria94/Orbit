@@ -11,6 +11,11 @@
     width: 63.3vw;
 }
 
+.forms-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
 .transfer-wrapper {
     width: 98vw;
 }
