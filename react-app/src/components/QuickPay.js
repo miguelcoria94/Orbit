@@ -10,12 +10,14 @@ const QuickPay = ({ currentUserId }) => {
   const [currentBalance, setCurrentBalance] = useState("");
   const [senderId, setSenderId] = useState("");
   const [amount, setAmount] = useState("");
+  const [noMoneyError, setNoMoneyError] = useState("")
 
   const transferFunds = async (e) => {
       e.preventDefault();
       const data = await axios.get(`/api/checkings_account/${currentUserId}`);
     setCurrentBalance(data.data.checkings_balance[0].balance);
     if (currentBalance < amount) {
+        setNoMoneyError("insufficient funds");
         return
       }
       
@@ -69,7 +71,7 @@ const QuickPay = ({ currentUserId }) => {
               className="small-input"
             />
             <button type="submit" className="add-funds-button">
-              Send Now <i class="fas fa-arrow-circle-right icon"></i>
+              {noMoneyError ? noMoneyError : "Send Now" }<i class="fas fa-arrow-circle-right icon"></i>
             </button>
           </div>
         </div>
