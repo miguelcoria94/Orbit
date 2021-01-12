@@ -85,6 +85,8 @@ function App() {
           <Transfers
             authenticate={authenticate}
             setAuthenticated={setAuthenticated}
+            currentUser={currentUser}
+            currentUserId={currentUserId}
           />
         </ProtectedRoute>
         <ProtectedRoute
