@@ -40,7 +40,7 @@ const Transfers = ({
               </form>
               <div>
               <p>
-                <i class="fas fa-exchange-alt icon icon-1"></i>
+                <i class="fas fa-exchange-alt transfer-icon"></i>
               </p>
               </div>
               <form className="transfer-form">

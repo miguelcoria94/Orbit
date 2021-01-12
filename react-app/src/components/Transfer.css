@@ -18,6 +18,10 @@
 .transfer-form{
 }
 
+.transfer-icon {
+    text-align: center;
+}
+
 .forms-wrapper {
     display: flex;
     justify-content: space-around;
