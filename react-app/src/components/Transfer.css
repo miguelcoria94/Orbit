@@ -8,6 +8,11 @@
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     height: 90%;
+    width: 63.3vw;
+}
+
+.transfer-wrapper {
+    width: 98vw;
 }
 
 .transfer-from-title {
@@ -20,7 +25,7 @@
 
 .big-custom-card {
     cursor: pointer;
-    height: 300px;
+    height: 250px;
     margin-top: 40px;
     display: flex;
     align-items: center;

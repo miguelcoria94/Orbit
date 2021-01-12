@@ -12,7 +12,7 @@ const Transfers = ({
 }) => {
   return (
     <Container fluid className="dashboard-wrapper">
-      <Row>
+      <Row className="transfer-wrapper">
         <Col className="col-3">
           <SideNav
             title={"Transfers"}
@@ -20,17 +20,22 @@ const Transfers = ({
             setAuthenticated={setAuthenticated}
           />
         </Col>
-        <Col className="col-5">
+        <Col className="col-4">
           <BigCheckingsCard currentUserId={currentUserId} />
-          <BigSavingsCard currentUserId={currentUserId} />
+          <Row>
+            <Col className="col-12">
+              <div className="transfer-form-wrapper">
+                <p className="transfer-from-title">Transfer Form</p>
+                <form>
+                  <div className="small-input-wrapper"></div>
+                </form>
+                <form></form>
+              </div>
+            </Col>
+          </Row>
         </Col>
-        <Col>
-          <div className="transfer-form-wrapper">
-            <p className="transfer-from-title">Transfer Form</p>
-            <form>
-
-            </form>
-          </div>
+        <Col className="col-4">
+          <BigSavingsCard currentUserId={currentUserId} />
         </Col>
       </Row>
     </Container>
