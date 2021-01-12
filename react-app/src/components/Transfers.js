@@ -40,8 +40,13 @@ const Transfers = ({
                     className="smaller-input"
                   />
                 </div>
-                <div>
-                  <button>Transfer</button>
+                <div className="button-wrapper">
+                  <button
+                    type="submit"
+                    className="add-funds-button transfer-button"
+                  >
+                    Transfer Now
+                  </button>
                 </div>
               </form>
               <div>
@@ -61,8 +66,13 @@ const Transfers = ({
                     className="smaller-input"
                   />
                 </div>
-                <div>
-                  <button>Transfer</button>
+                <div className="button-wrapper">
+                  <button
+                    type="submit"
+                    className="add-funds-button transfer-button"
+                  >
+                    Transfer Now
+                  </button>
                 </div>
               </form>
             </div>

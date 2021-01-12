@@ -32,6 +32,7 @@
 
 
 ::placeholder {
+    text-align: center;
 }
 
 .forms-wrapper {
@@ -42,7 +43,20 @@
     padding: 30px 20px;
     width: 100%
 }
+
+.transfer-button {
+    width: 100%;
+}
 .smaller-input-wrapper {
+}
+
+.button-wrapper {
+    display: flex;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
 }
 
 .smaller-input{
@@ -51,7 +65,7 @@
     color: white;
     border-radius: 5px;
     border: none;
-    padding-left: 10px;
+    text-align: center;
 }
 
 .smaller-input:active{
