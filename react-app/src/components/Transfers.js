@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
-import "./Dashboard.css";
+import "./Transfer.css";
 import BigCheckingsCard from "./BigCheckingsCard";
 import BigSavingsCard from "./BigSavingsAccount";
 
@@ -25,6 +25,12 @@ const Transfers = ({
           <BigSavingsCard currentUserId={currentUserId} />
         </Col>
         <Col>
+          <div className="transfer-form-wrapper">
+            <p>Transfer Form</p>
+            <form>
+
+            </form>
+          </div>
         </Col>
       </Row>
     </Container>
