@@ -38,9 +38,11 @@ const Transfers = ({
                   />
                 </div>
               </form>
+              <div>
               <p>
                 <i class="fas fa-exchange-alt icon icon-1"></i>
               </p>
+              </div>
               <form className="transfer-form">
                 <div className="smaller-input-wrapper">
                   <input

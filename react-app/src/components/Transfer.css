@@ -16,7 +16,6 @@
 }
 
 .transfer-form{
-    padding: 20px;
 }
 
 .forms-wrapper {
@@ -25,14 +24,13 @@
     align-content: center;
     align-self: center;
     padding: 30px 20px;
-    width: 80%
+    width: 100%
 }
 .smaller-input-wrapper {
-    width: 30px;
 }
 
 .smaller-input{
-    width: 100px;
+    width: 175px;
 }
 
 .transfer-from-title {
