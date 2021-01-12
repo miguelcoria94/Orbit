@@ -26,7 +26,7 @@ const Transfers = ({
         </Col>
         <Col>
           <div className="transfer-form-wrapper">
-            <p>Transfer Form</p>
+            <p className="transfer-from-title">Transfer Form</p>
             <form>
 
             </form>
