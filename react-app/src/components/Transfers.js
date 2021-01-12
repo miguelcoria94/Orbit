@@ -29,26 +29,32 @@ const Transfers = ({
             <p className="transfer-from-title">Transfer Form</p>
             <div className="forms-wrapper">
               <form className="transfer-form">
+                <p className="quick-pay-test transfer-form-subtitle">
+                  Transfer to Savings
+                </p>
                 <div className="smaller-input-wrapper">
                   <input
                     name="amount"
                     type="number"
-                    placeholder="Send to savings"
+                    placeholder="Enter Amount"
                     className="smaller-input"
                   />
                 </div>
               </form>
               <div>
-              <p>
-                <i class="fas fa-exchange-alt transfer-icon"></i>
-              </p>
+                <p>
+                  <i class="fas fa-exchange-alt transfer-icon"></i>
+                </p>
               </div>
               <form className="transfer-form">
+                <p className="quick-pay-test transfer-form-subtitle">
+                  Transfer to Checkings
+                </p>
                 <div className="smaller-input-wrapper">
                   <input
                     name="amount"
                     type="number"
-                    placeholder="Send to checkings"
+                    placeholder="Enter Amount"
                     className="smaller-input"
                   />
                 </div>
