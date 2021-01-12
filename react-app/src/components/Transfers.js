@@ -20,13 +20,12 @@ const Transfers = ({
             setAuthenticated={setAuthenticated}
           />
         </Col>
-        <Col className="col-3">
+        <Col className="col-5">
           <BigCheckingsCard currentUserId={currentUserId} />
-        </Col>
-        <Col col-3>
           <BigSavingsCard currentUserId={currentUserId} />
         </Col>
-        <Col></Col>
+        <Col>
+        </Col>
       </Row>
     </Container>
   );
