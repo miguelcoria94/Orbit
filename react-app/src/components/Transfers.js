@@ -17,6 +17,7 @@ const Transfers = ({
   const [noMoneyError, setNoMoneyError] = useState("");
   const [currentCheckingsBalance, setCurrentCheckingsBalance] = useState("");
   const [negativeError, setNegativeError] = useState("");
+  const [currentSavingsBalance, setCurrentSavingsBalance] = useState("")
 
   const transferToSavings = async (e) => {
     e.preventDefault();
@@ -28,7 +29,7 @@ const Transfers = ({
     }
 
     if (currentCheckingsBalance < savingsTransferAmount) {
-      setNoMoneyError("insufficient funds");
+      setNoMoneyError("Insufficient Funds");
       return;
     }
 
@@ -54,6 +55,18 @@ const Transfers = ({
 
   const transferToCheckings = async (e) => {
     e.preventDefault();
+
+    const data = await axios.get(`/api/savings_account/${currentUserId}`);
+    setCurrentSavingsBalance(data.data.savings_balance[0].balance);
+    if (parseInt(checkingsTransferAmount) < 0) {
+      setNegativeError("No Negative Amount");
+      return;
+    }
+
+    if (currentSavingsBalance < checkingsTransferAmount) {
+      setNoMoneyError("Insufficient Funds");
+      return;
+    }
 
     const response = await fetch("/api/savings_account/transfer-to-checkings", {
       method: "PUT",
@@ -155,9 +168,19 @@ const Transfers = ({
                 <div className="button-wrapper">
                   <button
                     type="submit"
-                    className="add-funds-button transfer-button"
+                    className={
+                      noMoneyError
+                        ? "activate-savings-button animate__animated animate__shakeX"
+                        : negativeError
+                        ? "activate-savings-button animate__animated animate__shakeX"
+                        : "add-funds-button transfer-button"
+                    }
                   >
-                    Transfer Now
+                    {noMoneyError
+                      ? `${noMoneyError}`
+                      : negativeError
+                      ? `${negativeError}`
+                      : "Send Now"}
                   </button>
                 </div>
               </form>
