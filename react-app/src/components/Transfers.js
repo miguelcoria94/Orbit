@@ -12,7 +12,18 @@ const Transfers = ({
 }) => {
   const [savingsTransferAmount, setSavingsTransferAmount] = useState("");
   const [checkingsTransferAmount, setCheckingsTransferAmount] = useState("");
-  
+  const [userId, setUserId] = useState("");
+
+  const updateSavings = (e) => {
+    setSavingsTransferAmount(e.target.value);
+    setUserId(currentUserId);
+  };
+
+  const updateCheckings = (e) => {
+    setCheckingsTransferAmount(currentUserId);
+    setUserId(currentUserId);
+  };
+
   return (
     <Container fluid className="dashboard-wrapper">
       <Row className="transfer-wrapper">
@@ -41,6 +52,7 @@ const Transfers = ({
                     type="number"
                     placeholder="Enter Amount"
                     className="smaller-input"
+                    onChange={updateSavings}
                   />
                 </div>
                 <div className="button-wrapper">
@@ -67,6 +79,7 @@ const Transfers = ({
                     type="number"
                     placeholder="Enter Amount"
                     className="smaller-input"
+                    onChange={updateCheckings}
                   />
                 </div>
                 <div className="button-wrapper">
