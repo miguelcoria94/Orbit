@@ -60,11 +60,13 @@ const Transfers = ({
     setCurrentSavingsBalance(data.data.savings_balance[0].balance);
     if (parseInt(checkingsTransferAmount) < 0) {
       setNegativeError("No Negative Amount");
+      setNoMoneyError("Send Now");
       return;
     }
 
     if (currentSavingsBalance < checkingsTransferAmount) {
       setNoMoneyError("Insufficient Funds");
+      setNegativeError("Send Now");
       return;
     }
 
