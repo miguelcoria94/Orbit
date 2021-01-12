@@ -22,43 +22,37 @@ const Transfers = ({
         </Col>
         <Col className="col-4">
           <BigCheckingsCard currentUserId={currentUserId} />
-          <Row>
-            <Col className="col-12">
-              <div className="transfer-form-wrapper">
-                <p className="transfer-from-title">Transfer Form</p>
-                <div className="forms-wrapper">
-                  <form>
-                    <div className="small-input-wrapper">
-                      <input
-                        name="amount"
-                        type="number"
-                        placeholder="Send to savings"
-                        onChange={"ef"}
-                        className="small-input"
-                      />
-                    </div>
-                  </form>
-                  <p>
-                    <i class="fas fa-exchange-alt icon icon-1"></i>
-                  </p>
-                  <form>
-                    <div className="small-input-wrapper">
-                      <input
-                        name="amount"
-                        type="number"
-                        placeholder="Send to checkings"
-                        onChange={"ef"}
-                        className="small-input"
-                      />
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </Col>
-          </Row>
-        </Col>
-        <Col className="col-4">
           <BigSavingsCard currentUserId={currentUserId} />
+        </Col>
+        <Col className="col-5">
+          <div className="transfer-form-wrapper">
+            <p className="transfer-from-title">Transfer Form</p>
+            <div className="forms-wrapper">
+              <form className="transfer-form">
+                <div className="smaller-input-wrapper">
+                  <input
+                    name="amount"
+                    type="number"
+                    placeholder="Send to savings"
+                    className="smaller-input"
+                  />
+                </div>
+              </form>
+              <p>
+                <i class="fas fa-exchange-alt icon icon-1"></i>
+              </p>
+              <form className="transfer-form">
+                <div className="smaller-input-wrapper">
+                  <input
+                    name="amount"
+                    type="number"
+                    placeholder="Send to checkings"
+                    className="smaller-input"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
         </Col>
       </Row>
     </Container>
