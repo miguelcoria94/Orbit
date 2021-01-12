@@ -70,8 +70,16 @@ const QuickPay = ({ currentUserId }) => {
               onChange={updateEmail}
               className="small-input"
             />
-            <button type="submit" className="add-funds-button">
-              {noMoneyError ? noMoneyError : "Send Now" }<i class="fas fa-arrow-circle-right icon"></i>
+            <button
+              type="submit"
+              className={
+                noMoneyError
+                  ? "activate-savings-button animate__animated animate__shakeX"
+                  : "add-funds-button"
+              }
+            >
+              {noMoneyError ? noMoneyError : "Send Now"}
+              <i class="fas fa-arrow-circle-right icon"></i>
             </button>
           </div>
         </div>
