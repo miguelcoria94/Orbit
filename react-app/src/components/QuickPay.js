@@ -78,8 +78,7 @@ const QuickPay = ({ currentUserId }) => {
                   : "add-funds-button"
               }
             >
-              {noMoneyError ? noMoneyError : "Send Now"}
-              <i class="fas fa-arrow-circle-right icon"></i>
+              {noMoneyError ? `${noMoneyError}` : "Send Now"}
             </button>
           </div>
         </div>
