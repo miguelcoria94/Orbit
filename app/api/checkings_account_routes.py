@@ -37,3 +37,8 @@ def quick_load(id):
     db.session.commit()
 
     return jsonify(weight.to_dict())
+
+
+@checkings_account_routes.route('/transfer', methods=['PUT'])
+def quick_pay():
+    return "hi"
