@@ -38,12 +38,15 @@ const Transfers = ({
                       />
                     </div>
                   </form>
+                  <p>
+                    <i class="fas fa-exchange-alt icon icon-1"></i>
+                  </p>
                   <form>
                     <div className="small-input-wrapper">
                       <input
                         name="email"
                         type="email"
-                        placeholder="Send to savings"
+                        placeholder="Send to checkings"
                         onChange={"ef"}
                         className="small-input"
                       />
