@@ -20,6 +20,15 @@
 
 .transfer-icon {
     text-align: center;
+    color: #46B34E;
+    font-size: 16px;
+    text-shadow: rgba(58, 207, 65, 0.835) 0px 5px 15px;
+}
+
+
+
+::placeholder {
+    text-align: center;
 }
 
 .forms-wrapper {
@@ -34,7 +43,20 @@
 }
 
 .smaller-input{
+    background-color: #202442;
     width: 175px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+.smaller-input:active{
+    outline: none;
+}
+
+.smaller-input:focus{
+    outline: none;
 }
 
 .transfer-from-title {
