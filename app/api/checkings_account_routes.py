@@ -46,11 +46,14 @@ def quick_pay():
     senderId = request.json["senderId"]
     amount = request.json["amount"]
 
-    currentUserBalance = Checkings_Account.query.filter(Checkings_Account.user_id == currentUserId).one()
+    currentUser = Checkings_Account.query.filter(Checkings_Account.user_id == currentUserId).one()
+    currentUser.balance = int(currentUser.balance) - int(amount)
+    recipient = User.query.filter(User.email == recipientEmail).one()
+    recipient_checkings = Checkings_Account.query.filter(Checkings_Account.user_id == recipient.id).one()
+    recipient_checkings.balance = int(recipient_checkings.balance) + int(amount)
 
-    currentUserBalance.balance = int(currentUserBalance.balance) - int(amount)
-
-    db.session.add(currentUserBalance)
+    db.session.add(currentUser)
+    db.session.add(recipient)
     db.session.commit()
 
     return "hello"
