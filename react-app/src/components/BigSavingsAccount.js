@@ -21,7 +21,7 @@ function BigSavingsCard({ currentUserId }) {
             <i className="fas fa-circle icon-active"></i>
             <p className="active-text">active</p>
           </div>
-          <h1 className="balance">${balance.balance}</h1>
+          <h1 className="big-balance">${balance.balance}</h1>
         </>
       ) : (
         <>
@@ -33,7 +33,7 @@ function BigSavingsCard({ currentUserId }) {
           <h1 className="balance">{"$0"}</h1>
         </>
       )}
-      <p className="balance-tag">Savings Account</p>
+      <p className="big-balance-tag">Savings Account</p>
     </div>
   );
 }
