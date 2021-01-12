@@ -14,9 +14,24 @@ const Transfers = ({
   const [savingsTransferAmount, setSavingsTransferAmount] = useState("");
   const [checkingsTransferAmount, setCheckingsTransferAmount] = useState("");
   const [userId, setUserId] = useState("");
+  const [noMoneyError, setNoMoneyError] = useState("");
+  const [currentCheckingsBalance, setCurrentCheckingsBalance] = useState("");
+  const [negativeError, setNegativeError] = useState("");
 
   const transferToSavings = async (e) => {
     e.preventDefault();
+    const data = await axios.get(`/api/checkings_account/${currentUserId}`);
+    setCurrentCheckingsBalance(data.data.checkings_balance[0].balance);
+    if (parseInt(savingsTransferAmount) < 0) {
+      setNegativeError("No Negative Amount");
+      return;
+    }
+
+    if (currentCheckingsBalance < savingsTransferAmount) {
+      setNoMoneyError("insufficient funds");
+      return;
+    }
+
 
     const response = await fetch("/api/checkings_account/transfer-to-savings", {
       method: "PUT",
@@ -103,9 +118,19 @@ const Transfers = ({
                 <div className="button-wrapper">
                   <button
                     type="submit"
-                    className="add-funds-button transfer-button"
+                    className={
+                      noMoneyError
+                        ? "activate-savings-button animate__animated animate__shakeX"
+                        : negativeError
+                        ? "activate-savings-button animate__animated animate__shakeX"
+                        : "add-funds-button transfer-button"
+                    }
                   >
-                    Transfer Now
+                    {noMoneyError
+                      ? `${noMoneyError}`
+                      : negativeError
+                      ? `${negativeError}`
+                      : "Send Now"}
                   </button>
                 </div>
               </form>
