@@ -11,6 +11,7 @@ const QuickPay = ({ currentUserId }) => {
   const [senderId, setSenderId] = useState("");
   const [amount, setAmount] = useState("");
   const [noMoneyError, setNoMoneyError] = useState("")
+  const [noEmailError, setEmailError] = useState("");
 
   const transferFunds = async (e) => {
       e.preventDefault();
@@ -36,6 +37,10 @@ const QuickPay = ({ currentUserId }) => {
 
     if (response.ok) {
       window.location.reload();
+    }
+
+    if (!response.ok) {
+      setNoMoneyError("Email Invalid")
     }
   };
 
@@ -78,7 +83,7 @@ const QuickPay = ({ currentUserId }) => {
                   : "add-funds-button"
               }
             >
-              {noMoneyError ? `${noMoneyError}` : "Send Now"}
+              {noMoneyError ? `${noMoneyError}` : noEmailError ? `${noEmailError}` : "Send Now"}
             </button>
           </div>
         </div>
