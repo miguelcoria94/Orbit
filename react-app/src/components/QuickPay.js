@@ -7,11 +7,17 @@ import "./Dashboard.css";
 
 const QuickPay = ({ currentUserId }) => {
   const [recipientEmail, setRecipientEmail] = useState("");
+  const [currentBalance, setCurrentBalance] = useState("");
   const [senderId, setSenderId] = useState("");
   const [amount, setAmount] = useState("");
 
   const transferFunds = async (e) => {
       e.preventDefault();
+      const data = await axios.get(`/api/checkings_account/${currentUserId}`);
+    setCurrentBalance(data.data.checkings_balance[0].balance);
+    if (currentBalance < amount) {
+        return
+      }
       
       const response = await fetch("/api/checkings_account/transfer", {
       method: "PUT",
