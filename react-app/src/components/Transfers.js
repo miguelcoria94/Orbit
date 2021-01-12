@@ -12,6 +12,7 @@ const Transfers = ({
       <Row>
         <Col className="col-3">
           <SideNav
+            title={"Transfers"}
             currentUser={currentUser}
             setAuthenticated={setAuthenticated}
           />

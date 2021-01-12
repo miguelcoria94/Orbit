@@ -6,12 +6,12 @@ import Col from "react-bootstrap/Col";
 import uranus from "./images/uranus.png";
 import LogoutButton from "./auth/LogoutButton";
 
-const SideNav = ({ currentUser, setAuthenticated }) => {
+const SideNav = ({ currentUser, setAuthenticated, title }) => {
   return (
     <Container className="sidenav-wrapper">
       <Row>
         <Col>
-          <h1 className="welcome-message-1">Dashboard</h1>
+          <h1 className="welcome-message-1">{title ? `${title}` : "Dashboard"}</h1>
           <p className="welcome-message-2">Logged in as {currentUser}</p>
           <LogoutButton
             setAuthenticated={setAuthenticated}
