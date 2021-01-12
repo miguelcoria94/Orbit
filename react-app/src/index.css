@@ -8,10 +8,9 @@
 /******* 404 page styles*/
 #root {
     height: calc(100vh);
-    background-color: #191446;
-    background-color: #011954;
-    background-image: linear-gradient(315deg, #001d5f 0%, #122b64 74%);
-    background-image: url(./components/images/1.jpg);
+    background-color: #1b2845;
+background-image: linear-gradient(0deg, #011956 0%, #011956 74%);
+
     font-family: 'Barlow', sans-serif;
     max-width: 100%;
     overflow: hidden;
@@ -174,7 +173,7 @@ a {
     font-family: 'Barlow', sans-serif;
     color: white;
     font-weight: 800;
-    font-size: 65px;
+    font-size: 80px;
 }
 
 .main-header-container {
@@ -186,7 +185,7 @@ a {
 }
 
 .home-cta {
-    color: #50ca2a;
+    color: #03c032;
     font-weight: 800;
 }
 
@@ -198,7 +197,7 @@ a {
 }
 
 
-.demo-button-home-1  {background-image: linear-gradient(to right, #1444ac 0%, #0e2a85  51%, #844db1  100%)}
+.demo-button-home-1  {background-image: linear-gradient(to right, #1444ac 0%, #0e2a85  51%, #4db155  100%)}
 .demo-button-home-1  {
 margin-top: 30px;
 padding: 15px 45px;
