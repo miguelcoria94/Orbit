@@ -196,7 +196,7 @@ a {
 }
 
 
-.demo-button-home-1  {background-image: linear-gradient(to right, #1444ac 0%, #0e2a85  51%, #4db155  100%)}
+.demo-button-home-1  {background-image: linear-gradient(to right, #ffffff 0%, #ffffff  51%, #4db155  100%)}
 .demo-button-home-1  {
 margin-top: 30px;
 padding: 15px 45px;
@@ -204,7 +204,7 @@ text-align: center;
 text-transform: uppercase;
 transition: 0.5s;
 background-size: 200% auto;
-color: white;            
+color: rgb(255, 0, 0);            
 border-radius: 10px;
 display: block;
 border: none;
