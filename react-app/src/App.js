@@ -82,7 +82,10 @@ function App() {
           exact={true}
           authenticated={authenticated}
         >
-          <Transfers />
+          <Transfers
+            authenticate={authenticate}
+            setAuthenticated={setAuthenticated}
+          />
         </ProtectedRoute>
         <ProtectedRoute
           path="/virtual-card"

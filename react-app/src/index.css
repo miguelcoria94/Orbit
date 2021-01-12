@@ -8,9 +8,7 @@
 /******* 404 page styles*/
 #root {
     height: calc(100vh);
-    background-color: #1b2845;
-background-image: linear-gradient(0deg, #011956 0%, #011956 74%);
-
+    background-color: #0d0f1f;
     font-family: 'Barlow', sans-serif;
     max-width: 100%;
     overflow: hidden;
@@ -115,9 +113,9 @@ nav {
 }
 
 .active {
-    color: #2ad45d !important;
+    color: #464d80 !important;
     font-weight: 600;
-    text-shadow: #001c4469 0px 4px 10px, #001c446e 0px 1px 10px;
+    text-shadow: #05515869 0px 4px 10px, #0d3d3f6e 0px 1px 10px;
 }
 
 a {
@@ -126,7 +124,7 @@ a {
 }
 
 .navbar_link:hover{
-    text-decoration: underline;
+    text-decoration:none;
     text-decoration-color: #5d677c;
     text-decoration-thickness: 2px;
 }
@@ -185,19 +183,19 @@ a {
 }
 
 .home-cta {
-    color: #03c032;
+    color: #3b416d;
     font-weight: 800;
 }
 
 
 .tiny-text {
-    color: #11c900;
-    border-left: 3px solid #11c900;
+    color: #3b416d;
+    border-left: 3px solid #202442;
     padding-left: 10px;
 }
 
 
-.demo-button-home-1  {background-image: linear-gradient(to right, #1444ac 0%, #0e2a85  51%, #4db155  100%)}
+.demo-button-home-1  {background-image: linear-gradient(to right, #202442 0%, #202442  51%, #213b6b  100%)}
 .demo-button-home-1  {
 margin-top: 30px;
 padding: 15px 45px;
@@ -205,39 +203,33 @@ text-align: center;
 text-transform: uppercase;
 transition: 0.5s;
 background-size: 200% auto;
-color: white;            
+color: #ffffff;            
 border-radius: 10px;
 display: block;
 border: none;
 }
 
-.demo-button-home-1:hover {
-background-position: right center; /* change the direction of the change here */
-color: #fff;
-text-decoration: none;
-}
 
-.demo-button-home  {background-image: linear-gradient(to right, #258b33 0%, #30bd37  51%, #333362  100%)}
-.demo-button-home  {
-margin-top: 30px;
-padding: 15px 45px;
-text-align: center;
-text-transform: uppercase;
-transition: 0.5s;
-background-size: 200% auto;
-color: white;            
-border-radius: 10px;
-display: block;
-border: none;
-}
-.image-col {
-    margin-top: 45px;
-}
-.demo-button-home:hover {
-background-position: right center; /* change the direction of the change here */
-color: #fff;
-text-decoration: none;
-}
+         .demo-button-home {background: #4b6cb7}
+         .demo-button-home {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            border-radius: 5px;
+            display: block;
+            border:none;
+          }
+
+          .demo-button-home:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
 
 .logout-button {
     padding: 5px 25px !important;

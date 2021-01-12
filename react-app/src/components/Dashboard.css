@@ -134,12 +134,19 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     transition: 0.5s;
     background-size: 200% auto;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     margin-left: 5px;
     margin-bottom: 15px;
     background-color: rgba(255, 0, 0, 0.25);
     color: white;
           }
+
+.activate-savings-button:active {
+    outline: none;
+}
+.activate-savings-button:focus {
+    outline: none;
+}
 
 .activate-savings-button:hover {
     background-position: right center; /* change the direction of the change here */

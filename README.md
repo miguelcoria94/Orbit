@@ -19,7 +19,7 @@
 - savings account(every user will have a saving)(✅)(DONE 100%)
 - checking account(every user will have a saving)(✅)(DONE 100%)
 - create virtual debit cards/mobile wallet(✅)
-- transactions between users(✅)
+- transactions between users(✅)(DONE 100%)
 - expense tracking(i will create a pie chart seperating all the transactions into categories)(✅)
 - transactions and types/recent transactions(this will be a table under the balance)(✅)
 - user pin to verify everything(user has a hashed pin number(smallint) (table made))(✅)
