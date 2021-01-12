@@ -30,8 +30,8 @@ const Transfers = ({
                   <form>
                     <div className="small-input-wrapper">
                       <input
-                        name="email"
-                        type="email"
+                        name="amount"
+                        type="number"
                         placeholder="Send to savings"
                         onChange={"ef"}
                         className="small-input"
@@ -44,8 +44,8 @@ const Transfers = ({
                   <form>
                     <div className="small-input-wrapper">
                       <input
-                        name="email"
-                        type="email"
+                        name="amount"
+                        type="number"
                         placeholder="Send to checkings"
                         onChange={"ef"}
                         className="small-input"
