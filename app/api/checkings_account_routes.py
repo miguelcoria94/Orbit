@@ -42,15 +42,15 @@ def quick_load(id):
 @checkings_account_routes.route('/transfer', methods=['PUT'])
 def quick_pay():
     currentUserId = request.json["currentUserId"]
-    userEmail = request.json["userEmail"]
+    recipientEmail = request.json["recipientEmail"]
     senderId = request.json["senderId"]
     amount = request.json["amount"]
 
-    weight = Checkings_Account.query.filter(Checkings_Account.user_id == currentUserId).one()
+    currentUserBalance = Checkings_Account.query.filter(Checkings_Account.user_id == currentUserId).one()
 
-    weight.balance = amount
+    currentUserBalance.balance = int(currentUserBalance.balance) - int(amount)
 
-    db.session.add(weight)
+    db.session.add(currentUserBalance)
     db.session.commit()
 
     return "hello"

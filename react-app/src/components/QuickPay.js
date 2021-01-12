@@ -6,23 +6,23 @@ import axios from "axios";
 import "./Dashboard.css";
 
 const QuickPay = ({ currentUserId }) => {
-  const [userEmail, setUserEmail] = useState("");
+  const [recipientEmail, setRecipientEmail] = useState("");
   const [senderId, setSenderId] = useState("");
   const [amount, setAmount] = useState("");
 
   const transferFunds = async (e) => {
-    e.preventDefault();
-
-    const response = await fetch("/api/checkings_account/transfer", {
+      e.preventDefault();
+      
+      const response = await fetch("/api/checkings_account/transfer", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-          currentUserId,
-          userEmail,
-          senderId,
-          amount
+        currentUserId,
+        recipientEmail,
+        senderId,
+        amount,
       }),
     });
 
@@ -32,7 +32,7 @@ const QuickPay = ({ currentUserId }) => {
   };
 
   const updateEmail = (e) => {
-    setUserEmail(e.target.value);
+    setRecipientEmail(e.target.value);
   };
 
   const updateAmount = (e) => {
