@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import "./Transfer.css";
@@ -10,6 +10,9 @@ const Transfers = ({
   setAuthenticated,
   currentUserId
 }) => {
+  const [savingsTransferAmount, setSavingsTransferAmount] = useState("");
+  const [checkingsTransferAmount, setCheckingsTransferAmount] = useState("");
+  
   return (
     <Container fluid className="dashboard-wrapper">
       <Row className="transfer-wrapper">
