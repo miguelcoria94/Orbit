@@ -23,10 +23,6 @@ function BigCheckingsCard({ currentUserId }) {
           <div className="disabled-wrapper">
             <i className="fas fa-circle icon-active"></i>
             <p className="active-text">active</p>
-            <AddFunds
-              currentBalance={currentBalance}
-              currentUserId={currentUserId}
-            />
           </div>
           <h1 className="balance">${balance.balance}</h1>
         </>
