@@ -18,12 +18,12 @@ const TransferHistory = ({currentUserId}) => {
       <Container>
         <Row>
           <Col className="col-12">
-            <p>Transfer History</p>
+            <p className="transfer-table-title">Transfer History</p>
           </Col>
         </Row>
         <Row>
           <Col className="ol-3">
-            <p>FROM</p>
+            <p className="table-label">FROM</p>
           </Col>
           <Col className="ol-3">
             <p>TO</p>
