@@ -59,8 +59,7 @@
 }
 
 .transfer-button {
-    margin-right: none !important;
-    margin-left: none !important;
+    width: 100%;
 }
 .smaller-input-wrapper {
 }
