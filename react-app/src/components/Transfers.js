@@ -57,6 +57,21 @@ const Transfers = ({
   const transferToCheckings = async (e) => {
     e.preventDefault();
 
+    const data = await axios.get(`/api/savings_account/${currentUserId}`);
+    setCurrentSavingsBalance(data.data.savings_balance[0].balance);
+    if (
+      data.data.savings_balance[0].balance < parseInt(checkingsTransferAmount)
+    ) {
+      setSavingsError("insufficient funds");
+      return;
+    }
+
+    if (parseInt(checkingsTransferAmount) < 0) {
+      setSavingsError("Invalid Amount");
+      return;
+    }
+
+
     const response = await fetch("/api/savings_account/transfer-to-checkings", {
       method: "PUT",
       headers: {
@@ -152,9 +167,13 @@ const Transfers = ({
                 <div className="button-wrapper">
                   <button
                     type="submit"
-                    className={"add-funds-button transfer-button"}
+                    className={
+                      savingsError
+                        ? "activate-savings-button animate__animated animate__shakeX transfer-button"
+                        : "add-funds-button transfer-button"
+                    }
                   >
-                    {"Send Now"}
+                    {savingsError ? `${savingsError}` : "Send Now"}
                   </button>
                 </div>
               </form>
