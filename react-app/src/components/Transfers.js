@@ -4,6 +4,7 @@ import SideNav from "./SideNav";
 import "./Transfer.css";
 import BigCheckingsCard from "./BigCheckingsCard";
 import BigSavingsCard from "./BigSavingsAccount";
+import TransferHistory from "./TransferHistory"
 import axios from "axios";
 
 const Transfers = ({
@@ -178,6 +179,7 @@ const Transfers = ({
                 </div>
               </form>
             </div>
+            <TransferHistory currentUserId={currentUserId} />
           </div>
         </Col>
       </Row>

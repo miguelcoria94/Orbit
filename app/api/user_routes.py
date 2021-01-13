@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from flask_login import login_required
-from app.models import User
+from app.models import User, Account_Transfers
 
 user_routes = Blueprint('users', __name__)
 
@@ -17,3 +17,9 @@ def users():
 def user(id):
     user = User.query.get(id)
     return user.to_dict()
+
+
+@user_routes.route('/<int:id>/transfer-history')
+def transfers(id):
+    users = Account_Transfers.query.filter(id == Account_Transfers.user_id).order_by(Account_Transfers.date.desc()).limit(8)
+    return {"users": [user.to_dict() for user in users]}

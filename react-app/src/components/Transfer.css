@@ -116,3 +116,51 @@
 
 .big-gradient-card {
 }
+
+.transfer-table-title {
+    font-family: Cousine;
+    text-align: center;
+    color: white;
+}
+
+.table-label {
+    color: white;
+    text-align: center;
+    font-family: Cousine;
+    font-size: 13px;
+}
+
+.info-row {
+}
+
+.info {
+    text-align: center;
+    color: white;
+}
+
+.table-label-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+}
+
+.table-icon {
+    color: orange;
+    margin-right: 10px;
+}
+
+.amount-icon {
+    color: #46B34E;
+    margin-right: 10px;
+}
+
+.from-icon {
+    margin-right: 10px;
+    color: rgb(168, 49, 49);
+}
+
+.to-icon {
+    margin-right: 10px;
+    color: #46B34E;
+}
