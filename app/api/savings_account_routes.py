@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, session, request
-from app.models import Savings_Account, User, Checkings_Account
+from app.models import Savings_Account, User, Checkings_Account, Account_Transfers
 from app.models import db
 
 savings_account_routes = Blueprint('savings_account', __name__)
@@ -36,7 +36,10 @@ def transferToCheckings():
         Checkings_Account.user_id == currentUserId).one()
     currentUserCheckings.balance = int(currentUserCheckings.balance) + int(amountToTransfer)
 
+    new_transfer = Account_Transfers(amount=amountToTransfer, user_id=currentUserId, receiving_account="checkings", sending_account="savings")
+
     db.session.add(currentUser)
+    db.session.add(new_transfer)
     db.session.add(currentUserCheckings)
     db.session.commit()
 
