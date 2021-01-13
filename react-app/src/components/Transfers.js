@@ -23,12 +23,12 @@ const Transfers = ({
     e.preventDefault();
     const data = await axios.get(`/api/checkings_account/${currentUserId}`);
     setCurrentCheckingsBalance(data.data.checkings_balance[0].balance);
-    if (currentCheckingsBalance < savingsTransferAmount) {
-      setCheckingsError("Insufficient Funds");
+    if (data.data.checkings_balance[0].balance < parseInt(savingsTransferAmount)) {
+      setCheckingsError("insufficient funds");
       return;
     }
 
-    if (savingsTransferAmount < 1) {
+    if (parseInt(savingsTransferAmount) < 0) {
       setCheckingsError("Invalid Amount");
       return;
     }
@@ -49,6 +49,7 @@ const Transfers = ({
     }
 
     if (!response.ok) {
+      window.location.reload()
       return
     }
   };
