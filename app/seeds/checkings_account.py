@@ -13,3 +13,4 @@ def seed_checkings_account():
 def undo_checkings_account():
     db.session.execute('TRUNCATE checkings_account;')
     db.session.commit()
+
