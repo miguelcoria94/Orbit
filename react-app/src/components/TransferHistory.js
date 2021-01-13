@@ -14,18 +14,36 @@ const TransferHistory = ({currentUserId}) => {
 
     console.log(userTransfers)
 
-    return <Container>
+    return (
+      <Container>
         <Row>
-            <Col className="col-12"><p>Transfer History</p></Col>
+          <Col className="col-12">
+            <p>Transfer History</p>
+          </Col>
         </Row>
-            {userTransfers.map((transfer, id) => (
-                <Row>
-                    <Col className="ol-3">
-                        <p>{transfer.amount}</p>
-                    </Col>
-                </Row>
-            ))}
-    </Container>
+        <Row>
+          <Col className="ol-3">
+            <p>FROM</p>
+          </Col>
+          <Col className="ol-3">
+            <p>TO</p>
+          </Col>
+          <Col className="ol-3">
+            <p>Amount</p>
+          </Col>
+          <Col className="ol-3">
+            <p>Date</p>
+          </Col>
+        </Row>
+        {userTransfers.map((transfer, id) => (
+          <Row>
+            <Col className="ol-3">
+              <p>{transfer.amount}</p>
+            </Col>
+          </Row>
+        ))}
+      </Container>
+    );
 }
 
 export default TransferHistory;
