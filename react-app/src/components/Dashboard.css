@@ -173,10 +173,13 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     background-size: 200% auto;
     border: none;
     border-radius: 5px;
-    margin-left: 5px;
     margin-bottom: 15px;
     background-color: rgba(27, 172, 39, 0.726);
     color: white;
+}
+
+.add-funds-space {
+    margin-left: 5px;
 }
 
 .icon-1 {

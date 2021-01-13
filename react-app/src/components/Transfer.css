@@ -15,6 +15,21 @@
     align-items: center;
 }
 
+.red-button {
+    background-color: rgb(114, 26, 26) !important;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.red-button:active {
+    outline: none;
+}
+
+.red-button:focus {
+    outline: none;
+}
+
 .transfer-form{
 }
 
@@ -40,7 +55,6 @@
     justify-content: space-around;
     align-content: center;
     align-self: center;
-    padding: 30px 20px;
     width: 100%
 }
 
@@ -55,8 +69,9 @@
     align-content: center;
     align-self: center;
     justify-content: center;
+    align-items: center;
     margin-top: 10px;
-    width: 100%;
+    width: 175px;
 }
 
 .smaller-input{
@@ -88,7 +103,7 @@
     cursor: pointer;
     height: 42.2%;
     margin-top: 40px;
-    width: 400px;
+    width: 100%;
     display: flex;
     align-items: center;
     align-content: center;

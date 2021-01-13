@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, session, request
-from app.models import Checkings_Account, User
+from app.models import Checkings_Account, User, Savings_Account
 from app.models import db
 
 checkings_account_routes = Blueprint('checkings_account', __name__)
@@ -54,6 +54,25 @@ def quick_pay():
 
     db.session.add(currentUser)
     db.session.add(recipient)
+    db.session.commit()
+
+    return "hello"
+
+
+@checkings_account_routes.route('/transfer-to-savings', methods=['PUT'])
+def transferToSavings():
+    currentUserId = request.json["userId"]
+    amountToTransfer = request.json["savingsTransferAmount"]
+
+    currentUser = Checkings_Account.query.filter(
+        Checkings_Account.user_id == currentUserId).one()
+    currentUser.balance = int(currentUser.balance) - int(amountToTransfer)
+    currentUserSavings = Savings_Account.query.filter(
+        Savings_Account.user_id == currentUserId).one()
+    currentUserSavings.balance = int(currentUserSavings.balance) + int(amountToTransfer)
+
+    db.session.add(currentUser)
+    db.session.add(currentUserSavings)
     db.session.commit()
 
     return "hello"

@@ -11,7 +11,7 @@ const LogoutButton = ({ setAuthenticated }) => {
   };
   
   return (
-    <button className="demo-button-home logout-button" onClick={onLogout}>
+    <button className="logout-button-home logout-button" onClick={onLogout}>
       Logout
     </button>
   );

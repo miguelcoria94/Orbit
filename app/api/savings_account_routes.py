@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, session, request
-from app.models import Savings_Account, User
+from app.models import Savings_Account, User, Checkings_Account
 from app.models import db
 
 savings_account_routes = Blueprint('savings_account', __name__)
@@ -22,3 +22,22 @@ def add_savings():
     db.session.commit()
 
     return {"id": new_savings.id}
+
+
+@savings_account_routes.route('/transfer-to-checkings', methods=['PUT'])
+def transferToCheckings():
+    currentUserId = request.json["userId"]
+    amountToTransfer = request.json["checkingsTransferAmount"]
+
+    currentUser = Savings_Account.query.filter(
+        Savings_Account.user_id == currentUserId).one()
+    currentUser.balance = int(currentUser.balance) - int(amountToTransfer)
+    currentUserCheckings = Checkings_Account.query.filter(
+        Checkings_Account.user_id == currentUserId).one()
+    currentUserCheckings.balance = int(currentUserCheckings.balance) + int(amountToTransfer)
+
+    db.session.add(currentUser)
+    db.session.add(currentUserCheckings)
+    db.session.commit()
+
+    return "hello"

@@ -17,10 +17,15 @@ const QuickPay = ({ currentUserId }) => {
       e.preventDefault();
       const data = await axios.get(`/api/checkings_account/${currentUserId}`);
     setCurrentBalance(data.data.checkings_balance[0].balance);
-    if (currentBalance < amount) {
-        setNoMoneyError("insufficient funds");
-        return
-      }
+    if (data.data.checkings_balance[0].balance < parseInt(amount)) {
+      setNoMoneyError("insufficient funds");
+      return;
+    }
+
+    if (parseInt(amount) < 0) {
+      setNoMoneyError("Invalid Amount");
+      return;
+    }
       
       const response = await fetch("/api/checkings_account/transfer", {
       method: "PUT",
@@ -40,15 +45,20 @@ const QuickPay = ({ currentUserId }) => {
     }
 
     if (!response.ok) {
+      window.location.reload();
       setNoMoneyError("Email Invalid")
     }
   };
 
   const updateEmail = (e) => {
+    setNoMoneyError("");
     setRecipientEmail(e.target.value);
+    setSenderId(currentUserId);
   };
 
   const updateAmount = (e) => {
+    setNoMoneyError("");
+    setNoMoneyError("");
     setAmount(e.target.value);
     setSenderId(currentUserId);
   };

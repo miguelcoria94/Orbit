@@ -210,9 +210,9 @@ border: none;
 }
 
 
-         .demo-button-home {background: #4b6cb7}
+         .demo-button-home {background: #22386b}
          .demo-button-home {
-            margin: 10px;
+             margin-top: 40px;
             padding: 15px 45px;
             text-align: center;
             text-transform: uppercase;
@@ -222,9 +222,31 @@ border: none;
             border-radius: 5px;
             display: block;
             border:none;
+            width: 100%;
           }
 
           .demo-button-home:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+
+         .logout-button-home {background: #22386b}
+         .logout-button-home {
+             margin-top: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            border-radius: 5px;
+            display: block;
+            border:none;
+            width: 75%;
+          }
+
+          .logout-button-home:hover {
             background-position: right center; /* change the direction of the change here */
             color: #fff;
             text-decoration: none;
