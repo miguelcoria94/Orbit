@@ -11,6 +11,7 @@ import NoMatch from "./components/static_pages/NoMatch"
 import Home from "./components/static_pages/Home"
 import Dashboard from "./components/Dashboard";
 import Transfers from "./components/Transfers"
+import VirtualCard from "./components/VirtualCard"
 import { Redirect } from "react-router-dom";
 
 function App() {
@@ -94,7 +95,12 @@ function App() {
           exact={true}
           authenticated={authenticated}
         >
-          <Transfers />
+          <VirtualCard
+            authenticate={authenticate}
+            setAuthenticated={setAuthenticated}
+            currentUser={currentUser}
+            currentUserId={currentUserId}
+          />
         </ProtectedRoute>
         <ProtectedRoute
           path="/transactions"
