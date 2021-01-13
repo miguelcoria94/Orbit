@@ -15,24 +15,10 @@ const Transfers = ({
   const [checkingsTransferAmount, setCheckingsTransferAmount] = useState("");
   const [userId, setUserId] = useState("");
   const [noMoneyError, setNoMoneyError] = useState("");
-  const [currentCheckingsBalance, setCurrentCheckingsBalance] = useState("");
-  const [negativeError, setNegativeError] = useState("");
   const [currentSavingsBalance, setCurrentSavingsBalance] = useState("")
 
   const transferToSavings = async (e) => {
     e.preventDefault();
-    const data = await axios.get(`/api/checkings_account/${currentUserId}`);
-    setCurrentCheckingsBalance(data.data.checkings_balance[0].balance);
-    if (parseInt(savingsTransferAmount) < 0) {
-      setNegativeError("No Negative Amount");
-      return;
-    }
-
-    if (currentCheckingsBalance < savingsTransferAmount) {
-      setNoMoneyError("Insufficient Funds");
-      return;
-    }
-
 
     const response = await fetch("/api/checkings_account/transfer-to-savings", {
       method: "PUT",
@@ -50,25 +36,12 @@ const Transfers = ({
     }
 
     if (!response.ok) {
+      return
     }
   };
 
   const transferToCheckings = async (e) => {
     e.preventDefault();
-
-    const data = await axios.get(`/api/savings_account/${currentUserId}`);
-    setCurrentSavingsBalance(data.data.savings_balance[0].balance);
-    if (parseInt(checkingsTransferAmount) < 0) {
-      setNegativeError("No Negative Amount");
-      setNoMoneyError("Send Now");
-      return;
-    }
-
-    if (currentSavingsBalance < checkingsTransferAmount) {
-      setNoMoneyError("Insufficient Funds");
-      setNegativeError("Send Now");
-      return;
-    }
 
     const response = await fetch("/api/savings_account/transfer-to-checkings", {
       method: "PUT",
@@ -86,6 +59,7 @@ const Transfers = ({
     }
 
     if (!response.ok) {
+      window.location.reload();
     }
   };
 
@@ -133,19 +107,10 @@ const Transfers = ({
                 <div className="button-wrapper">
                   <button
                     type="submit"
-                    className={
-                      noMoneyError
-                        ? "activate-savings-button animate__animated animate__shakeX"
-                        : negativeError
-                        ? "activate-savings-button animate__animated animate__shakeX"
-                        : "add-funds-button transfer-button"
+                    className={"add-funds-button transfer-button"
                     }
                   >
-                    {noMoneyError
-                      ? `${noMoneyError}`
-                      : negativeError
-                      ? `${negativeError}`
-                      : "Send Now"}
+                    {"Send Now"}
                   </button>
                 </div>
               </form>
@@ -170,19 +135,10 @@ const Transfers = ({
                 <div className="button-wrapper">
                   <button
                     type="submit"
-                    className={
-                      noMoneyError
-                        ? "activate-savings-button animate__animated animate__shakeX"
-                        : negativeError
-                        ? "activate-savings-button animate__animated animate__shakeX"
-                        : "add-funds-button transfer-button"
+                    className={"add-funds-button transfer-button"
                     }
                   >
-                    {noMoneyError
-                      ? `${noMoneyError}`
-                      : negativeError
-                      ? `${negativeError}`
-                      : "Send Now"}
+                    {"Send Now"}
                   </button>
                 </div>
               </form>

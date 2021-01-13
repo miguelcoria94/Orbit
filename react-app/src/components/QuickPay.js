@@ -21,6 +21,11 @@ const QuickPay = ({ currentUserId }) => {
         setNoMoneyError("insufficient funds");
         return
       }
+
+    if (amount < 1) {
+      setNoMoneyError("Invalid Amount");
+      return;
+    }
       
       const response = await fetch("/api/checkings_account/transfer", {
       method: "PUT",
