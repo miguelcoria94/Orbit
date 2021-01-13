@@ -122,3 +122,35 @@
     text-align: center;
     color: white;
 }
+
+.table-label {
+    color: white;
+    text-align: center;
+    font-family: Cousine;
+    font-size: 13px;
+}
+
+.info-row {
+}
+
+.info {
+    text-align: center;
+    color: white;
+}
+
+.table-label-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+}
+
+.table-icon {
+    color: orange;
+    margin-right: 10px;
+}
+
+.amount-icon {
+    color: #46B34E;
+    margin-right: 10px;
+}

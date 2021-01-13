@@ -21,24 +21,37 @@ const TransferHistory = ({currentUserId}) => {
             <p className="transfer-table-title">Transfer History</p>
           </Col>
         </Row>
-        <Row>
-          <Col className="ol-3">
+        <Row className="info-row">
+          <Col className="col-3 table-label-wrapper">
             <p className="table-label">FROM</p>
           </Col>
-          <Col className="ol-3">
-            <p>TO</p>
+          <Col className="col-3 table-label-wrapper">
+            <p className="table-label">TO</p>
           </Col>
-          <Col className="ol-3">
-            <p>Amount</p>
+          <Col className="col-3 table-label-wrapper">
+            <p className="table-label">
+              <i class="far fa-money-bill-alt amount-icon"></i>Amount
+            </p>
           </Col>
-          <Col className="ol-3">
-            <p>Date</p>
+          <Col className="col-3 table-label-wrapper">
+            <p className="table-label">
+              <i class="far fa-calendar-alt table-icon"></i>Date
+            </p>
           </Col>
         </Row>
         {userTransfers.map((transfer, id) => (
-          <Row>
-            <Col className="ol-3">
-              <p>{transfer.amount}</p>
+          <Row className="info-row">
+            <Col className="col-3 info">
+              <p>{transfer.sending_account}</p>
+            </Col>
+            <Col className="col-3 info">
+              <p>{transfer.receiving_account}</p>
+            </Col>
+            <Col className="col-3 info">
+              <p>${transfer.amount}</p>
+            </Col>
+            <Col className="col-3 info">
+              <p>{transfer.date.slice(4, 16)}</p>
             </Col>
           </Row>
         ))}
