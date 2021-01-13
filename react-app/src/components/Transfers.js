@@ -14,11 +14,24 @@ const Transfers = ({
   const [savingsTransferAmount, setSavingsTransferAmount] = useState("");
   const [checkingsTransferAmount, setCheckingsTransferAmount] = useState("");
   const [userId, setUserId] = useState("");
-  const [noMoneyError, setNoMoneyError] = useState("");
   const [currentSavingsBalance, setCurrentSavingsBalance] = useState("")
+  const [currentCheckingsBalance, setCurrentCheckingsBalance] = useState("");
+  const [savingsError, setSavingsError] = useState("");
+  const [checkingsError, setCheckingsError] = useState("");
 
   const transferToSavings = async (e) => {
     e.preventDefault();
+    const data = await axios.get(`/api/checkings_account/${currentUserId}`);
+    setCurrentCheckingsBalance(data.data.checkings_balance[0].balance);
+    if (currentCheckingsBalance < savingsTransferAmount) {
+      setCheckingsError("Insufficient Funds");
+      return;
+    }
+
+    if (savingsTransferAmount < 1) {
+      setCheckingsError("Invalid Amount");
+      return;
+    }
 
     const response = await fetch("/api/checkings_account/transfer-to-savings", {
       method: "PUT",
@@ -107,10 +120,13 @@ const Transfers = ({
                 <div className="button-wrapper">
                   <button
                     type="submit"
-                    className={"add-funds-button transfer-button"
+                    className={
+                      checkingsError
+                        ? "activate-savings-button animate__animated animate__shakeX transfer-button"
+                        : "add-funds-button transfer-button"
                     }
                   >
-                    {"Send Now"}
+                    {checkingsError ? `${checkingsError}` : "Send Now"}
                   </button>
                 </div>
               </form>
@@ -135,8 +151,7 @@ const Transfers = ({
                 <div className="button-wrapper">
                   <button
                     type="submit"
-                    className={"add-funds-button transfer-button"
-                    }
+                    className={"add-funds-button transfer-button"}
                   >
                     {"Send Now"}
                   </button>

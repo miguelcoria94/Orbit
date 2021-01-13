@@ -55,12 +55,12 @@
     justify-content: space-around;
     align-content: center;
     align-self: center;
-    padding: 30px 20px;
     width: 100%
 }
 
 .transfer-button {
-    width: 100%;
+    margin-right: none !important;
+    margin-left: none !important;
 }
 .smaller-input-wrapper {
 }
@@ -70,8 +70,9 @@
     align-content: center;
     align-self: center;
     justify-content: center;
+    align-items: center;
     margin-top: 10px;
-    width: 100%;
+    width: 175px;
 }
 
 .smaller-input{
