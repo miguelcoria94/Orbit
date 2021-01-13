@@ -23,10 +23,14 @@ const TransferHistory = ({currentUserId}) => {
         </Row>
         <Row className="info-row">
           <Col className="col-3 table-label-wrapper">
-            <p className="table-label">FROM</p>
+            <p className="table-label">
+              <i class="fas fa-long-arrow-alt-down from-icon"></i>FROM
+            </p>
           </Col>
           <Col className="col-3 table-label-wrapper">
-            <p className="table-label">TO</p>
+            <p className="table-label">
+              <i class="fas fa-long-arrow-alt-up to-icon"></i>TO
+            </p>
           </Col>
           <Col className="col-3 table-label-wrapper">
             <p className="table-label">

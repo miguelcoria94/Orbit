@@ -154,3 +154,13 @@
     color: #46B34E;
     margin-right: 10px;
 }
+
+.from-icon {
+    margin-right: 10px;
+    color: rgb(168, 49, 49);
+}
+
+.to-icon {
+    margin-right: 10px;
+    color: #46B34E;
+}
