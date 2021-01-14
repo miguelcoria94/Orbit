@@ -33,11 +33,6 @@ const Home = ({ setAuthenticated }) => {
             />
           </Col>
         </Row>
-        <Row>
-          <Col>
-            <Row></Row>
-          </Col>
-        </Row>
       </Container>
     );
 };
