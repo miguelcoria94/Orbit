@@ -164,3 +164,7 @@
     margin-right: 10px;
     color: #46B34E;
 }
+
+ul {
+    list-style: none !important;
+}
