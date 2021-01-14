@@ -8,7 +8,7 @@
 /******* 404 page styles*/
 #root {
     height: calc(100vh);
-    background-color: #080A14;
+    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
     font-family: 'Barlow', sans-serif;
     max-width: 100%;
     overflow: hidden;
@@ -175,14 +175,15 @@ padding: 15px 45px;
 text-align: center;
 text-transform: uppercase;
 transition: 0.5s;
-background-size: 200% auto;
 color: #ffffff;            
 border-radius: 10px;
 border: none;
+cursor: pointer;
 }
 
 .demo-button:hover{
-
+    cursor: pointer;
+    background-color: rgba(53, 219, 67, 0.726);
 }
 
 
@@ -250,6 +251,7 @@ border: none;
 @media (max-width: 768px) {
     #root {
     height: calc(100%);
+    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
     font-family: 'Barlow', sans-serif;
 }
 .animate__animated.animate__slideInRight {
