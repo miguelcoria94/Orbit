@@ -10,8 +10,10 @@ import axios from "axios";
 const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
 
   return (
-        <Col className="virtual-card-form">
-        </Col>
+    <Col className="virtual-card-form">
+      <h1 className="transfer-from-title">Create a Virtual Card</h1>
+      
+    </Col>
   );
 };
 
