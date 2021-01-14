@@ -56,12 +56,12 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
             </li>
             <li className="navbar_links-sidenav">
               <NavLink
-                to="/transactions"
+                to="/expense-tracking"
                 exact={true}
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-receipt icon icon-1"></i>Transactions
+                  <i class="fas fa-receipt icon icon-1"></i>Expense Tracking
                 </p>
               </NavLink>
             </li>

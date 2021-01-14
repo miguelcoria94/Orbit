@@ -103,7 +103,7 @@ function App() {
           />
         </ProtectedRoute>
         <ProtectedRoute
-          path="/transactions"
+          path="/expense-tracking"
           exact={true}
           authenticated={authenticated}
         >
