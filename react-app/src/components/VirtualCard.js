@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import BigCheckingsCard from "./BigCheckingsCard";
+import VirtualCardForm from "./VirtualCardForm"
 import "./virtualcard.css"
 
 
@@ -28,7 +29,10 @@ const VirtualCard = ({ currentUserId, currentUser, setAuthenticated }) => {
               </p>
             </div>
             <BigCheckingsCard currentUserId={currentUserId} />
-          </Col>
+                </Col>
+                <Col className="col-5">
+                    <VirtualCardForm currentUser={currentUser} currentUserId={currentUserId}/>
+                </Col>
         </Row>
       </Container>
     );
