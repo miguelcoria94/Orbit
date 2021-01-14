@@ -6,7 +6,11 @@
 }
 
 .vc-container-left {
+    display: flex;
     flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .virtual-card-form {
