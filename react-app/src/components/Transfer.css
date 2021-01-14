@@ -132,6 +132,7 @@
 
 .transfer-main {
     overflow: scroll;
+    height: 50vh;
 }
 
 .info-row {
