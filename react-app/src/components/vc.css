@@ -1,10 +1,17 @@
 .vc-container {
-    height: 100%;
     display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.vc-container-left {
+    flex-direction: column;
 }
 
 .virtual-card-form {
-    background-color: #202442;
+    background-color: #2D325A;
     height: 90%;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }

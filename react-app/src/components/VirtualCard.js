@@ -18,7 +18,7 @@ const VirtualCard = ({ currentUserId, currentUser, setAuthenticated }) => {
               setAuthenticated={setAuthenticated}
             />
           </Col>
-          <Col className="col-4">
+          <Col className="col-4 vc-container-left">
             <div className="virtual-card-info-card card custom-card">
               <h1 className="vc-card-title">
                 Keep your personal information private

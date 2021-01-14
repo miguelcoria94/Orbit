@@ -11,7 +11,6 @@ const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
 
   return (
         <Col className="virtual-card-form">
-          <h1>geaeds</h1>
         </Col>
   );
 };
