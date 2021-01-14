@@ -163,9 +163,13 @@ a {
 
 
 .tiny-text {
-    color: #3b416d;
-    border-left: 3px solid #202442;
+    color: #535a8f;
+    border-left: 3px solid #202442 !important;
     padding-left: 10px;
+}
+
+.welcome {
+    color: #535a8f;
 }
 
 
