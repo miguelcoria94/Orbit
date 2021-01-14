@@ -25,7 +25,7 @@ const Home = ({ setAuthenticated }) => {
             </h1>
             <DemoButton setAuthenticated={setAuthenticated} />
           </Col>
-          <Col className="col-5">
+          <Col className="">
             <img
               alt="home-spaceman"
               src={spaceman}
