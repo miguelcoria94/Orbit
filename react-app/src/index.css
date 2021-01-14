@@ -64,6 +64,7 @@ html, body {
     flex-direction: column;
     align-content: center;
     background-color: transparent !important;
+    height: 80vh !important;
 }
 
 .inv-box{
