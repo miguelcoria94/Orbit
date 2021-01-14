@@ -34,7 +34,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   }
 
   return (
-    <Container>
+    <Container className="form-container">
       <Row className="d-flex justify-content-center form-wrapper ">
         <form
           onSubmit={onLogin}
@@ -45,7 +45,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               <div>{error}</div>
             ))}
           </div>
-          <p className="tiny-text welcome">Welcome Back!</p>
+          <p className=" welcome">Welcome Back!</p>
           <h1 className="form-title">Sign in</h1>
           <div className="label-wrapper">
             <label htmlFor="email" className="label">
@@ -72,7 +72,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               onChange={updatePassword}
               className="input"
             />
-            <button className="demo-button-home" type="submit">
+            <button className="demo-button" type="submit">
               Login
             </button>
           </div>

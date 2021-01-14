@@ -11,7 +11,9 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
     <Container className="sidenav-wrapper">
       <Row>
         <Col>
-          <h1 className="welcome-message-1">{title ? `${title}` : "Dashboard"}</h1>
+          <h1 className="welcome-message-1">
+            {title ? `${title}` : "Dashboard"}
+          </h1>
           <p className="welcome-message-2">Logged in as {currentUser}</p>
           <LogoutButton
             setAuthenticated={setAuthenticated}
@@ -24,10 +26,8 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
                 exact={true}
                 activeClassName="active-sidenav"
               >
-                <p>
-                  <i
-                    class="fas fa-home icon icon-1"
-                  ></i>
+                <p className="sidenav-link">
+                  <i class="fas fa-home icon icon-1"></i>
                   Dashboard
                 </p>
               </NavLink>

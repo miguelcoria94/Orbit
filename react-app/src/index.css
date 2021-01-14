@@ -6,6 +6,9 @@
 
 
 /******* 404 page styles*/
+body, html {
+    height: 100vh;
+}
 #root {
     height: calc(100vh);
     background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
@@ -61,6 +64,7 @@ html, body {
     flex-direction: column;
     align-content: center;
     background-color: transparent !important;
+    height: 80vh !important;
 }
 
 .inv-box{
@@ -114,9 +118,9 @@ nav {
 }
 
 .active {
-    color: #464d80 !important;
     font-weight: 600;
     text-shadow: #05515869 0px 4px 10px, #0d3d3f6e 0px 1px 10px;
+    color: rgba(27, 172, 39, 0.726) !important;
 }
 
 a {
@@ -130,40 +134,7 @@ a {
     text-decoration-thickness: 2px;
 }
 
-@media (max-width: 768px) {
-    #root {
-    height: calc(100%);
-    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
-    font-family: 'Barlow', sans-serif;
-}
-.animate__animated.animate__slideInRight {
-  --animate-duration:20s;
-}
 
-
-
-    .logo {
-        justify-items: center;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        margin-top: 20px;
-    }
-
-    .navbar_links {
-    margin-left: none;
-}
-
-    .navbar_container {
-        justify-items: center;
-        align-items: center;
-        justify-content: center;
-        align-content: center;
-        align-self: center;
-        padding-right: 55px !important;
-        height: 25px;
-    }
-}
 
 /*** Home page styles**/
 
@@ -192,24 +163,35 @@ a {
 
 
 .tiny-text {
-    color: #3b416d;
-    border-left: 3px solid #202442;
+    color: #535a8f;
+    border-left: 3px solid #202442 !important;
     padding-left: 10px;
 }
 
+.welcome {
+    color: #535a8f;
+}
 
-.demo-button-home-1  {background-image: linear-gradient(to right, #202442 0%, #202442  51%, #213b6b  100%)}
-.demo-button-home-1  {
+
+.demo-button  {background-color: rgba(27, 172, 39, 0.726);
+    color: white;
+    cursor: pointer !important;
+}
+.demo-button  {
 margin-top: 30px;
 padding: 15px 45px;
 text-align: center;
 text-transform: uppercase;
 transition: 0.5s;
-background-size: 200% auto;
 color: #ffffff;            
 border-radius: 10px;
-display: block;
 border: none;
+cursor: pointer;
+}
+
+.demo-button:hover{
+    cursor: pointer;
+    background-color: rgba(74, 255, 89, 0.726);
 }
 
 
@@ -272,4 +254,119 @@ border: none;
     color: rgb(255, 255, 255) !important;
     font-weight: 900 !important;
 }
-         
+
+/* small screens */
+
+@media (max-width: 768px) {
+    #root {
+    height: calc(100vh);
+    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
+    font-family: 'Barlow', sans-serif;
+}
+.animate__animated.animate__slideInRight {
+  --animate-duration:20s;
+}
+
+
+
+    .logo {
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        margin-top: 20px;
+    }
+
+    .navbar_links {
+    margin-left: none;
+}
+
+    .navbar_container {
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+        padding-right: 55px !important;
+        height: 25px;
+    }
+
+    .main-header-h1 {
+    font-weight: 800;
+    font-size: 60px;
+    z-index: 3;
+}
+
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home_image {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+}
+
+    .main-header-container {
+    padding-top: 40px;
+    z-index: 2;
+}
+}
+
+/* medium size screen */
+
+@media (min-width: 991.98px) {
+    .main-header-h1 {
+    font-weight: 800;
+    font-size: 50px;
+    z-index: 3;
+}
+
+.home_image {
+    width: 1000px;
+    z-index: 1;
+}
+.main-header-container {
+    padding-top: 40px;
+    z-index: 2;
+}
+
+}
+
+/* big screen */
+
+@media (min-width: 1399.98px) {
+.main-header-h1 {
+    font-weight: 800;
+    font-size: 90px;
+    z-index: 3;
+    width: 700px;
+}
+
+.home_image {
+    width: 1200px;
+    z-index: 1;
+    left: -350px;
+}
+}
+
+@media (min-width: 1399.98px) {
+.main-header-h1 {
+    font-weight: 800;
+    font-size: 90px;
+    z-index: 3;
+    width: 700px;
+}
+
+.home_image {
+    width: 1200px;
+    z-index: 1;
+    left: -350px;
+}
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}

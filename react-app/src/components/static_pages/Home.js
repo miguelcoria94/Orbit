@@ -6,7 +6,7 @@ import DemoButton from "../auth/DemoButton"
 const Home = ({ setAuthenticated }) => {
     return (
       <Container>
-        <Row>
+        <Row className="home-wrapper">
           <Col className="main-header-container">
             <p className="tiny-text">Personal Finance & Banking App</p>
             <h1 className="main-header-h1">
@@ -25,18 +25,12 @@ const Home = ({ setAuthenticated }) => {
             </h1>
             <DemoButton setAuthenticated={setAuthenticated} />
           </Col>
-          <Col className="col-5 image-col">
+          <Col className="">
             <img
               alt="home-spaceman"
               src={spaceman}
-              width="700"
               className="home_image"
             />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Row></Row>
           </Col>
         </Row>
       </Container>

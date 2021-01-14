@@ -15,7 +15,7 @@ const TransferHistory = ({currentUserId}) => {
     console.log(userTransfers)
 
     return (
-      <Container>
+      <Container className="transfer-main">
         <Row>
           <Col className="col-12">
             <p className="transfer-table-title">Transfer History</p>

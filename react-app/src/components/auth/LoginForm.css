@@ -1,12 +1,12 @@
 .form {
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-self: flex-start;
     align-content: center;
     justify-content: center;
     background-color: #202442;
     width: 80%;
-    height: 100%;
+    margin-top: 40px;
     padding: 40px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -16,19 +16,19 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .form-wrapper {
-    margin-top: 30px;
-    height: 600px;
+    height: 90vh;
     margin-bottom: 30px;
+    border-radius: 10px;
 }
 
 .form-wrapper-register {
-    margin-top: 30px;
     margin-bottom: 30px;
+    border-radius: 10px;
 }
-
 .form-title {
     color: white;
     font-size: 75px;
@@ -62,16 +62,24 @@
     justify-content: space-around;
 }
 
+.form-container {
+    height: 100vh;
+}
+
 @media (max-width: 768px) {
     .form-title {
         text-align: center;
     }
 
     .welcome {
-        color: #00C9B7;
     border-left: none !important;
     padding-left: none;
     text-align: center;
     text-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+
+    .form-wrapper-register{
+        overflow: scroll;
+        height: 70vh;
     }
 }

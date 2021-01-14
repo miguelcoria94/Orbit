@@ -130,6 +130,11 @@
     font-size: 13px;
 }
 
+.transfer-main {
+    overflow: scroll;
+    height: 50vh;
+}
+
 .info-row {
 }
 
@@ -163,4 +168,8 @@
 .to-icon {
     margin-right: 10px;
     color: #46B34E;
+}
+
+ul {
+    list-style: none !important;
 }

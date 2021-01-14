@@ -10,9 +10,8 @@ const LogoutButton = ({ setAuthenticated }) => {
         <Container fluid className="fluid image container">
           <img
             alt="spaceman"
-            width={500}
             src={spaceman4}
-            height={500}
+            height={300}
             className="animate__animated animate__slideInRight image"
           />
         </Container>

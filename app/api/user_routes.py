@@ -21,5 +21,5 @@ def user(id):
 
 @user_routes.route('/<int:id>/transfer-history')
 def transfers(id):
-    users = Account_Transfers.query.filter(id == Account_Transfers.user_id).order_by(Account_Transfers.date.desc()).limit(8)
+    users = Account_Transfers.query.filter(id == Account_Transfers.user_id).order_by(Account_Transfers.date.desc()).all()
     return {"users": [user.to_dict() for user in users]}
