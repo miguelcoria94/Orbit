@@ -114,9 +114,9 @@ nav {
 }
 
 .active {
-    color: #464d80 !important;
     font-weight: 600;
     text-shadow: #05515869 0px 4px 10px, #0d3d3f6e 0px 1px 10px;
+    color: rgba(27, 172, 39, 0.726) !important;
 }
 
 a {
