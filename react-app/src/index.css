@@ -360,3 +360,8 @@ cursor: pointer;
     left: -350px;
 }
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}

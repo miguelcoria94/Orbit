@@ -56,7 +56,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
     <Container>
       <Row className="d-flex justify-content-center form-wrapper-register ">
         <form onSubmit={onSignUp} className="form">
-          <p className="tiny-text welcome">Welcome!</p>
+          <p className="tiny-text welcome">Take control of your money today!</p>
           <h1 className="form-title">Sign up</h1>
           <Row className="name-box">
             <Col className="label-wrapper">
@@ -125,7 +125,7 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
               ></input>
             </Col>
           </Row>
-          <button className="demo-button-home" type="submit">
+          <button className="demo-button" type="submit">
             Sign Up
           </button>
         </form>
