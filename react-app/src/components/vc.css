@@ -1,0 +1,10 @@
+.vc-container {
+    height: 100%;
+    display: flex;
+}
+
+.virtual-card-form {
+    background-color: #202442;
+    height: 90%;
+    border-radius: 5px;
+}

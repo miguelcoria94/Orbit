@@ -4,6 +4,7 @@ import SideNav from "./SideNav";
 import BigCheckingsCard from "./BigCheckingsCard";
 import VirtualCardForm from "./VirtualCardForm"
 import "./virtualcard.css"
+import "./vc.css";
 
 
 const VirtualCard = ({ currentUserId, currentUser, setAuthenticated }) => {
@@ -30,7 +31,7 @@ const VirtualCard = ({ currentUserId, currentUser, setAuthenticated }) => {
             </div>
             <BigCheckingsCard currentUserId={currentUserId} />
                 </Col>
-                <Col className="col-5">
+                <Col className="col-5 vc-container">
                     <VirtualCardForm currentUser={currentUser} currentUserId={currentUserId}/>
                 </Col>
         </Row>
