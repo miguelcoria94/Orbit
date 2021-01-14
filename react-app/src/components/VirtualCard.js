@@ -4,6 +4,7 @@ import SideNav from "./SideNav";
 import BigCheckingsCard from "./BigCheckingsCard";
 import VirtualCardForm from "./VirtualCardForm"
 import "./virtualcard.css"
+import "./vc.css";
 
 
 const VirtualCard = ({ currentUserId, currentUser, setAuthenticated }) => {
@@ -17,7 +18,7 @@ const VirtualCard = ({ currentUserId, currentUser, setAuthenticated }) => {
               setAuthenticated={setAuthenticated}
             />
           </Col>
-          <Col className="col-4">
+          <Col className="col-4 vc-container-left">
             <div className="virtual-card-info-card card custom-card">
               <h1 className="vc-card-title">
                 Keep your personal information private
@@ -30,7 +31,7 @@ const VirtualCard = ({ currentUserId, currentUser, setAuthenticated }) => {
             </div>
             <BigCheckingsCard currentUserId={currentUserId} />
                 </Col>
-                <Col className="col-5">
+                <Col className="col-5 vc-container">
                     <VirtualCardForm currentUser={currentUser} currentUserId={currentUserId}/>
                 </Col>
         </Row>
