@@ -30,7 +30,6 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
                   <i class="fas fa-home icon icon-1"></i>
                   Dashboard
                 </p>
-                <i class="fas fa-home icon icon-1"></i>
               </NavLink>
             </li>
             <li className="navbar_links-sidenav">

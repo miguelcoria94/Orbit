@@ -100,12 +100,12 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 .big-balance {
     color: white;
     font-weight: 300;
-    font-size: 70px;
+    font-size: 80px;
 }
 
 .big-balance-tag {
     color: #898999;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .icon-disabled {
