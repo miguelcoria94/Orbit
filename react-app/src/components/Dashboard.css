@@ -1,8 +1,7 @@
 .dashboard-wrapper {
     height: auto;
-    background-color: #26294B;
-    background-color: #bdbdbd;
-    background-image: linear-gradient(19deg, #15404b 0%, #341a7e 100%);
+    background-image: linear-gradient(to bottom, #364471, #2d3b62, #253353, #1d2a44, #172236);  
+
     border-radius: 10px;
     padding:0 !important;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;

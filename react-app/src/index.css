@@ -8,7 +8,7 @@
 /******* 404 page styles*/
 #root {
     height: calc(100vh);
-    background-color: #0d0f1f;
+    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
     font-family: 'Barlow', sans-serif;
     max-width: 100%;
     overflow: hidden;
@@ -16,8 +16,9 @@
 }
 
 .home_image {
-    width: 650px;
-    position: relative;
+    width: 1000px;
+    position:absolute; top:2%; right: 1px; left: -240px;
+    z-index: 1;
 }
 
 html, body {
@@ -172,10 +173,12 @@ a {
     color: white;
     font-weight: 800;
     font-size: 80px;
+    z-index: 3;
 }
 
 .main-header-container {
     padding-top: 40px;
+    z-index: 2;
 }
 
 .animate__animated.animate__shakeY {
