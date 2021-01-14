@@ -8,7 +8,7 @@
 /******* 404 page styles*/
 #root {
     height: calc(100vh);
-    background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
+    background-color: #080A14;
     font-family: 'Barlow', sans-serif;
     max-width: 100%;
     overflow: hidden;
@@ -198,8 +198,11 @@ a {
 }
 
 
-.demo-button-home-1  {background-image: linear-gradient(to right, #202442 0%, #202442  51%, #213b6b  100%)}
-.demo-button-home-1  {
+.demo-button  {background-color: rgba(27, 172, 39, 0.726);
+    color: white;
+    cursor: pointer !important;
+}
+.demo-button  {
 margin-top: 30px;
 padding: 15px 45px;
 text-align: center;
@@ -208,8 +211,11 @@ transition: 0.5s;
 background-size: 200% auto;
 color: #ffffff;            
 border-radius: 10px;
-display: block;
 border: none;
+}
+
+.demo-button:hover{
+
 }
 
 
