@@ -6,7 +6,7 @@
     color: white;
     background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%);
     padding: 20px 40px !important;
-    height: 90%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-content: center;
