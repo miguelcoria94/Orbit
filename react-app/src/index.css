@@ -6,6 +6,9 @@
 
 
 /******* 404 page styles*/
+body, html {
+    height: 100vh;
+}
 #root {
     height: calc(100vh);
     background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
@@ -183,7 +186,7 @@ cursor: pointer;
 
 .demo-button:hover{
     cursor: pointer;
-    background-color: rgba(53, 219, 67, 0.726);
+    background-color: rgba(74, 255, 89, 0.726);
 }
 
 
@@ -327,6 +330,21 @@ cursor: pointer;
 }
 
 /* big screen */
+
+@media (min-width: 1399.98px) {
+.main-header-h1 {
+    font-weight: 800;
+    font-size: 90px;
+    z-index: 3;
+    width: 700px;
+}
+
+.home_image {
+    width: 1200px;
+    z-index: 1;
+    left: -350px;
+}
+}
 
 @media (min-width: 1399.98px) {
 .main-header-h1 {
