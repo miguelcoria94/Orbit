@@ -237,7 +237,7 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 .gradient-card {
     transition: 0.5s;
     background-size: 200% auto;
-    background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%)
+    background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%);
 }
 
 .gradient-card:hover {

@@ -1,0 +1,17 @@
+.virtual-card-container {
+}
+
+.virtual-card-info-card {
+    margin-top: 40px;
+    font-weight: 100px;
+    color: white;
+    background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%);
+    padding: 20px 40px !important;
+    padding-top: 50px;
+    height: 42%;
+}
+
+.vc-card-title {
+    font-family: Cousine;
+    font-size: 25px;
+}
