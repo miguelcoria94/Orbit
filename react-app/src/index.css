@@ -250,7 +250,7 @@ cursor: pointer;
 
 @media (max-width: 768px) {
     #root {
-    height: calc(100%);
+    height: calc(100vh);
     background-image: linear-gradient(to bottom, #001c44, #1b1330, #1d0c1e, #15050f, #000000);
     font-family: 'Barlow', sans-serif;
 }
@@ -281,4 +281,37 @@ cursor: pointer;
         padding-right: 55px !important;
         height: 25px;
     }
+
+    .main-header-h1 {
+    font-weight: 800;
+    font-size: 60px;
+    z-index: 3;
+}
+
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home_image {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+}
+
+    .main-header-container {
+    padding-top: 40px;
+    z-index: 2;
+}
+}
+
+/* medium size screen */
+
+@media (max-width: 991.98px) {
+}
+
+/* big screen */
+
+@media (max-width: 1399.98px) {
+
 }
