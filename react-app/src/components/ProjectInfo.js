@@ -4,7 +4,7 @@ import { Row, Col, Container } from "react-bootstrap/";
 const ProjectInfo = () => {
     return (
         <Container>
-
+            <h1>This is a test tos e</h1>
         </Container>
     )
 }
