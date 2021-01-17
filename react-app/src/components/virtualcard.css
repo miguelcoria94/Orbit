@@ -21,3 +21,9 @@
 .vc-card-text {
     font-family: Cousine;
 }
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}

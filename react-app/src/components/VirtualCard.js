@@ -19,8 +19,8 @@ const VirtualCard = ({ currentUserId, currentUser, setAuthenticated }) => {
             />
           </Col>
           <Col className=" vc-container">
-                    <VirtualCardForm currentUser={currentUser} currentUserId={currentUserId}/>
-                </Col>
+             <VirtualCardForm currentUser={currentUser} currentUserId={currentUserId}/>
+          </Col>
         </Row>
       </Container>
     );

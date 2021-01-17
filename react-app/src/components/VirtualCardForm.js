@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import "./vc.css";
-import BigCheckingsCard from "./BigCheckingsCard";
+import SmallCheckingsCard from "./SmallCheckingsCard";
 import BigSavingsCard from "./BigSavingsAccount";
 import TransferHistory from "./TransferHistory";
 import DebitCard from "./DebitCard"
@@ -11,10 +11,17 @@ import axios from "axios";
 const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
 
   return (
-    <Col className="virtual-card-form">
+    <Container className="virtual-card-form" fluid>
       <h1 className="transfer-from-title">Create a Virtual Card</h1>
-      <DebitCard></DebitCard>
-    </Col>
+      <Row className="card-container">
+        <Col>
+          <SmallCheckingsCard></SmallCheckingsCard>
+        </Col>
+        <Col>
+          <DebitCard></DebitCard>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
