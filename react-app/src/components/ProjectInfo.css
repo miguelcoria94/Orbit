@@ -8,5 +8,10 @@
 .about-title{
     color: white;
     font-weight: 800;
+    font-size: 60px;
+}
 
+.about-subheading {
+    color: white;
+    
 }
