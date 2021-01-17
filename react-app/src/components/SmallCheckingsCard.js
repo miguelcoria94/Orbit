@@ -29,11 +29,11 @@ function SmallCheckingsCard({ currentUserId }) {
             ) : (
                     <>
                         <div className="disabled-wrapper">
-                            <i class="fas fa-circle icon-disabled"></i>
-                            <p className="disabled-text">Disabled</p>
+                            <i class="fas fa-circle icon-disabled active-text-small"></i>
+                            <p className="disabled-text active-text-small">Disabled</p>
                             <LoadCheckings currentUserId={currentUserId} />
                         </div>
-                        <h1 className="balance">{"$0"}</h1>
+                        <h1 className="balance balance-small">{"$0"}</h1>
                     </>
                 )}
             <p className="big-balance-tag small-balance-tag">Checkings Account</p>
