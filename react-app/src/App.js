@@ -5,7 +5,6 @@ import SignUpForm from "./components/auth/SignUpForm";
 import NavBar from "./components/NavBar";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { authenticate } from "./services/auth";
-import About from "./components/static_pages/About"
 import Contact from "./components/static_pages/Contact"
 import NoMatch from "./components/static_pages/NoMatch"
 import Home from "./components/static_pages/Home"
@@ -13,6 +12,7 @@ import Dashboard from "./components/Dashboard";
 import Transfers from "./components/Transfers"
 import VirtualCard from "./components/VirtualCard"
 import { Redirect } from "react-router-dom";
+import ProjectInfo from "./components/ProjectInfo";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -60,8 +60,8 @@ function App() {
             currentUser={currentUser}
           />
         </Route>
-        <Route exact path="/about">
-          <About />
+        <Route exact path="/project-info">
+          <ProjectInfo />
         </Route>
         <Route exact path="/contact">
           <Contact />

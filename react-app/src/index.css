@@ -305,7 +305,8 @@ cursor: pointer;
     .home_image {
     z-index: 1;
     position: absolute;
-    top: 50%;
+    top: -400px;
+    left: -300px;
 }
 
     .main-header-container {
@@ -360,9 +361,9 @@ cursor: pointer;
 }
 
 .home_image {
-    width: 1200px;
+    width: 700px;
     z-index: 1;
-    left: -350px;
+    left: -250px;
 }
 }
 
