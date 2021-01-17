@@ -1,6 +1,7 @@
 .aboutPageContainer {
     background-color: #202442;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
     padding: 40px;
 }
