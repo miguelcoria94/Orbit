@@ -25,7 +25,8 @@
 }
 
 .debit-card {
-    
+    display: flex;
+    align-self: center;
     margin-top: 20px;
     width: 300px;
     height: 175px;
