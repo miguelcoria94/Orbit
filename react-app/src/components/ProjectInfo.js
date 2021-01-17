@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import "./ProjectInfo.css"
-
+import profile_pic from "../components/images/profile_pic.jpeg"
 const ProjectInfo = () => {
     return (
         <Container className="aboutPageContainer">
@@ -18,11 +18,14 @@ const ProjectInfo = () => {
                     <p className="about-feature">Create Virtual Cards.
                     </p>
                     <p className="about-feature-text">Virtual Cards provides a solution that allows you to generate unique card numbers for free for your online purchases.</p>
-                    <p className="about-feature">Create goals and stay motivated
+                    <p className="about-feature">Create goals and stay motivated.
                     </p>
                     <p className="about-feature-text">You can use Goals to set money aside while keeping it handy when you need it. Deleting a goal adds the balance right back to your account.</p>
                 </Col>
                 <Col>
+                    <div className="profile-card">
+                        <img src={profile_pic} className="profile-pic"/>
+                    </div>
                 </Col>
             </Row>
         </Container>

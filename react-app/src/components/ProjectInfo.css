@@ -13,16 +13,25 @@
 
 .about-subheading {
     margin-top: 20px;
+    font-size: 40px;
     color: white;
+    font-family: Cousine;
 }
-
 .about-feature {
     color: rgb(27, 172, 39);
     font-weight: 600;
     margin-top: 20px;
+    font-family: Cousine;
     
 }
 
 .about-feature-text{
     color: white;
+}
+
+.profile-card {
+
+}
+.profile-pic {
+    border-radius: 50%;
 }
