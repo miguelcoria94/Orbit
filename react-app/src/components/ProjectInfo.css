@@ -61,6 +61,6 @@
     .aboutPageContainer {
     height: 80vh;
     overflow: scroll;
-    border-radius: none;
+    border-radius: 0px;
 }
 }
