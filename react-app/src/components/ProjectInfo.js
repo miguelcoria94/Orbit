@@ -3,7 +3,7 @@ import { Row, Col, Container } from "react-bootstrap/";
 
 const ProjectInfo = () => {
     return (
-        <Container>
+        <Container className="aboutPageContainer">
             <h1>This is a test tos e</h1>
         </Container>
     )
