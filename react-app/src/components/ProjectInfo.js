@@ -25,9 +25,15 @@ const ProjectInfo = () => {
                 <Col>
                     <div className="profile-card">
                         <img src={profile_pic} className="profile-pic"/>
-                        <button className="demo-button">Github repo</button>
-                        <button className="demo-button">Portfolio Site</button>
-                        <button className="demo-button">Linkedin</button>
+                        <a href="https://github.com/miguelcoria94/Orbit" className="demo-button about-link">
+                            Github Repo
+                        </a>
+                        <a href="https://mcoria.com/" className="demo-button about-link">
+                            Other Projects
+                        </a>
+                        <a href="https://www.linkedin.com/in/miguel-coria-273888130/" className="demo-button about-link">
+                            linkedin
+                        </a>
                     </div>
                 </Col>
             </Row>
