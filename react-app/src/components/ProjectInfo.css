@@ -2,7 +2,7 @@
     background-color: #202442;
     margin-top: 40px;
     border-radius: 5px;
-    padding: 20px;
+    padding: 40px;
 }
 
 .about-title{
@@ -30,8 +30,17 @@
 }
 
 .profile-card {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 100%;
 }
+
 .profile-pic {
+    height: 200px;
+    width: 200px;
+    align-self: center;
     border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }

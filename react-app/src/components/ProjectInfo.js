@@ -25,6 +25,9 @@ const ProjectInfo = () => {
                 <Col>
                     <div className="profile-card">
                         <img src={profile_pic} className="profile-pic"/>
+                        <button className="demo-button">Github repo</button>
+                        <button className="demo-button">Portfolio Site</button>
+                        <button className="demo-button">Linkedin</button>
                     </div>
                 </Col>
             </Row>
