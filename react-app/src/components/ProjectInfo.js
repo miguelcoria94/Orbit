@@ -5,7 +5,7 @@ import "./ProjectInfo.css"
 const ProjectInfo = () => {
     return (
         <Container className="aboutPageContainer">
-            <h1>This is a test tos e</h1>
+            <h1 className="about-title">Welcome to Orbit !</h1>
         </Container>
     )
 }

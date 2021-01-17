@@ -2,4 +2,11 @@
     background-color: #202442;
     margin-top: 40px;
     border-radius: 5px;
+    padding: 20px;
+}
+
+.about-title{
+    color: white;
+    font-weight: 800;
+
 }
