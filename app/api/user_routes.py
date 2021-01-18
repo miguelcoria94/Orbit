@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from flask_login import login_required
-from app.models import User, Account_Transfers, Virtual_Cards
+from app.models import User, Account_Transfers, Virtual_Cards, Balance_History
 
 user_routes = Blueprint('users', __name__)
 
@@ -29,3 +29,10 @@ def transfers(id):
 def virtual_cards(id):
     users = Virtual_Cards.query.filter(id == Virtual_Cards.user_id).order_by(Virtual_Cards.date.desc()).all()
     return {"users": [user.to_dict() for user in users]}
+
+
+@user_routes.route('/<int:id>/balance-history')
+def balance_history(id):
+    users = Balance_History.query.filter(id == Balance_History.user_id).order_by(
+        Balance_History.date.desc()).all()
+    return {"history": [user.to_dict() for user in users]}
