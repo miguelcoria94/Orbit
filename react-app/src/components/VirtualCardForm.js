@@ -9,7 +9,7 @@ import VirtualCardCreator from "./VirtualCardCreator";
 import axios from "axios";
 
 const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
-
+  document.title = "Orbit - Virtual Cards"
   return (
     <Container className="virtual-card-form" fluid>
       <Row className="card-container">

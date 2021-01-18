@@ -11,6 +11,7 @@ import { LineChart, PieChart } from "react-chartkick";
 import "chart.js";
 
 const Dashboard = ({ setAuthenticated, currentUser, currentUserId }) => {
+  document.title = "Orbit - Dashboard"
   return (
     <Container fluid className="dashboard-wrapper">
       <Row>

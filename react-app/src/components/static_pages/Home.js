@@ -4,6 +4,7 @@ import spaceman from "../images/mpMockup.png";
 import DemoButton from "../auth/DemoButton"
 
 const Home = ({ setAuthenticated }) => {
+  document.title = "Orbit - Home"
     return (
       <Container>
         <Row className="home-wrapper">

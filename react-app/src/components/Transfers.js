@@ -20,6 +20,8 @@ const Transfers = ({
   const [savingsError, setSavingsError] = useState("");
   const [checkingsError, setCheckingsError] = useState("");
 
+  document.title = "Orbit - Transfers"
+
   const transferToSavings = async (e) => {
     e.preventDefault();
     const data = await axios.get(`/api/checkings_account/${currentUserId}`);

@@ -3,6 +3,7 @@ import { Row, Col, Container } from "react-bootstrap/";
 import "./ProjectInfo.css"
 import profile_pic from "../components/images/profile_pic.jpeg"
 const ProjectInfo = () => {
+    document.title = "Orbit - Project Info"
     return (
         <Container className="aboutPageContainer">
             <h1 className="about-title">About Orbit</h1>

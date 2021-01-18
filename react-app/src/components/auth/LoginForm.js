@@ -10,6 +10,8 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  document.title = "Orbit - Signin"
+
   const onLogin = async (e) => {
     e.preventDefault();
     const user = await login(email, password);

@@ -12,7 +12,9 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
-  const [errors, setErrors] = useState("")
+  const [errors, setErrors] = useState("");
+
+  document.title = "Orbit - Signup"
 
   const onSignUp = async (e) => {
     e.preventDefault();
