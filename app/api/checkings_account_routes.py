@@ -107,12 +107,18 @@ def createVirtualCard():
 def updateVirtualCard():
     amount = request.json["cardBalance"]
     cardId = request.json["cardId"]
+    userId = request.json["userId"]
 
     cardToUpdate = Virtual_Cards.query.filter(
         Virtual_Cards.id == cardId).one()
 
+    currentUserBalance = Checkings_Account.query.filter(
+        Checkings_Account.user_id == userId).one()
+    currentUserBalance.balance = int(currentUserBalance.balance) + int(amount)
+
     cardToUpdate.status = 'disabled'
 
+    db.session.add(currentUserBalance)
     db.session.add(cardToUpdate)
     db.session.commit()
     return {"success": True}
