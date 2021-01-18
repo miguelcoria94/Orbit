@@ -7,7 +7,7 @@ const VirtualCardCreator = ({ currentUserId }) => {
     const [currentUser, setCurrentUser] = useState("")
     const [merchant, setMerchant] = useState("");
     const [currentBalance, setCurrentBalance] = useState("")
-    const [checkingsError, setCheckingsError] = useState("")
+    const [createError, setCreateError] = useState("")
     const [cardNumber, setCardNumber] = useState("")
 
     const createVirtualCard = async (e) => {
@@ -15,12 +15,12 @@ const VirtualCardCreator = ({ currentUserId }) => {
         const data = await axios.get(`/api/checkings_account/${currentUserId}`);
         setCurrentBalance(data.data.checkings_balance[0].balance);
         if (data.data.checkings_balance[0].balance < parseInt(amount)) {
-            setCheckingsError("insufficient funds");
+            setCreateError("insufficient funds");
             return;
         }
 
         if (parseInt(amount) < 0) {
-            setCheckingsError("Invalid Amount");
+            setCreateError("Invalid Amount");
             return;
         }
 
