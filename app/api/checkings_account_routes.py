@@ -90,9 +90,14 @@ def createVirtualCard():
     merchant1 = request.json["merchant"]
     currentBalance = request.json["currentBalance"]
 
+    currentUserBalance = Checkings_Account.query.filter(
+        Checkings_Account.user_id == currentUser).one()
+    currentUserBalance.balance = int(currentUserBalance.balance) - int(amount1)
+
     new_virtual_card = Virtual_Cards(amount=amount1, user_id=currentUser, card_number=cardNumber1, merchant=merchant1, status="active")
 
     db.session.add(new_virtual_card)
+    db.session.add(currentUserBalance)
     db.session.commit()
 
     return {"success": True}
