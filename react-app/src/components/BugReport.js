@@ -19,9 +19,27 @@ const BugReport = ({ currentUserId, currentUser, setAuthenticated }) => {
                     />
                 </Col>
                 <Col className="bug-report-wrapper">
-                    <h1 className="bug-report-title">Bug Report</h1>
-                    <form>
-
+                    <h1 className="bug-report-title"><i class="fas fa-bug"></i> Bug Report</h1>
+                    <form className="bug-form">
+                        <Row>
+                            <Col>
+                        <input name="firstname" className="input w-100" type="text" placeholder="First Name">
+                        </input>
+                            </Col>
+                            <Col>
+                        <input name="lastname" className="input w-100" type="text" placeholder="last Name">
+                        </input>
+                            </Col>
+                        </Row>
+                        <input name="email" className="input" type="email" placeholder="Enter Your Email">
+                        </input>
+                        <input name="subject" className="input" type="text" placeholder="Headline">
+                        </input>
+                        <textarea name="body" className="input ta" type="textarea" placeholder="Please Explain The Issue">
+                        </textarea>
+                        <button className="demo-button">
+                            Submit Bug
+                        </button>
                     </form>
                 </Col>
             </Row>

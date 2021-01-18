@@ -272,6 +272,18 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     color: white;
     text-align: center;
     font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+.ta {
+    height: 37vh;
+}
+
+.bug-form {
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
