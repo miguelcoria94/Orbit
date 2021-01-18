@@ -6,9 +6,44 @@ const VirtualCardCreator = ({ currentUserId }) => {
     const [amount, setAmount] = useState("");
     const [currentUser, setCurrentUser] = useState("")
     const [merchant, setMerchant] = useState("");
+    const [currentBalance, setCurrentBalance] = useState("")
+    const [checkingsError, setCheckingsError] = useState("")
+    const [cardNumber, setCardNumber] = useState("")
 
-    useEffect(() => {
-    }, []);
+    const createVirtualCard = async (e) => {
+        e.preventDefault();
+        const data = await axios.get(`/api/checkings_account/${currentUserId}`);
+        setCurrentBalance(data.data.checkings_balance[0].balance);
+        if (data.data.checkings_balance[0].balance < parseInt(amount)) {
+            setCheckingsError("insufficient funds");
+            return;
+        }
+
+        if (parseInt(amount) < 0) {
+            setCheckingsError("Invalid Amount");
+            return;
+        }
+
+        const response = await fetch("/api/checkings_account/virtual-card", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                userId,
+                savingsTransferAmount
+            }),
+        });
+
+        if (response.ok) {
+            window.location.reload();
+        }
+
+        if (!response.ok) {
+            window.location.reload()
+            return
+        }
+    };
 
     const updateAmount = (e) => {
         setAmount(e.target.value);
@@ -30,7 +65,7 @@ const VirtualCardCreator = ({ currentUserId }) => {
             </Row>
             <Row className="">
                 <Col>
-                    <form className="virtualcardform">
+                    <form className="virtualcardform" onSubmit={createVirtualCard}>
                         <input placeholder="Purchase Amount" name="amount"
                             type="number"
                             onChange={updateAmount}

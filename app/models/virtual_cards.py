@@ -7,6 +7,7 @@ class Virtual_Cards(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     amount = db.Column(db.Integer, nullable=False)
+    card_number = db.Column(db.Integer, nullable=False)
     merchant = db.Column(db.String(255), nullable=False, unique=False)
     status = db.Column(db.String(255), nullable=False, unique=False)
     date = db.Column(db.DateTime(timezone=True),
@@ -16,11 +17,12 @@ class Virtual_Cards(db.Model):
 
     user = db.relationship('User', back_populates='virtual_cards', )
 
-    def __init__(self, amount, user_id, merchant, status):
+    def __init__(self, amount, user_id, merchant, status, card_number):
         self.amount = amount
         self.user_id = user_id
         self.merchant = merchant
         self.status = status
+        self.card_number = card_number
 
 
     def to_dict(self):
@@ -30,5 +32,6 @@ class Virtual_Cards(db.Model):
             "user_id": self.user_id,
             "merchant": self.merchant,
             "status": self.status,
-            "date": self.date
+            "date": self.date,
+            "card_number": self.card_number
         }
