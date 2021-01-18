@@ -72,3 +72,12 @@
 
 .virtual-card-form-container {
 }
+
+.disabled-button {
+    background-color: rgb(167, 49, 49);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.disabled-button:hover {
+    background-color: rgb(218, 44, 44);
+}

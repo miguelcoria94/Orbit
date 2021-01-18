@@ -67,7 +67,7 @@ const VirtualCardHistory = ({ currentUserId }) => {
                         <p>{card.card_number}</p>
                     </Col>
                     <Col className="info">
-                        { card.status === "disabled" ? <Button disabled>Disabled</Button> :
+                        {card.status === "disabled" ? <button className="add-funds-button add-funds-space disabled-button" disabled>Deleted</button> :
                             <DeleteVC cardId={card.id} cardBalance={card.amount} />
                         }
                     </Col>
