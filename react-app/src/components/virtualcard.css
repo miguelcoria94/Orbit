@@ -26,6 +26,9 @@
     width: 100%;
     display: flex;
     justify-content: end;
+}
+
+.card-container2{
     padding-top: 40px;
 }
 
