@@ -18,7 +18,11 @@ const BugReport = ({ currentUserId, currentUser, setAuthenticated }) => {
                         setAuthenticated={setAuthenticated}
                     />
                 </Col>
-                <Col>
+                <Col className="bug-report-wrapper">
+                    <h1 className="bug-report-title">Bug Report</h1>
+                    <form>
+
+                    </form>
                 </Col>
             </Row>
         </Container>
