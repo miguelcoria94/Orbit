@@ -18,10 +18,8 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background-color: #2D325A;
     height: 80vh;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .debit-card {

@@ -101,3 +101,9 @@ def createVirtualCard():
     db.session.commit()
 
     return {"success": True}
+
+
+@checkings_account_routes.route('/update-virtual-card', methods=['POST'])
+def createVirtualCard():
+    amount1 = request.json["cardBalance"]
+    cardNumber1 = request.json["cardId"]

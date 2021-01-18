@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Container } from "react-bootstrap/";
+import { Row, Col, Container, Button } from "react-bootstrap/";
 import axios from "axios";
 import DeleteVC from "./DeleteVC"
 
@@ -67,7 +67,9 @@ const VirtualCardHistory = ({ currentUserId }) => {
                         <p>{card.card_number}</p>
                     </Col>
                     <Col className="info">
-                        <DeleteVC cardId={card.id} cardBalance={card.amount}/>
+                        { card.status === "disabled" ? <Button disabled>Disabled</Button> :
+                            <DeleteVC cardId={card.id} cardBalance={card.amount} />
+                        }
                     </Col>
                 </Row>
             ))}
