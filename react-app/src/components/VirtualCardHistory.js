@@ -15,7 +15,7 @@ const VirtualCardHistory = ({ currentUserId }) => {
     console.log(userTransfers)
 
     return (
-        <Container className="virtual-card-transfer-container">
+        <Container className="virtual-card-transfer-container h-100">
             <Row>
                 <Col className="col-12">
                     <p className="transfer-table-title virtual-card-title">Virtual Card History</p>

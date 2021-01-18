@@ -47,3 +47,12 @@
 .virtual-card-title {
     margin-top: 20px !important;
 }
+
+.virtualcardform{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.virtual-card-form-container {
+}
