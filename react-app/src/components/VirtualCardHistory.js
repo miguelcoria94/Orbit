@@ -23,7 +23,8 @@ const VirtualCardHistory = ({ currentUserId }) => {
             <Row className="info-row">
                 <Col className="col-3 table-label-wrapper">
                     <p className="table-label">
-                        <i class="fas fa-long-arrow-alt-down from-icon"></i>Merchant Name
+                        <i class="fas fa-store from-icon">
+                        </i>Merchant
             </p>
                 </Col>
                 <Col className="col-3 table-label-wrapper">
@@ -33,7 +34,7 @@ const VirtualCardHistory = ({ currentUserId }) => {
                 </Col>
                 <Col className="col-3 table-label-wrapper">
                     <p className="table-label">
-                        <i class="fas fa-long-arrow-alt-up to-icon"></i>Status
+                        <i class="fas fa-question to-icon"></i>Status
             </p>
                 </Col>
                 <Col className="col-3 table-label-wrapper">
