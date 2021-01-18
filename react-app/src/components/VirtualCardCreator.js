@@ -25,13 +25,16 @@ const VirtualCardCreator = ({ currentUserId }) => {
         }
 
         const response = await fetch("/api/checkings_account/virtual-card", {
-            method: "PUT",
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                userId,
-                savingsTransferAmount
+                amount,
+                cardNumber,
+                currentUserId,
+                merchant,
+                currentBalance,
             }),
         });
 
@@ -53,6 +56,7 @@ const VirtualCardCreator = ({ currentUserId }) => {
     const updateMerchant = (e) => {
         setMerchant(e.target.value);
         setCurrentUser(currentUserId);
+        setCardNumber(Math.floor(Math.random() * 9000000000000000) + 1000000000)
     };
 
 

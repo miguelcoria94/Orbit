@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, session, request
-from app.models import Checkings_Account, User, Savings_Account, Account_Transfers
+from app.models import Checkings_Account, User, Savings_Account, Account_Transfers, Virtual_Cards
 from app.models import db
 
 checkings_account_routes = Blueprint('checkings_account', __name__)
@@ -80,4 +80,19 @@ def transferToSavings():
     db.session.add(currentUserSavings)
     db.session.commit()
 
-    return "hello"
+    return {"success": True}
+
+@checkings_account_routes.route('/virtual-card', methods=['POST'])
+def createVirtualCard():
+    amount1 = request.json["amount"]
+    cardNumber1 = request.json["cardNumber"]
+    currentUser = request.json["currentUserId"]
+    merchant1 = request.json["merchant"]
+    currentBalance = request.json["currentBalance"]
+
+    new_virtual_card = Virtual_Cards(amount=amount1, user_id=currentUser, card_number=cardNumber1, merchant=merchant1, status="active")
+
+    db.session.add(new_virtual_card)
+    db.session.commit()
+
+    return {"success": True}

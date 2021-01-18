@@ -7,13 +7,13 @@ class Virtual_Cards(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     amount = db.Column(db.Integer, nullable=False)
-    card_number = db.Column(db.Integer, nullable=False)
+    card_number = db.Column(db.String(255), nullable=False)
     merchant = db.Column(db.String(255), nullable=False, unique=False)
     status = db.Column(db.String(255), nullable=False, unique=False)
     date = db.Column(db.DateTime(timezone=True),
                      server_default=db.func.now(), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey(
-        'users.id'), nullable=False, unique=True)
+        'users.id'), nullable=False)
 
     user = db.relationship('User', back_populates='virtual_cards', )
 

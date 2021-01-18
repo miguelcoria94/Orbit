@@ -15,7 +15,7 @@ class User(db.Model, UserMixin):
   savings_account = db.relationship('Savings_Account', back_populates='user', cascade="all, delete, delete-orphan")
   checkings_account = db.relationship('Checkings_Account', back_populates='user', cascade="all, delete, delete-orphan")
   account_transfers = db.relationship('Account_Transfers', back_populates='user', cascade="all, delete, delete-orphan")
-  virtual_cacrds = db.relationship('Virtual_Cards', back_populates='user', cascade="all, delete, delete-orphan")
+  virtual_cards = db.relationship('Virtual_Cards', back_populates='user', cascade="all, delete, delete-orphan")
 
 
   @property
