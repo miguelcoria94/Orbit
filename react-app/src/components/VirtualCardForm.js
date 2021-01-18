@@ -22,7 +22,7 @@ const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
       </Row>
       <Row className="card-container">
         <Col className="card-holder">
-          <VirtualCardHistory />
+          <VirtualCardHistory currentUserId={currentUserId}/>
         </Col>
         <Col className="card-holder">
           <VirtualCardCreator currentUserId={currentUserId}/>

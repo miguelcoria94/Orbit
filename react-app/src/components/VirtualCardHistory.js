@@ -3,12 +3,12 @@ import { Row, Col, Container } from "react-bootstrap/";
 import axios from "axios";
 
 const VirtualCardHistory = ({ currentUserId }) => {
-    const [userTransfers, setUserTransfers] = useState([]);
+    const [virtualCards, setVirtualCard] = useState([]);
 
     useEffect(() => {
         (async () => {
-            const data = await axios.get(`/api/users/${currentUserId}/transfer-history`);
-            setUserTransfers(data.data.users);
+            const data = await axios.get(`/api/users/${currentUserId}/virtual-cards`);
+            setVirtualCard(data.data.users);
         })();
     }, []);
 
@@ -43,19 +43,19 @@ const VirtualCardHistory = ({ currentUserId }) => {
             </p>
                 </Col>
             </Row>
-            {userTransfers.map((transfer, id) => (
+            {virtualCards.map((card, id) => (
                 <Row className="info-row">
                     <Col className="col-3 info">
-                        <p>{transfer.sending_account}</p>
+                        <p>{card.merchant}</p>
                     </Col>
                     <Col className="col-3 info">
-                        <p>{transfer.receiving_account}</p>
+                        <p>{card.amount}</p>
                     </Col>
                     <Col className="col-3 info">
-                        <p>${transfer.amount}</p>
+                        <p>{card.status}</p>
                     </Col>
                     <Col className="col-3 info">
-                        <p>{transfer.date.slice(4, 16)}</p>
+                        <p>{card.date.slice(4, 16)}</p>
                     </Col>
                 </Row>
             ))}
