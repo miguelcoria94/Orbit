@@ -60,11 +60,10 @@ const Dashboard = ({ setAuthenticated, currentUser, currentUserId }) => {
               id="users-chart"
               width="64vw"
               height="100%"
-              colors={["rgb(8, 255, 29)", "#666"]}
+              colors={["rgb(8, 255, 29)", "#ffffff"]}
               label="Value"
               data={actualData}
-              xtitle="Time"
-              ytitle="Checkings Account Balance"
+              prefix="$"
             />
           </div>
         </Col>

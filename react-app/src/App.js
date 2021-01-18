@@ -13,6 +13,7 @@ import Transfers from "./components/Transfers"
 import VirtualCard from "./components/VirtualCard"
 import { Redirect } from "react-router-dom";
 import ProjectInfo from "./components/ProjectInfo";
+import BugReport from "./components/BugReport";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -121,7 +122,10 @@ function App() {
           exact={true}
           authenticated={authenticated}
         >
-          <Transfers />
+          <BugReport authenticate={authenticate}
+            setAuthenticated={setAuthenticated}
+            currentUser={currentUser}
+            currentUserId={currentUserId}/>
         </ProtectedRoute>
         <Route component={NoMatch} />
       </Switch>

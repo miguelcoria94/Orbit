@@ -53,6 +53,19 @@ html, body {
     color: #00c921 !important;
     padding-bottom: 20px !important;
 }
+.chart-div{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+}
+.chart-title {
+    font-family: Cousine;
+    color: white;
+    text-align: center;
+    align-self: center;
+    font-size: 20px;
+}
 
 .test-404:hover {
     text-shadow: #00c9b87c 0px 4px 10px, #00c9b86e 0px 1px 10px;
