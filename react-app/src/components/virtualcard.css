@@ -21,3 +21,34 @@
 .vc-card-text {
     font-family: Cousine;
 }
+
+.card-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.card-container2{
+    padding-top: 40px;
+}
+
+
+.card-holder {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.active-text-small {
+    margin-top: 20px;
+}
+
+.balance-small {
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.small-balance-tag {
+    text-align: center;
+}

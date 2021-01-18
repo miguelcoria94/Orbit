@@ -22,7 +22,7 @@ const LoadCheckings = ({ currentUserId }) => {
   };
 
   return (
-    <button className="activate-savings-button" onClick={activateSavings}>
+    <button className="activate-savings-button active-text-small" onClick={activateSavings}>
       Load $100
     </button>
   );

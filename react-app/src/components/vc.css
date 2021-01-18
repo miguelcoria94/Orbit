@@ -18,19 +18,66 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background-color: #2D325A;
     height: 80vh;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .debit-card {
-    
-    margin-top: 20px;
-    width: 300px;
-    height: 175px;
+    display: flex;
+    align-self: center;
+    width: 100%;
+    height: 250px;
     border-radius: 10px;
     color: white;
-background-color: #202442;
-border: none;
-box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px 5px}
+    background-color: #202442;
+    border: none;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px 5px;
+}
+
+.virtual-card-transfer-container {
+    background-color: #202442;
+    height: 45vh !important;
+    overflow: scroll;
+    border-radius: 5px;
+    margin: none !important;
+    width: 100%;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px 5px;
+}
+
+.vc-input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.virtual-card-transfer-container-2 {
+    background-color: #202442;
+    height: 250px !important;
+    overflow: scroll;
+    border-radius: 5px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px 5px;
+}
+
+.virtual-card-title {
+    margin-top: 20px !important;
+}
+
+.virtualcardform{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.virtual-card-form-container {
+}
+
+.disabled-button {
+    background-color: rgb(167, 49, 49);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.disabled-button:hover {
+    background-color: rgb(218, 44, 44);
+}

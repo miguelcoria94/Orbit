@@ -2,19 +2,30 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import "./vc.css";
-import BigCheckingsCard from "./BigCheckingsCard";
-import BigSavingsCard from "./BigSavingsAccount";
-import TransferHistory from "./TransferHistory";
-import DebitCard from "./DebitCard"
+import SmallCheckingsCard from "./SmallCheckingsCard";
+import DebitCard from "./DebitCard";
+import VirtualCardHistory from "./VirtualCardHistory";
+import VirtualCardCreator from "./VirtualCardCreator";
 import axios from "axios";
 
 const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
 
   return (
-    <Col className="virtual-card-form">
-      <h1 className="transfer-from-title">Create a Virtual Card</h1>
-      <DebitCard></DebitCard>
-    </Col>
+    <Container className="virtual-card-form" fluid>
+      <Row className="card-container">
+        <Col className="card-holder h-100">
+          <SmallCheckingsCard currentUserId={currentUserId}></SmallCheckingsCard>
+        </Col>
+        <Col className="card-holder h-100">
+          <VirtualCardCreator currentUserId={currentUserId} />
+        </Col>
+      </Row>
+      <Row className="card-container card-container2">
+        <Col className="card-holder">
+          <VirtualCardHistory currentUserId={currentUserId}/>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

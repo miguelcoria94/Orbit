@@ -45,7 +45,6 @@ const QuickPay = ({ currentUserId }) => {
     }
 
     if (!response.ok) {
-      window.location.reload();
       setNoMoneyError("Email Invalid")
     }
   };
