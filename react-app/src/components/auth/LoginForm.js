@@ -6,9 +6,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./LoginForm.css"
 
 const LoginForm = ({ authenticated, setAuthenticated }) => {
-  const [errors, setErrors] = useState([]);
+  const [errors, setErrors] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  document.title = "Orbit - Signin"
 
   const onLogin = async (e) => {
     e.preventDefault();
@@ -17,7 +19,7 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
       window.location.reload();
       setAuthenticated(true);
     } else {
-      setErrors(user.errors);
+      setErrors("Invalid Login");
     }
   };
 
@@ -40,11 +42,6 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
           onSubmit={onLogin}
           className="form"
         >
-          <div>
-            {errors.map((error) => (
-              <div>{error}</div>
-            ))}
-          </div>
           <p className=" welcome">Welcome Back!</p>
           <h1 className="form-title">Sign in</h1>
           <div className="label-wrapper">
@@ -72,8 +69,15 @@ const LoginForm = ({ authenticated, setAuthenticated }) => {
               onChange={updatePassword}
               className="input"
             />
-            <button className="demo-button" type="submit">
-              Login
+            <button
+              type="submit"
+              className={
+                errors
+                  ? "activate-savings-button animate__animated animate__shakeX transfer-button demo-button"
+                  : "add-funds-button transfer-button demo-button"
+              }
+            >
+              {errors ? `${errors}` : "Login"}
             </button>
           </div>
         </form>

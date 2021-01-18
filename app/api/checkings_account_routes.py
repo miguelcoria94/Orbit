@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, session, request
-from app.models import Checkings_Account, User, Savings_Account, Account_Transfers, Virtual_Cards
+from app.models import Checkings_Account, User, Savings_Account, Account_Transfers, Virtual_Cards, Balance_History
 from app.models import db
 
 checkings_account_routes = Blueprint('checkings_account', __name__)
@@ -17,8 +17,10 @@ def add_checkings():
     balance = request.json['loadBalance']
 
     new_checkings = Checkings_Account(balance, user_id)
+    update_history = Balance_History(balance, user_id)
 
     db.session.add(new_checkings)
+    db.session.add(update_history)
     db.session.commit()
 
     return {"id": new_checkings.id}
@@ -30,9 +32,12 @@ def quick_load(id):
     user_id = request.json['currentUserId']
     weight = Checkings_Account.query.filter(Checkings_Account.user_id == user_id).one()
     newbalance = request.json['newBalance']
+    update_history = Balance_History(balance=newbalance, user_id=user_id)
 
     weight.balance = newbalance
+    
 
+    db.session.add(update_history)
     db.session.add(weight)
     db.session.commit()
 
@@ -52,8 +57,10 @@ def quick_pay():
     recipient_checkings = Checkings_Account.query.filter(Checkings_Account.user_id == recipient.id).one()
     recipient_checkings.balance = int(recipient_checkings.balance) + int(amount)
 
+    update_history = Balance_History(balance=currentUser.balance, user_id=currentUserId)
 
 
+    db.session.add(update_history)
     db.session.add(currentUser)
     db.session.add(recipient)
     db.session.commit()
@@ -75,6 +82,10 @@ def transferToSavings():
 
     new_transfer = Account_Transfers(amount=amountToTransfer, user_id=currentUserId, receiving_account="savings", sending_account="checkings")
 
+    update_history = Balance_History(balance=currentUser.balance, user_id=currentUserId)
+
+
+    db.session.add(update_history)
     db.session.add(currentUser)
     db.session.add(new_transfer)
     db.session.add(currentUserSavings)
@@ -96,6 +107,10 @@ def createVirtualCard():
 
     new_virtual_card = Virtual_Cards(amount=amount1, user_id=currentUser, card_number=cardNumber1, merchant=merchant1, status="active")
 
+    update_history = Balance_History(balance=currentUserBalance.balance, user_id=currentUser)
+
+
+    db.session.add(update_history)
     db.session.add(new_virtual_card)
     db.session.add(currentUserBalance)
     db.session.commit()
@@ -118,6 +133,9 @@ def updateVirtualCard():
 
     cardToUpdate.status = 'disabled'
 
+    update_history = Balance_History(balance=currentUserBalance.balance, user_id=userId)
+
+    db.session.add(update_history)
     db.session.add(currentUserBalance)
     db.session.add(cardToUpdate)
     db.session.commit()

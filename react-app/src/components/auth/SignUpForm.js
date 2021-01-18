@@ -12,6 +12,9 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repeatPassword, setRepeatPassword] = useState("");
+  const [errors, setErrors] = useState("");
+
+  document.title = "Orbit - Signup"
 
   const onSignUp = async (e) => {
     e.preventDefault();
@@ -20,6 +23,8 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
       if (!user.errors) {
         window.location.reload();
         setAuthenticated(true);
+      } else {
+        setErrors("Problem Signing Up")
       }
     }
   };
@@ -125,8 +130,15 @@ const SignUpForm = ({authenticated, setAuthenticated}) => {
               ></input>
             </Col>
           </Row>
-          <button className="demo-button" type="submit">
-            Sign Up
+          <button
+            type="submit"
+            className={
+              errors
+                ? "activate-savings-button animate__animated animate__shakeX transfer-button demo-button"
+                : "add-funds-button transfer-button demo-button"
+            }
+          >
+            {errors ? `${errors}` : "Login"}
           </button>
         </form>
       </Row>

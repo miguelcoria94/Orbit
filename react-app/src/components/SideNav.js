@@ -83,7 +83,7 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-bug icon icon-1"></i>Report A Bug
+                  <i class="fas fa-bug icon icon-1"></i>Report a Bug
                 </p>
               </NavLink>
             </li>

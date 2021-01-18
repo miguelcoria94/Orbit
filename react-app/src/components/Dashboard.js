@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import "./Dashboard.css";
@@ -9,8 +9,41 @@ import QuickPay from "./QuickPay";
 import { Chart } from "react-charts";
 import { LineChart, PieChart } from "react-chartkick";
 import "chart.js";
+import axios from "axios";
 
 const Dashboard = ({ setAuthenticated, currentUser, currentUserId }) => {
+  document.title = "Orbit - Dashboard"
+
+  const [balanceHistory, setBalanceHistory] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const data = await axios.get(
+        `/api/users/${currentUserId}/balance-history`
+      );
+      setBalanceHistory(data.data.history);
+      
+    })();
+  }, []);
+
+  console.log(balanceHistory)
+
+  const actualData = {}
+
+  const setData = (object) => {
+    object.map((data) => {
+      if (data.date[data.amount]) {
+        return 
+      } else {
+        actualData[data.date] = data.amount
+      }
+    })
+  }
+
+  setData(balanceHistory)
+
+  console.log(actualData)
+
   return (
     <Container fluid className="dashboard-wrapper">
       <Row>
@@ -27,9 +60,10 @@ const Dashboard = ({ setAuthenticated, currentUser, currentUserId }) => {
               id="users-chart"
               width="64vw"
               height="100%"
-              colors={["rgb(8, 255, 29)", "#666"]}
+              colors={["rgb(8, 255, 29)", "#ffffff"]}
               label="Value"
-              data={{ 1: 3500, 2: 4000, 3: 3600, 4: 5000 }}
+              data={actualData}
+              prefix="$"
             />
           </div>
         </Col>
