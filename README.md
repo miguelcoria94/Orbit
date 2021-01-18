@@ -18,7 +18,7 @@
 - user auth(user has a user name and hashed password(table made)) (✅)(DONE 100%)
 - savings account(every user will have a saving)(✅)(DONE 100%)
 - checking account(every user will have a saving)(✅)(DONE 100%)
-- create virtual debit cards/mobile wallet(✅)
+- create virtual debit cards/mobile wallet(✅)(DONE 100%)
 - transactions between users(✅)(DONE 100%)
 - expense tracking(i will create a pie chart seperating all the transactions into categories)(✅)
 - transactions and types/recent transactions(this will be a table under the balance)(✅)
