@@ -83,7 +83,16 @@ const VirtualCardCreator = ({ currentUserId }) => {
                             onChange={updateMerchant} className="input"></input>
                             </Col>
                         </Row>
-                        <button type="submit" className="demo-button">Create Now</button>
+                        <button
+                            type="submit"
+                            className={
+                                createError
+                                    ? "activate-savings-button animate__animated animate__shakeX transfer-button demo-button"
+                                    : "add-funds-button transfer-button demo-button"
+                            }
+                        >
+                            {createError ? `${createError}` : "Create Now"}
+                        </button>
                     </form>
                 </Col>
             </Row>
