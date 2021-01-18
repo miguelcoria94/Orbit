@@ -5,6 +5,7 @@ import "./vc.css";
 import SmallCheckingsCard from "./SmallCheckingsCard";
 import DebitCard from "./DebitCard";
 import VirtualCardHistory from "./VirtualCardHistory";
+import VirtualCardCreator from "./VirtualCardCreator";
 import axios from "axios";
 
 const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
@@ -25,7 +26,7 @@ const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
           <VirtualCardHistory />
         </Col>
         <Col className="card-holder">
-          <h1>Virtual Card Form</h1>
+          <VirtualCardCreator />
         </Col>
       </Row>
     </Container>

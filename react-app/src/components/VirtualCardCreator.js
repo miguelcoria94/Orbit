@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import axios from "axios";
 
-const VirtualCardHistory = ({ currentUserId }) => {
+const VirtualCardCreator = ({ currentUserId }) => {
     const [userTransfers, setUserTransfers] = useState([]);
 
     useEffect(() => {
@@ -63,4 +63,4 @@ const VirtualCardHistory = ({ currentUserId }) => {
     );
 }
 
-export default VirtualCardHistory;
+export default VirtualCardCreator;
