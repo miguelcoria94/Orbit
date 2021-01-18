@@ -13,10 +13,10 @@ const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
   return (
     <Container className="virtual-card-form" fluid>
       <Row className="card-container">
-        <Col className="card-holder">
+        <Col className="card-holder h-100">
           <SmallCheckingsCard currentUserId={currentUserId}></SmallCheckingsCard>
         </Col>
-        <Col className="card-holder">
+        <Col className="card-holder h-100">
           <DebitCard></DebitCard>
         </Col>
       </Row>

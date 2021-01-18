@@ -5,12 +5,18 @@ import axios from "axios";
 const VirtualCardCreator = ({ currentUserId }) => {
     const [amount, setAmount] = useState("");
     const [currentUser, setCurrentUser] = useState("")
+    const [merchant, setMerchant] = useState("");
 
     useEffect(() => {
     }, []);
 
     const updateAmount = (e) => {
         setAmount(e.target.value);
+        setCurrentUser(currentUserId);
+    };
+
+    const updateMerchant = (e) => {
+        setMerchant(e.target.value);
         setCurrentUser(currentUserId);
     };
 
@@ -31,7 +37,7 @@ const VirtualCardCreator = ({ currentUserId }) => {
                             className="input"></input>
                         <input placeholder="Merchant Name" name="merchantname"
                             type="text"
-                            onChange={"ph"} className="input"></input>
+                            onChange={updateMerchant} className="input"></input>
                         <button type="submit" className="demo-button">Create Now</button>
                     </form>
                 </Col>

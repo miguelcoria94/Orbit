@@ -12,7 +12,6 @@ const VirtualCardHistory = ({ currentUserId }) => {
         })();
     }, []);
 
-    console.log(userTransfers)
 
     return (
         <Container className="virtual-card-transfer-container h-100">
@@ -24,17 +23,17 @@ const VirtualCardHistory = ({ currentUserId }) => {
             <Row className="info-row">
                 <Col className="col-3 table-label-wrapper">
                     <p className="table-label">
-                        <i class="fas fa-long-arrow-alt-down from-icon"></i>FROM
-            </p>
-                </Col>
-                <Col className="col-3 table-label-wrapper">
-                    <p className="table-label">
-                        <i class="fas fa-long-arrow-alt-up to-icon"></i>TO
+                        <i class="fas fa-long-arrow-alt-down from-icon"></i>Merchant Name
             </p>
                 </Col>
                 <Col className="col-3 table-label-wrapper">
                     <p className="table-label">
                         <i class="far fa-money-bill-alt amount-icon"></i>Amount
+            </p>
+                </Col>
+                <Col className="col-3 table-label-wrapper">
+                    <p className="table-label">
+                        <i class="fas fa-long-arrow-alt-up to-icon"></i>Status
             </p>
                 </Col>
                 <Col className="col-3 table-label-wrapper">
