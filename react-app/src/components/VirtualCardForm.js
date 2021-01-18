@@ -12,7 +12,6 @@ const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
 
   return (
     <Container className="virtual-card-form" fluid>
-      <h1 className="transfer-from-title">Create a Virtual Card</h1>
       <Row className="card-container">
         <Col className="card-holder">
           <SmallCheckingsCard currentUserId={currentUserId}></SmallCheckingsCard>

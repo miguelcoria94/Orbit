@@ -18,7 +18,7 @@ const VirtualCardCreator = ({ currentUserId }) => {
         <Container className="virtual-card-transfer-container">
             <Row>
                 <Col className="col-12">
-                    <p className="transfer-table-title virtual-card-title">Virtual Card History</p>
+                    <p className="transfer-table-title virtual-card-title">Create Virtual Card</p>
                 </Col>
             </Row>
             <Row className="info-row">
