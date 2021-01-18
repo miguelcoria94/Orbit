@@ -3,9 +3,8 @@ import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import "./vc.css";
 import SmallCheckingsCard from "./SmallCheckingsCard";
-import BigSavingsCard from "./BigSavingsAccount";
-import TransferHistory from "./TransferHistory";
-import DebitCard from "./DebitCard"
+import DebitCard from "./DebitCard";
+import VirtualCardHistory from "./VirtualCardHistory";
 import axios from "axios";
 
 const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
@@ -19,6 +18,14 @@ const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
         </Col>
         <Col className="card-holder">
           <DebitCard></DebitCard>
+        </Col>
+      </Row>
+      <Row className="card-container">
+        <Col className="card-holder">
+          <VirtualCardHistory />
+        </Col>
+        <Col className="card-holder">
+          <h1>Virtual Card Form</h1>
         </Col>
       </Row>
     </Container>
