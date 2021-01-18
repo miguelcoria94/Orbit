@@ -61,7 +61,7 @@ const VirtualCardCreator = ({ currentUserId }) => {
 
 
     return (
-        <Container className="virtual-card-transfer-container virtual-card-form-container h-100">
+        <Container className="virtual-card-transfer-container-2">
             <Row>
                 <Col className="col-12">
                     <p className="transfer-table-title virtual-card-title">Create A Virtual Card</p>
@@ -70,13 +70,19 @@ const VirtualCardCreator = ({ currentUserId }) => {
             <Row className="">
                 <Col>
                     <form className="virtualcardform" onSubmit={createVirtualCard}>
+                        <Row className="vc-input-wrapper">
+                            <Col>
                         <input placeholder="Purchase Amount" name="amount"
                             type="number"
                             onChange={updateAmount}
                             className="input"></input>
+                            </Col>
+                            <Col>
                         <input placeholder="Merchant Name" name="merchantname"
                             type="text"
                             onChange={updateMerchant} className="input"></input>
+                            </Col>
+                        </Row>
                         <button type="submit" className="demo-button">Create Now</button>
                     </form>
                 </Col>

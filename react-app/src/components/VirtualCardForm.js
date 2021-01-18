@@ -17,15 +17,12 @@ const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
           <SmallCheckingsCard currentUserId={currentUserId}></SmallCheckingsCard>
         </Col>
         <Col className="card-holder h-100">
-          <DebitCard></DebitCard>
+          <VirtualCardCreator currentUserId={currentUserId} />
         </Col>
       </Row>
       <Row className="card-container">
         <Col className="card-holder">
           <VirtualCardHistory currentUserId={currentUserId}/>
-        </Col>
-        <Col className="card-holder">
-          <VirtualCardCreator currentUserId={currentUserId}/>
         </Col>
       </Row>
     </Container>
