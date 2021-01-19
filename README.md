@@ -24,6 +24,12 @@ Users can securely create an account using our login and logout feature.  [CHECK
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/login.png)
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/signup.png)
 
+## Dashboard
+
+Once a user logs in they are taken to there dashboard where they can get an overview of their account. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/Dashboard.js)
+
+![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/dashboard.png)
+
 - user auth(user has a user name and hashed password(table made)) (✅)(DONE 100%)
 - savings account(every user will have a saving)(✅)(DONE 100%)
 - checking account(every user will have a saving)(✅)(DONE 100%)
