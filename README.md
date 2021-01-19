@@ -20,6 +20,10 @@ A live version of the application can be found [here](https://orbit-banking.hero
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/homepage.png)
 
+## Database Design
+
+![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/drawSQL-export-2021-01-19_08_58.png)
+
 ## User Authenication
 
 Users can securely create an account using our login and logout feature.  [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/tree/main/react-app/src/components/auth)
