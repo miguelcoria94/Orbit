@@ -7,7 +7,11 @@ import "./vc.css";
 
 
 const BugReport = ({ currentUserId, currentUser, setAuthenticated }) => {
-
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [userEmail, setUserEmail] = useState("");
+    const [title, setTitle] = useState("");
+    const [body, setBody] = useState("");
     document.title = "Orbit - Report a Bug"
 
     const updateFirstName = (e) => {
@@ -25,6 +29,8 @@ const BugReport = ({ currentUserId, currentUser, setAuthenticated }) => {
     const updateBody = (e) => {
         setBody(e.target.value);
     };
+
+    
     return (
         <Container fluid className="dashboard-wrapper">
             <Row className="transfer-wrapper">
