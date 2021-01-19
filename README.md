@@ -41,9 +41,21 @@ Once a user logs in they can transfer between savings and checkings account. Use
 
 ## Virtual Cards
 
-Once a user logs in they can transfer between savings and checkings account. Users also have the ability to send eachother money via email. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/QuickPay.js)
+Once a user logs in they have the ability to create virtual cards to keep there personal information safe from merchants. If the user decides to delete a virtual card they created the balance of that card will be added back to their checkings account. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/VirtualCardForm.js)
 
-![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/transfers.png)
+![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/vc.png)
+
+## Expense Tracking
+
+Once a user logs in they can begin tracking expenses. A pie chart is updated everytime they add an expense so that the user can visualize there spending. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/ExpenseTracking.js)
+
+![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/expenses.png)
+
+## Looking forward - goals
+
+Once a user logs in they will soon be able to set goals and visualize there progress and they fund each goal.
+
+![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/goals.png)
 
 - user auth(user has a user name and hashed password(table made)) (✅)(DONE 100%)
 - savings account(every user will have a saving)(✅)(DONE 100%)
