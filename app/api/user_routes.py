@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, session, request
 from flask_login import login_required
-from app.models import User, Account_Transfers, Virtual_Cards, Balance_History, Bug_Report
+from app.models import User, Account_Transfers, Virtual_Cards, Balance_History, Bug_Report, Expenses
 from app.models import db
 
 user_routes = Blueprint('users', __name__)
@@ -51,5 +51,20 @@ def newBug():
     new_bug = Bug_Report(first_name=firstName, last_name=lastName, email=userEmail, title=title1, body=body1, user_id=currentUserId)
 
     db.session.add(new_bug)
+    db.session.commit()
+    return {"success": True}
+
+
+@user_routes.route('/add-expense', methods=['POST'])
+def newExpense():
+    amount1 = request.json["amount"]
+    expenseType1 = request.json["expenseType"]
+    merchant1 = request.json["merchant"]
+    userId1 = request.json["userId"]
+
+    new_expense = Expenses(amount=amount1, expense_type=expenseType1,
+                         merchant=merchant1, user_id=userId1)
+
+    db.session.add(new_expense)
     db.session.commit()
     return {"success": True}

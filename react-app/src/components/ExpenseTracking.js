@@ -22,7 +22,6 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
             setError1("You must provide a valid expense type")
             return
         }
-
         
         if (!merchant) {
             setError1("You must provide a valid merchant")
@@ -33,12 +32,16 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
             return
         }
 
-        const response = await fetch("/api/users/bug-report", {
+        const response = await fetch("/api/users/add-expense", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
+                amount,
+                expenseType,
+                merchant,
+                userId
             }),
         });
 
