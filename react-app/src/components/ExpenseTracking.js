@@ -46,6 +46,7 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
                                 </Row>
                                 <input name="amount" className="input w-100" type="number" placeholder="How much did you spend?">
                                 </input>
+                                <button className="add-funds-button transfer-button demo-button">Add Expense</button>
                             </form>
                         </Col>
                     </Row>
