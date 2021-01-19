@@ -45,6 +45,12 @@ Once a user logs in they have the ability to create virtual cards to keep there 
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/vc.png)
 
+## Report A Bug
+
+Once a user logs in they have the ability to report any bugs they come across. Currently the reports are saved to the database. In the future I will create an admin account where an admin can view all the bugs and update the user on the status. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/BugReport.js)
+
+![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/bug.png)
+
 ## Expense Tracking
 
 Once a user logs in they can begin tracking expenses. A pie chart is updated everytime they add an expense so that the user can visualize there spending. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/ExpenseTracking.js)
