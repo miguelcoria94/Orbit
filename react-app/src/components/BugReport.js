@@ -26,7 +26,8 @@ const BugReport = ({ currentUserId, currentUser, setAuthenticated }) => {
                 lastName,
                 userEmail,
                 title,
-                body
+                body,
+                currentUserId
             }),
         });
 
