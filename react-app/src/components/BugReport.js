@@ -14,6 +14,31 @@ const BugReport = ({ currentUserId, currentUser, setAuthenticated }) => {
     const [body, setBody] = useState("");
     document.title = "Orbit - Report a Bug"
 
+    const submitBug = async (e) => {
+        e.preventDefault();
+        const response = await fetch("/api/user/bug-report", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                firstName,
+                lastName,
+                userEmail,
+                title,
+                body
+            }),
+        });
+
+        if (response.ok) {
+            window.location.reload();
+        }
+
+        if (!response.ok) {
+            return
+        }
+    };
+
     const updateFirstName = (e) => {
         setFirstName(e.target.value);
     };
@@ -43,24 +68,24 @@ const BugReport = ({ currentUserId, currentUser, setAuthenticated }) => {
                 </Col>
                 <Col className="bug-report-wrapper">
                     <h1 className="bug-report-title"><i class="fas fa-bug"></i> Bug Report</h1>
-                    <form className="bug-form">
+                    <form className="bug-form" onSubmit={submitBug}>
                         <Row>
                             <Col>
-                        <input name="firstname" className="input w-100" type="text" placeholder="First Name">
+                                <input name="firstname" className="input w-100" type="text" placeholder="First Name" onChange={updateFirstName}>
                         </input>
                             </Col>
                             <Col>
-                        <input name="lastname" className="input w-100" type="text" placeholder="last Name">
+                                <input name="lastname" className="input w-100" type="text" placeholder="last Name" onChange={updateLastName}>
                         </input>
                             </Col>
                         </Row>
-                        <input name="email" className="input" type="email" placeholder="Enter Your Email">
+                        <input name="email" className="input" type="email" placeholder="Enter Your Email" onChange={updateEmail}>
                         </input>
-                        <input name="subject" className="input" type="text" placeholder="Headline">
+                        <input name="subject" className="input" type="text" placeholder="Headline" onChange={updateTitle}>
                         </input>
-                        <textarea name="body" className="input ta" type="textarea" placeholder="Please Explain The Issue">
+                        <textarea name="body" className="input ta" type="textarea" placeholder="Please Explain The Issue" onChange={updateBody}>
                         </textarea>
-                        <button className="demo-button">
+                        <button className="demo-button" type="submit">
                             Submit Bug
                         </button>
                     </form>
