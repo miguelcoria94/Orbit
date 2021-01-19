@@ -63,7 +63,7 @@ Once a user logs in they can begin tracking expenses. A pie chart is updated eve
 
 ## Looking forward - goals
 
-Once a user logs in they will soon be able to set goals and visualize there progress and they fund each goal.
+Once a user logs in they will soon be able to set goals and visualize there progress as they fund each goal.
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/goals.png)
 
