@@ -167,17 +167,86 @@ Once a user logs in they have the ability to create virtual cards to keep there 
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/vc.png)
 
+```py
+@checkings_account_routes.route('/virtual-card', methods=['POST'])
+def createVirtualCard():
+    amount1 = request.json["amount"]
+    cardNumber1 = request.json["cardNumber"]
+    currentUser = request.json["currentUserId"]
+    merchant1 = request.json["merchant"]
+    currentBalance = request.json["currentBalance"]
+
+    currentUserBalance = Checkings_Account.query.filter(
+        Checkings_Account.user_id == currentUser).one()
+    currentUserBalance.balance = int(currentUserBalance.balance) - int(amount1)
+
+    new_virtual_card = Virtual_Cards(amount=amount1, user_id=currentUser, card_number=cardNumber1, merchant=merchant1, status="active")
+
+    update_history = Balance_History(balance=currentUserBalance.balance, user_id=currentUser)
+
+
+    db.session.add(update_history)
+    db.session.add(new_virtual_card)
+    db.session.add(currentUserBalance)
+    db.session.commit()
+
+    return {"success": True}
+```
+
 ## Report A Bug
 
 Once a user logs in they have the ability to report any bugs they come across. Currently the reports are saved to the database. In the future I will create an admin account where an admin can view all the bugs and update the user on the status. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/BugReport.js)
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/bug.png)
 
+```py
+@user_routes.route('/bug-report', methods=['POST'])
+def newBug():
+    firstName = request.json["firstName"]
+    lastName = request.json["lastName"]
+    userEmail = request.json["userEmail"]
+    title1 = request.json["title"]
+    body1 = request.json["body"]
+    currentUserId = request.json["currentUserId"]
+
+    new_bug = Bug_Report(first_name=firstName, last_name=lastName, email=userEmail, title=title1, body=body1, user_id=currentUserId)
+
+    db.session.add(new_bug)
+    db.session.commit()
+    return {"success": True}
+```
+
 ## Expense Tracking
 
 Once a user logs in they can begin tracking expenses. A pie chart is updated everytime they add an expense so that the user can visualize there spending. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/ExpenseTracking.js)
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/expenses.png)
+
+```py
+@user_routes.route('/add-expense', methods=['POST'])
+def newExpense():
+    amount1 = request.json["amount"]
+    expenseType1 = request.json["expenseType"]
+    merchant1 = request.json["merchant"]
+    userId1 = request.json["currentUserId"]
+
+    currentUserBalance = Checkings_Account.query.filter(
+        Checkings_Account.user_id == userId1).one()
+    currentUserBalance.balance = int(currentUserBalance.balance) - int(amount1)
+
+    update_history = Balance_History(
+        balance=currentUserBalance.balance, user_id=userId1)
+
+
+    new_expense = Expenses(amount=amount1, expense_type=expenseType1,
+                         merchant=merchant1, user_id=userId1, status="active")
+
+    db.session.add(update_history)
+    db.session.add(currentUserBalance)
+    db.session.add(new_expense)
+    db.session.commit()
+    return {"success": True}
+```
 
 ## Looking forward - goals
 
