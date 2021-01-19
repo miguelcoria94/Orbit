@@ -286,6 +286,46 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     flex-direction: column;
 }
 
+.coming-soon-image{
+    height:500px;
+    align-self: center;
+    text-align: center;
+}
+
+.cs-title {
+    font-size: 80px;
+    color: white;
+    font-weight: 300;
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.cs-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.big-icon {
+    font-size: 100px;
+    color: #46B34E;
+    text-shadow: rgba(9, 255, 0, 0.35) 0px 5px 15px;
+}
+
+.cs-text {
+    font-family: Cousine;
+    color: #00c921 !important;
+}
+
+.animate__animated.animate__bounce {
+    --animate-duration: 30s;
+}
+
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
 
 .balance {

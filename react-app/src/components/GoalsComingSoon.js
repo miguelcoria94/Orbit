@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
+import comingsoon from "../components/images/spaceman2.png"
 
 
 const GoalsComingSoon = ({ currentUserId, currentUser, setAuthenticated }) => {
@@ -15,7 +16,12 @@ const GoalsComingSoon = ({ currentUserId, currentUser, setAuthenticated }) => {
                         setAuthenticated={setAuthenticated}
                     />
                 </Col>
-                <Col className=" vc-container">
+                <Col >
+                    <div className="cs-wrapper">
+                        <i class="fas fa-plane-departure big-icon"></i>
+                        <h1 className="cs-title">Coming Soon !</h1>
+                        <p className="cs-text">Check back for updates.</p>
+                    </div>
                 </Col>
             </Row>
         </Container>
