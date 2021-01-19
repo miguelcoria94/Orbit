@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import "./Transfer.css";

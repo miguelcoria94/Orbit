@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import uranus from "./images/uranus.png";
 import LogoutButton from "./auth/LogoutButton";
 
 const SideNav = ({ currentUser, setAuthenticated, title }) => {
@@ -27,7 +26,7 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
                 activeClassName="active-sidenav"
               >
                 <p className="sidenav-link">
-                  <i class="fas fa-home icon icon-1"></i>
+                  <i className="fas fa-home icon icon-1"></i>
                   Dashboard
                 </p>
               </NavLink>
@@ -39,7 +38,7 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-exchange-alt icon icon-1"></i>Transfers
+                  <i className="fas fa-exchange-alt icon icon-1"></i>Transfers
                 </p>
               </NavLink>
             </li>
@@ -50,7 +49,7 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fab fa-cc-visa icon icon-1"></i>Virtual Card
+                  <i className="fab fa-cc-visa icon icon-1"></i>Virtual Card
                 </p>
               </NavLink>
             </li>
@@ -61,7 +60,7 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-receipt icon icon-1"></i>Expense Tracking
+                  <i className="fas fa-receipt icon icon-1"></i>Expense Tracking
                 </p>
               </NavLink>
             </li>
@@ -72,7 +71,7 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-plane-departure icon icon-1"></i>Goals
+                  <i className="fas fa-plane-departure icon icon-1"></i>Goals
                 </p>
               </NavLink>
             </li>
@@ -83,7 +82,7 @@ const SideNav = ({ currentUser, setAuthenticated, title }) => {
                 activeClassName="active-sidenav"
               >
                 <p>
-                  <i class="fas fa-bug icon icon-1"></i>Report a Bug
+                  <i className="fas fa-bug icon icon-1"></i>Report a Bug
                 </p>
               </NavLink>
             </li>

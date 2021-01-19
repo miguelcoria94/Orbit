@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import spaceman4 from "../images/space.png"
 import Container from "react-bootstrap/Container";
 
-const LogoutButton = ({ setAuthenticated }) => {
+const LogoutButton = ({ }) => {
     return (
       <Jumbotron fluid className="bg-404 ">
         <Container fluid className="fluid image container">

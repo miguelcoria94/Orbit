@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Row, Col, Container } from "react-bootstrap/";
-import SideNav from "./SideNav";
 import "./vc.css";
 import SmallCheckingsCard from "./SmallCheckingsCard";
-import DebitCard from "./DebitCard";
 import VirtualCardHistory from "./VirtualCardHistory";
 import VirtualCardCreator from "./VirtualCardCreator";
-import axios from "axios";
 
-const VirtualCardForm = ({ currentUser, setAuthenticated, currentUserId }) => {
+const VirtualCardForm = ({ currentUserId }) => {
   document.title = "Orbit - Virtual Cards"
   return (
     <Container className="virtual-card-form" fluid>

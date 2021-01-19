@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Row, Col, Container, Button } from "react-bootstrap/";
+import { Row, Col } from "react-bootstrap/";
 import axios from "axios";
 import DeleteExpense from "./DeleteExpense"
 
@@ -26,23 +26,23 @@ const ExpenseReport = ({ currentUserId }) => {
             <Row className="info-row">
                 <Col className="col-2 table-label-wrapper">
                     <p className="table-label">
-                        <i class="fas fa-store from-icon">
+                        <i className="fas fa-store from-icon">
                         </i>Merchant
             </p>
                 </Col>
                 <Col className="col-2 table-label-wrapper">
                     <p className="table-label">
-                        <i class="far fa-money-bill-alt amount-icon"></i>Amount
+                        <i className="far fa-money-bill-alt amount-icon"></i>Amount
             </p>
                 </Col>
                 <Col className="col-2 table-label-wrapper">
                     <p className="table-label">
-                        <i class="fas fa-cash-register to-icon"></i>Expense Type
+                        <i className="fas fa-cash-register to-icon"></i>Expense Type
             </p>
                 </Col>
                 <Col className="col-2 table-label-wrapper">
                     <p className="table-label">
-                        <i class="far fa-calendar-alt table-icon"></i>Date Created
+                        <i className="far fa-calendar-alt table-icon"></i>Date Created
             </p>
                 </Col>
             </Row>

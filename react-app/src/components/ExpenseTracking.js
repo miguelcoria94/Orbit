@@ -30,8 +30,6 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
             setPiedata(data.data.history);
         })();
     }, []);
-    
-    console.log(pieData)
 
     const setData = () => {
         pieData.map((data) => {
@@ -66,10 +64,6 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
     }
 
     setData()
-
-    console.log(HousingTotal)
-    console.log(InsuranceTotal)
-    console.log(RecreationTotal)
     document.title = "Orbit - Expense Tracking"
 
     const submitExpense = async (e) => {
@@ -99,7 +93,8 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
                 amount,
                 expenseType,
                 merchant,
-                currentUserId
+                currentUserId,
+                userId
             }),
         });
 

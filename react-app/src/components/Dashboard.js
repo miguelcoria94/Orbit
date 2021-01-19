@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import "./Dashboard.css";
-import LogoutButton from "./auth/LogoutButton"
 import SavingsCard from "./SavingsCard"
 import CheckingsCard from "./CheckingsCard";
 import QuickPay from "./QuickPay";
-import { Chart } from "react-charts";
-import { LineChart, PieChart } from "react-chartkick";
+import { LineChart } from "react-chartkick";
 import "chart.js";
 import axios from "axios";
 
