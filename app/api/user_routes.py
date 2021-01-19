@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, session, request
 from flask_login import login_required
-from app.models import User, Account_Transfers, Virtual_Cards, Balance_History, Bug_Report
+from app.models import User, Account_Transfers, Virtual_Cards, Balance_History, Bug_Report, Expenses, Checkings_Account
 from app.models import db
 
 user_routes = Blueprint('users', __name__)
@@ -53,3 +53,35 @@ def newBug():
     db.session.add(new_bug)
     db.session.commit()
     return {"success": True}
+
+
+@user_routes.route('/add-expense', methods=['POST'])
+def newExpense():
+    amount1 = request.json["amount"]
+    expenseType1 = request.json["expenseType"]
+    merchant1 = request.json["merchant"]
+    userId1 = request.json["currentUserId"]
+
+    currentUserBalance = Checkings_Account.query.filter(
+        Checkings_Account.user_id == userId1).one()
+    currentUserBalance.balance = int(currentUserBalance.balance) - int(amount1)
+
+    update_history = Balance_History(
+        balance=currentUserBalance.balance, user_id=userId1)
+
+
+    new_expense = Expenses(amount=amount1, expense_type=expenseType1,
+                         merchant=merchant1, user_id=userId1, status="active")
+
+    db.session.add(update_history)
+    db.session.add(currentUserBalance)
+    db.session.add(new_expense)
+    db.session.commit()
+    return {"success": True}
+
+
+@user_routes.route('/<int:id>/expense-history')
+def expense_history(id):
+    users = Expenses.query.filter(id == Expenses.user_id).order_by(
+        Expenses.date.desc()).all()
+    return {"history": [user.to_dict() for user in users]}

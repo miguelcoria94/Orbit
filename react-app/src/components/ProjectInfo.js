@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import "./ProjectInfo.css"
 import profile_pic from "../components/images/profile_pic.jpeg"
@@ -25,7 +25,7 @@ const ProjectInfo = () => {
                 </Col>
                 <Col>
                     <div className="profile-card">
-                        <img src={profile_pic} className="profile-pic"/>
+                        <img src={profile_pic} className="profile-pic" alt="profile-pic"/>
                         <a href="https://github.com/miguelcoria94/Orbit" className="demo-button about-link">
                             Github Repo
                         </a>

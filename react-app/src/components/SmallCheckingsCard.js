@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Dashboard.css";
 import LoadCheckings from "./LoadCheckings";
-import AddFunds from "./AddFunds";
 
 function SmallCheckingsCard({ currentUserId }) {
     const [balance, setBalance] = useState([]);

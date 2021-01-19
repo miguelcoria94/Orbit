@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
-import comingsoon from "../components/images/spaceman2.png"
 
 
-const GoalsComingSoon = ({ currentUserId, currentUser, setAuthenticated }) => {
+const GoalsComingSoon = ({ currentUser, setAuthenticated }) => {
     document.title = "Orbit - Coming Soon"
     return (
         <Container fluid className="dashboard-wrapper">

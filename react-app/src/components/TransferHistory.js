@@ -12,8 +12,6 @@ const TransferHistory = ({currentUserId}) => {
       })();
     }, []);
 
-    console.log(userTransfers)
-
     return (
       <Container className="transfer-main">
         <Row>

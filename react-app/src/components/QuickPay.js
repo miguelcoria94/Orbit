@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Redirect } from "react-router-dom";
-import { Container, Row } from "react-bootstrap/";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "./Dashboard.css";

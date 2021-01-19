@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
-import BigCheckingsCard from "./BigCheckingsCard";
 import VirtualCardForm from "./VirtualCardForm"
 import "./virtualcard.css"
 import "./vc.css";
