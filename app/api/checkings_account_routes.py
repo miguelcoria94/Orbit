@@ -58,9 +58,11 @@ def quick_pay():
     recipient_checkings.balance = int(recipient_checkings.balance) + int(amount)
 
     update_history = Balance_History(balance=currentUser.balance, user_id=currentUserId)
+    update_history_receiving = Balance_History(balance=recipient_checkings.balance, user_id=recipient.id)
 
 
     db.session.add(update_history)
+    db.session.add(update_history_receiving)
     db.session.add(currentUser)
     db.session.add(recipient)
     db.session.commit()
