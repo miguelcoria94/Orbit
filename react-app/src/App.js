@@ -15,6 +15,7 @@ import { Redirect } from "react-router-dom";
 import ProjectInfo from "./components/ProjectInfo";
 import BugReport from "./components/BugReport";
 import GoalsComingSoon from "./components/GoalsComingSoon";
+import ExpenseTracking from "./components/ExpenseTracking";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -109,7 +110,10 @@ function App() {
           exact={true}
           authenticated={authenticated}
         >
-          <Transfers />
+          <ExpenseTracking authenticate={authenticate}
+            setAuthenticated={setAuthenticated}
+            currentUser={currentUser}
+            currentUserId={currentUserId}/>
         </ProtectedRoute>
         <ProtectedRoute
           path="/goals"
