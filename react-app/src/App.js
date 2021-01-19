@@ -116,7 +116,10 @@ function App() {
           exact={true}
           authenticated={authenticated}
         >
-          <GoalsComingSoon />
+          <GoalsComingSoon authenticate={authenticate}
+            setAuthenticated={setAuthenticated}
+            currentUser={currentUser}
+            currentUserId={currentUserId}/>
         </ProtectedRoute>
         <ProtectedRoute
           path="/report-a-bug"
