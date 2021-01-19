@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Container, Button } from "react-bootstrap/";
 import axios from "axios";
-import DeleteVC from "./DeleteVC"
+import DeleteExpense from "./DeleteExpense"
 
 const ExpenseReport = ({ currentUserId }) => {
-    const [virtualCards, setVirtualCard] = useState([]);
+    const [expenseHistory, setExpenseHistory] = useState([]);
 
     useEffect(() => {
         (async () => {
-            const data = await axios.get(`/api/users/${currentUserId}/virtual-cards`);
-            setVirtualCard(data.data.users);
+            const data = await axios.get(`/api/users/${currentUserId}/expense-history`);
+            setExpenseHistory(data.data.history);
         })();
     }, []);
+
+    
 
 
     return (
@@ -35,7 +37,7 @@ const ExpenseReport = ({ currentUserId }) => {
                 </Col>
                 <Col className="col-2 table-label-wrapper">
                     <p className="table-label">
-                        <i class="fas fa-question to-icon"></i>Status
+                        <i class="fas fa-cash-register to-icon"></i>Expense Type
             </p>
                 </Col>
                 <Col className="col-2 table-label-wrapper">
@@ -43,33 +45,23 @@ const ExpenseReport = ({ currentUserId }) => {
                         <i class="far fa-calendar-alt table-icon"></i>Date Created
             </p>
                 </Col>
-                <Col className="col-2 table-label-wrapper">
-                    <p className="table-label">
-                        <i class="fab fa-cc-visa to-icon"></i>Card Number
-            </p>
-                </Col>
             </Row>
-            {virtualCards.map((card, id) => (
+            {expenseHistory.map((card, id) => (
                 <Row className="info-row">
-                    <Col className=" info">
+                    <Col className=" info col-2">
                         <p>{card.merchant}</p>
                     </Col>
-                    <Col className=" info">
+                    <Col className=" info col-2">
                         <p>${card.amount}</p>
                     </Col>
-                    <Col className=" info">
-                        <p>{card.status}</p>
+                    <Col className=" info col-2">
+                        <p>{card.expense_type}</p>
                     </Col>
-                    <Col className=" info">
+                    <Col className=" info col-2">
                         <p>{card.date.slice(4, 16)}</p>
                     </Col>
                     <Col className="info">
-                        <p>{card.card_number}</p>
-                    </Col>
-                    <Col className="info">
-                        {card.status === "disabled" ? <button className="add-funds-button add-funds-space disabled-button" disabled>Deleted</button> :
-                            <DeleteVC cardId={card.id} cardBalance={card.amount} userId={card.user_id} />
-                        }
+                            <DeleteExpense id={card.id} cardBalance={card.amount} userId={card.user_id} />
                     </Col>
                 </Row>
             ))}

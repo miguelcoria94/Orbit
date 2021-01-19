@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify, session, request
-from app.models import Checkings_Account, User, Savings_Account, Account_Transfers, Virtual_Cards, Balance_History
+from app.models import Checkings_Account, User, Savings_Account, Account_Transfers, Virtual_Cards, Balance_History, Expenses
 from app.models import db
 
 checkings_account_routes = Blueprint('checkings_account', __name__)
@@ -138,5 +138,30 @@ def updateVirtualCard():
     db.session.add(update_history)
     db.session.add(currentUserBalance)
     db.session.add(cardToUpdate)
+    db.session.commit()
+    return {"success": True}
+
+
+@checkings_account_routes.route('/delete-expense', methods=['PUT'])
+def deleteExpense():
+    amount = request.json["cardBalance"]
+    cardId = request.json["id"]
+    userId = request.json["userId"]
+
+    expenseToDelete = Expenses.query.filter(
+        Expenses.id == cardId).one()
+
+    expenseToDelete.status = "deleted"
+
+    currentUserBalance = Checkings_Account.query.filter(
+        Checkings_Account.user_id == userId).one()
+    currentUserBalance.balance = int(currentUserBalance.balance) + int(amount)
+
+    update_history = Balance_History(
+        balance=currentUserBalance.balance, user_id=userId)
+
+    db.session.add(update_history)
+    db.session.add(currentUserBalance)
+    db.session.delete(expenseToDelete)
     db.session.commit()
     return {"success": True}

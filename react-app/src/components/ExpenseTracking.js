@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap/";
 import SideNav from "./SideNav";
 import { PieChart } from "react-chartkick";
+import axios from "axios";
 import ExpenseReport from "./ExpenseReport";
 
 
@@ -11,7 +12,64 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
     const [userId, setUserId] = useState("");
     const [merchant, setMerchant] = useState("");
     const [error1, setError1] = useState("");
+    const [pieData, setPiedata] = useState([]);
+    let HousingTotal = 0
+    let InsuranceTotal = 0
+    let FoodTotal = 0
+    let GivingTotal = 0
+    let SavingsTotal = 0
+    let UtilitiesTotal = 0
+    let TransportationTotal = 0
+    let RecreationTotal = 0
+    let PersonalTotal = 0
+
     
+    useEffect(() => {
+        (async () => {
+            const data = await axios.get(`/api/users/${currentUserId}/expense-history`);
+            setPiedata(data.data.history);
+        })();
+    }, []);
+    
+    console.log(pieData)
+
+    const setData = () => {
+        pieData.map((data) => {
+            if (data.expense_type === "Housing") {
+                HousingTotal += data.amount
+            }
+            else if (data.expense_type === "Insurance") {
+                InsuranceTotal += data.amount
+            }
+            else if (data.expense_type === "Food") {
+                FoodTotal += data.amount
+            }
+            else if (data.expense_type === "Giving") {
+                GivingTotal += data.amount
+            }
+            else if (data.expense_type === "Savings") {
+                SavingsTotal += data.amount
+            }
+            else if (data.expense_type === "Utilities") {
+                UtilitiesTotal += data.amount
+            }
+            else if (data.expense_type === "Transportation") {
+                TransportationTotal += data.amount
+            }
+            else if (data.expense_type === "Recreation") {
+                RecreationTotal += data.amount
+            }
+            else if (data.expense_type === "Personal") {
+                PersonalTotal += data.amount
+            }
+        })
+    }
+
+    setData()
+
+    console.log(HousingTotal)
+    console.log(InsuranceTotal)
+    console.log(RecreationTotal)
     document.title = "Orbit - Expense Tracking"
 
     const submitExpense = async (e) => {
@@ -41,7 +99,7 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
                 amount,
                 expenseType,
                 merchant,
-                userId
+                currentUserId
             }),
         });
 
@@ -80,7 +138,7 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
                     <Row>
                         <Col className="er-wrap2">
                             <h1 className="bug-report-title">Breakdown</h1>
-                            <PieChart data={[["Food", 44], ["Shopping", 23], ["Food", 104]]} width="300px" height="170px"/>
+                            <PieChart legend={false} data={[["Food", FoodTotal], ["Housing", HousingTotal], ["Insurance", InsuranceTotal], ["Giving", GivingTotal], ["Savings", SavingsTotal], ["Utilities", UtilitiesTotal], ["Transportation", TransportationTotal], ["Recreation", RecreationTotal], ["Personal", PersonalTotal]]} width="300px" height="250px"/>
                         </Col>
                         <Col className="er-wrap">
                             <h1 className="bug-report-title">Add Expense</h1>
@@ -94,7 +152,7 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
                                     <option value="Housing">Housing</option>
                                     <option value="Insurance">Insurance</option>
                                     <option value="Food">Food</option>
-                                    <option value="Giving">Gving</option>
+                                    <option value="Giving">Giving</option>
                                     <option value="Savings">Savings</option>
                                     <option value="Utilities">Utilities</option>
                                     <option value="Transportation">Transportation</option>
@@ -121,7 +179,7 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
                         </Col>
                     </Row>
                     <Row>
-                        <ExpenseReport />
+                        <ExpenseReport currentUserId={currentUserId}/>
                     </Row>
                 </Col>
             </Row>
