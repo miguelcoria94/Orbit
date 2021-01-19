@@ -1,6 +1,7 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, session, request
 from flask_login import login_required
-from app.models import User, Account_Transfers, Virtual_Cards, Balance_History
+from app.models import User, Account_Transfers, Virtual_Cards, Balance_History, Bug_Report
+from app.models import db
 
 user_routes = Blueprint('users', __name__)
 
@@ -36,3 +37,19 @@ def balance_history(id):
     users = Balance_History.query.filter(id == Balance_History.user_id).order_by(
         Balance_History.date.desc()).all()
     return {"history": [user.to_dict() for user in users]}
+
+
+@user_routes.route('/bug-report', methods=['POST'])
+def newBug():
+    firstName = request.json["firstName"]
+    lastName = request.json["lastName"]
+    userEmail = request.json["userEmail"]
+    title1 = request.json["title"]
+    body1 = request.json["body"]
+    currentUserId = request.json["currentUserId"]
+
+    new_bug = Bug_Report(first_name=firstName, last_name=lastName, email=userEmail, title=title1, body=body1, user_id=currentUserId)
+
+    db.session.add(new_bug)
+    db.session.commit()
+    return {"success": True}

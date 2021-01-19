@@ -14,6 +14,7 @@ import VirtualCard from "./components/VirtualCard"
 import { Redirect } from "react-router-dom";
 import ProjectInfo from "./components/ProjectInfo";
 import BugReport from "./components/BugReport";
+import GoalsComingSoon from "./components/GoalsComingSoon";
 
 function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -115,7 +116,10 @@ function App() {
           exact={true}
           authenticated={authenticated}
         >
-          <Transfers />
+          <GoalsComingSoon authenticate={authenticate}
+            setAuthenticated={setAuthenticated}
+            currentUser={currentUser}
+            currentUserId={currentUserId}/>
         </ProtectedRoute>
         <ProtectedRoute
           path="/report-a-bug"
