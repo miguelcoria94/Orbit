@@ -16,7 +16,7 @@ const BugReport = ({ currentUserId, currentUser, setAuthenticated }) => {
 
     const submitBug = async (e) => {
         e.preventDefault();
-        const response = await fetch("/api/user/bug-report", {
+        const response = await fetch("/api/users/bug-report", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

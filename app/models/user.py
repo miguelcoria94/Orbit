@@ -17,6 +17,7 @@ class User(db.Model, UserMixin):
   account_transfers = db.relationship('Account_Transfers', back_populates='user', cascade="all, delete, delete-orphan")
   virtual_cards = db.relationship('Virtual_Cards', back_populates='user', cascade="all, delete, delete-orphan")
   balance_history = db.relationship('Balance_History', back_populates='user', cascade="all, delete, delete-orphan")
+  bug_report = db.relationship('Bug_Report', back_populates='user', cascade="all, delete, delete-orphan")
 
 
   @property
