@@ -6,7 +6,63 @@ import ExpenseReport from "./ExpenseReport";
 
 
 const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
+    const [expenseType, setExpenseType] = useState("");
+    const [amount, setAmount] = useState("");
+    const [userId, setUserId] = useState("");
+    const [merchant, setMerchant] = useState("");
+    const [error1, setError1] = useState("");
+    
     document.title = "Orbit - Expense Tracking"
+
+    const submitExpense = async (e) => {
+        e.preventDefault();
+        setUserId(currentUserId)
+
+        if (!expenseType) {
+            setError1("You must provide a valid expense type")
+            return
+        }
+
+        
+        if (!merchant) {
+            setError1("You must provide a valid merchant")
+            return
+        }
+        if (!amount) {
+            setError1("You must provide a valid amount")
+            return
+        }
+
+        const response = await fetch("/api/users/bug-report", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+            }),
+        });
+
+        if (response.ok) {
+            window.location.reload();
+        }
+
+        if (!response.ok) {
+            return
+        }
+    };
+
+    const updateExpenseType = (e) => {
+        setExpenseType(e.target.value);
+    };
+
+    const updateAmount = (e) => {
+        setAmount(e.target.value);
+    };
+
+    const updateMerchant = (e) => {
+        setMerchant(e.target.value);
+    };
+
     return (
         <Container fluid className="dashboard-wrapper">
             <Row className="transfer-wrapper">
@@ -25,13 +81,13 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
                         </Col>
                         <Col className="er-wrap">
                             <h1 className="bug-report-title">Add Expense</h1>
-                            <form>
+                            <form onSubmit={submitExpense}>
                                 <Row>
                                     <Col>
                                 <label className="label">Expense Type </label>
                                     </Col>
                                     <Col>
-                                <select className="input" name="type" type="text">
+                                <select className="input" name="type" type="text" onChange={updateExpenseType}>
                                     <option value="Housing">Housing</option>
                                     <option value="Insurance">Insurance</option>
                                     <option value="Food">Food</option>
@@ -44,9 +100,20 @@ const ExpenseTracking = ({ currentUserId, currentUser, setAuthenticated }) => {
                                 </select>
                                     </Col>
                                 </Row>
-                                <input name="amount" className="input w-100" type="number" placeholder="How much did you spend?">
+                                <input name="merchant" className="input w-100" type="text" placeholder="Merchant Name" onChange={updateMerchant}>
                                 </input>
-                                <button className="add-funds-button transfer-button demo-button">Add Expense</button>
+                                <input name="amount" className="input w-100" type="number" placeholder="How much did you spend?" onChange={updateAmount}>
+                                </input>
+                                <button
+                                    type="submit"
+                                    className={
+                                        error1
+                                            ? "activate-savings-button animate__animated animate__shakeX transfer-button demo-button"
+                                            : "add-funds-button transfer-button demo-button"
+                                    }
+                                >
+                                    {error1 ? `${error1}` : "Add Expense"}
+                                </button>
                             </form>
                         </Col>
                     </Row>
