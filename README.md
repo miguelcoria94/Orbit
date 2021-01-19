@@ -11,9 +11,18 @@
   <img src="https://cdn.vox-cdn.com/thumbor/fbrTLtxuP2D29o8VJUaE-u3NKfU=/0x0:792x613/1200x800/filters:focal(300x237:426x363)/cdn.vox-cdn.com/uploads/chorus_image/image/59850273/Docker_logo_011.0.png" alt="sqlalchemy-logo" width="50">
 </h1>
 
-<h1 align="center">
-  MVP
-</h1>
+## Home
+
+Personal Finance & Banking App
+
+![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/homepage.png)
+
+## User Authenication
+
+Users can securely create an account using our login and logout feature.  [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/tree/main/react-app/src/components/auth)
+
+![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/login.png)
+![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/signup.png)
 
 - user auth(user has a user name and hashed password(table made)) (✅)(DONE 100%)
 - savings account(every user will have a saving)(✅)(DONE 100%)
