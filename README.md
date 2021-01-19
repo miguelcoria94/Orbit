@@ -24,6 +24,18 @@ A live version of the application can be found [here](https://orbit-banking.hero
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/drawSQL-export-2021-01-19_08_58.png)
 
+```py
+from .db import db
+from .user import User
+from .savings_account import Savings_Account
+from .checkings_account import Checkings_Account
+from .account_transfers import Account_Transfers
+from .virtual_cards import Virtual_Cards
+from .balance_history import Balance_History
+from .bug_report import Bug_Report
+from .expenses import Expenses
+```
+
 ## User Authenication
 
 Users can securely create an account using our login and logout feature.  [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/tree/main/react-app/src/components/auth)
@@ -31,17 +43,123 @@ Users can securely create an account using our login and logout feature.  [CHECK
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/login.png)
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/signup.png)
 
+```py
+from .db import db
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import UserMixin
+
+class User(db.Model, UserMixin):
+  __tablename__ = 'users'
+
+  id = db.Column(db.Integer, primary_key = True)
+  firstname = db.Column(db.String(40), nullable=False, unique=False)
+  lastname = db.Column(db.String(40), nullable=False, unique=False)
+  username = db.Column(db.String(40), nullable = False, unique =True)
+  email = db.Column(db.String(255), nullable = False, unique =True)
+  hashed_password = db.Column(db.String(255), nullable=False)
+  
+  savings_account = db.relationship('Savings_Account', back_populates='user', cascade="all, delete, delete-orphan")
+  checkings_account = db.relationship('Checkings_Account', back_populates='user', cascade="all, delete, delete-orphan")
+  account_transfers = db.relationship('Account_Transfers', back_populates='user', cascade="all, delete, delete-orphan")
+  virtual_cards = db.relationship('Virtual_Cards', back_populates='user', cascade="all, delete, delete-orphan")
+  balance_history = db.relationship('Balance_History', back_populates='user', cascade="all, delete, delete-orphan")
+  bug_report = db.relationship('Bug_Report', back_populates='user', cascade="all, delete, delete-orphan")
+  expenses = db.relationship('Expenses', back_populates='user', cascade="all, delete, delete-orphan")
+
+
+  @property
+  def password(self):
+    return self.hashed_password
+
+
+  @password.setter
+  def password(self, password):
+    self.hashed_password = generate_password_hash(password)
+
+
+  def check_password(self, password):
+    return check_password_hash(self.password, password)
+
+
+  def to_dict(self):
+    return {
+      "id": self.id,
+      "username": self.username,
+      "email": self.email
+    }
+```
+
 ## Dashboard
 
 Once a user logs in they are taken to there dashboard where they can get an overview of their account. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/Dashboard.js)
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/dashboard.png)
 
+```js
+return (
+    <Container fluid className="dashboard-wrapper">
+      <Row>
+        <Col className="col-3">
+          <SideNav
+            currentUser={currentUser}
+            setAuthenticated={setAuthenticated}
+          />
+        </Col>
+        <Col className="col-3">
+          <CheckingsCard currentUserId={currentUserId} />
+          <div className="chart-div">
+            <LineChart
+              id="users-chart"
+              width="64vw"
+              height="100%"
+              colors={["rgb(8, 255, 29)", "#ffffff"]}
+              label="Value"
+              data={actualData}
+              prefix="$"
+            />
+          </div>
+        </Col>
+        <Col col-3>
+          <SavingsCard currentUserId={currentUserId} />
+        </Col>
+        <Col col-3 className="last-div">
+          <QuickPay currentUserId={currentUserId} />
+        </Col>
+      </Row>
+    </Container>
+  );
+```
+
 ## Transfers
 
 Once a user logs in they can transfer between savings and checkings account. Users also have the ability to send eachother money via email. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/QuickPay.js)
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/transfers.png)
+
+```py
+@checkings_account_routes.route('/transfer', methods=['PUT'])
+def quick_pay():
+    currentUserId = request.json["currentUserId"]
+    recipientEmail = request.json["recipientEmail"]
+    senderId = request.json["senderId"]
+    amount = request.json["amount"]
+
+    currentUser = Checkings_Account.query.filter(Checkings_Account.user_id == currentUserId).one()
+    currentUser.balance = int(currentUser.balance) - int(amount)
+    recipient = User.query.filter(User.email == recipientEmail).one()
+    recipient_checkings = Checkings_Account.query.filter(Checkings_Account.user_id == recipient.id).one()
+    recipient_checkings.balance = int(recipient_checkings.balance) + int(amount)
+
+    update_history = Balance_History(balance=currentUser.balance, user_id=currentUserId)
+    update_history_receiving = Balance_History(balance=recipient_checkings.balance, user_id=recipient.id)
+
+
+    db.session.add(update_history)
+    db.session.add(update_history_receiving)
+    db.session.add(currentUser)
+    db.session.add(recipient)
+    db.session.commit()
+```
 
 ## Virtual Cards
 
