@@ -14,6 +14,8 @@
 ## Home
 
 Personal Finance & Banking App
+<br>
+
 A live version of the application can be found [here](https://orbit-banking.herokuapp.com/).
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/homepage.png)
