@@ -12,10 +12,36 @@ const BugReport = ({ currentUserId, currentUser, setAuthenticated }) => {
     const [userEmail, setUserEmail] = useState("");
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
+    const [error, setError] = useState("");
     document.title = "Orbit - Report a Bug"
 
     const submitBug = async (e) => {
         e.preventDefault();
+
+        if (!firstName) {
+            setError("You must provide a valid first name")
+            return
+        }
+
+        if (!lastName) {
+            setError("You must provide a valid last name")
+            return
+        }
+
+        if (!userEmail) {
+            setError("You must provide a valid email")
+            return
+        }
+
+        if (!title) {
+            setError("You must provide a valid title")
+            return
+        }
+
+        if (!body) {
+            setError("You must provide a valid body")
+            return
+        }
         const response = await fetch("/api/users/bug-report", {
             method: "POST",
             headers: {
@@ -86,8 +112,15 @@ const BugReport = ({ currentUserId, currentUser, setAuthenticated }) => {
                         </input>
                         <textarea name="body" className="input ta" type="textarea" placeholder="Please Explain The Issue" onChange={updateBody}>
                         </textarea>
-                        <button className="demo-button" type="submit">
-                            Submit Bug
+                        <button
+                            type="submit"
+                            className={
+                                error
+                                    ? "activate-savings-button animate__animated animate__shakeX transfer-button demo-button"
+                                    : "add-funds-button transfer-button demo-button"
+                            }
+                        >
+                            {error ? `${error}` : "Submit Bug"}
                         </button>
                     </form>
                 </Col>
