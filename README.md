@@ -67,22 +67,11 @@ Once a user logs in they will soon be able to set goals and visualize there prog
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/goals.png)
 
-- user auth(user has a user name and hashed password(table made)) (✅)(DONE 100%)
-- savings account(every user will have a saving)(✅)(DONE 100%)
-- checking account(every user will have a saving)(✅)(DONE 100%)
-- create virtual debit cards/mobile wallet(✅)(DONE 100%)
-- transactions between users(✅)(DONE 100%)
-- expense tracking(i will create a pie chart seperating all the transactions into categories)(✅)
-- transactions and types/recent transactions(this will be a table under the balance)(✅)
-- user pin to verify everything(user has a hashed pin number(smallint) (table made))(✅)
-- savings account has limit and cool down times(✅)
-- lock account feature(✅)
-- goals/bigpurchase with money progress bar(✅)
-- round purchases to nearst dollar and transfer change to savings()
-- low balance alert
-- notification panel(marked as read)
+## Upcoming Features
 
-Bonus 
+- account locking feature
+- user pin before any action
+- notifications
 - login history
 - request from others
 - mobile check deposits
