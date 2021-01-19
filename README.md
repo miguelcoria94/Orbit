@@ -30,6 +30,12 @@ Once a user logs in they are taken to there dashboard where they can get an over
 
 ![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/dashboard.png)
 
+## Transfers
+
+Once a user logs in they can transfer between savings and checkings account. Users also have the ability to send eachother money via email. [CHECK IT OUT](https://github.com/miguelcoria94/Orbit/blob/main/react-app/src/components/QuickPay.js)
+
+![user auth gif](https://github.com/miguelcoria94/Orbit/blob/main/readme-images/transfers.png)
+
 - user auth(user has a user name and hashed password(table made)) (✅)(DONE 100%)
 - savings account(every user will have a saving)(✅)(DONE 100%)
 - checking account(every user will have a saving)(✅)(DONE 100%)
