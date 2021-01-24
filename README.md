@@ -3,13 +3,13 @@
 <br>
   Documentation
 </h1>
+  
 ![heroku](https://github.com/harshcut/harshcut/blob/master/static/heroku.svg) 
 ![photoshop](https://github.com/harshcut/harshcut/blob/master/static/photshop.svg) 
 ![postgresql](https://github.com/harshcut/harshcut/blob/master/static/postgresql.svg) 
 ![python](https://github.com/harshcut/harshcut/blob/master/static/python.svg) 
 ![react](https://github.com/harshcut/harshcut/blob/master/static/react.svg) 
 ![vscode](https://github.com/harshcut/harshcut/blob/master/static/vscode.svg)
-
 ## Home
 
 Personal Finance & Banking App
