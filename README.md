@@ -1,8 +1,4 @@
-<h1 align="center">
-<img src="https://github.com/miguelcoria94/Orbit/blob/main/readme-images/Screen%20Shot%202021-01-06%20at%201.55.05%20PM.png" alt="orbit-logo">
-<br>
-  Documentation
-</h1>
+# Orbit
   
 ![heroku](https://github.com/harshcut/harshcut/blob/master/static/heroku.svg) 
 ![photoshop](https://github.com/harshcut/harshcut/blob/master/static/photshop.svg) 
