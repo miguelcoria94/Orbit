@@ -3,13 +3,12 @@
 <br>
   Documentation
 </h1>
-<h1 align="center">
-  <img src="https://cdn.worldvectorlogo.com/logos/react.svg" alt="js-logo" width="50">
-  <img src="https://i.ibb.co/d2HFVkR/kisspng-flask-by-example-web-framework-python-bottle-sebastian-estenssoro-5b6c0aa33b3b57-91701197153.png" alt="flask-logo" width="50">
-  <img src="https://i.ibb.co/VpGfh8w/icons8-postgresql-96-1.png" alt="psql-logo" width="50">
-  <img src="https://hakin9.org/wp-content/uploads/2019/08/connect-a-flask-app-to-a-mysql-database-with-sqlalchemy-and-pymysql.jpg" alt="sqlalchemy-logo" width="50">
-  <img src="https://cdn.vox-cdn.com/thumbor/fbrTLtxuP2D29o8VJUaE-u3NKfU=/0x0:792x613/1200x800/filters:focal(300x237:426x363)/cdn.vox-cdn.com/uploads/chorus_image/image/59850273/Docker_logo_011.0.png" alt="sqlalchemy-logo" width="50">
-</h1>
+![heroku](https://github.com/harshcut/harshcut/blob/master/static/heroku.svg) 
+![photoshop](https://github.com/harshcut/harshcut/blob/master/static/photshop.svg) 
+![postgresql](https://github.com/harshcut/harshcut/blob/master/static/postgresql.svg) 
+![python](https://github.com/harshcut/harshcut/blob/master/static/python.svg) 
+![react](https://github.com/harshcut/harshcut/blob/master/static/react.svg) 
+![vscode](https://github.com/harshcut/harshcut/blob/master/static/vscode.svg)
 
 ## Home
 
