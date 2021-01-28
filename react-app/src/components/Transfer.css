@@ -6,7 +6,7 @@
     background-color: #2D325A;
     margin-top: 40px;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -111,7 +111,7 @@
     flex-direction: column;
     background-color: #2D325A;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .big-gradient-card {
@@ -178,7 +178,7 @@ ul {
     background-color: #202442;
     width: 100%;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     height: 250px;
     overflow: scroll;
 }
@@ -194,7 +194,7 @@ ul {
     margin-top: 20px;
     background-color: #202442;
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .er-wrap2{
