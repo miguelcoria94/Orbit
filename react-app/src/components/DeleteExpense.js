@@ -11,7 +11,7 @@ const DeleteExpense = ({ id, cardBalance, userId }) => {
 
     return (
         <button className="add-funds-button add-funds-space disabled-button" onClick={deleteCard}>
-            Delete Card
+            Delete Expense
         </button>
     );
 };
