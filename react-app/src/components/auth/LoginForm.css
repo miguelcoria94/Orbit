@@ -4,12 +4,9 @@
     align-self: flex-start;
     align-content: center;
     justify-content: center;
-    background-color: #202442;
     width: 80%;
     margin-top: 40px;
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .label-wrapper {
